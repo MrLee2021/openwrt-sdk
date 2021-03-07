@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-ssl-openssl/Makefile
+Package: luci-ssl-openssl
+Submenu: 1. Collections
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +luci +libustream-openssl +openssl-util
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: LuCI with HTTPS support (OpenSSL as SSL backend)
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description:    LuCI with OpenSSL as the SSL backend (libustream-openssl). OpenSSL cmd tools (openssl-util) are used by uhttpd for SSL key generation instead of the default px5g. (If px5g is installed, uhttpd will prefer that.)
+
+@@
+
+

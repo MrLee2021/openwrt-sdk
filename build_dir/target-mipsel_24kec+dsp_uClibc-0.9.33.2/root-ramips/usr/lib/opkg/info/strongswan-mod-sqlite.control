@@ -1,0 +1,10 @@
+Package: strongswan-mod-sqlite
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-mod-sql, libsqlite3
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3989
+Description:  StrongSwan SQLite database interface plugin

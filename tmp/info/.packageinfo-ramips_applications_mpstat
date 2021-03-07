@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/mpstat/Makefile
+Package: mpstat
+Submenu: Applications
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: mpstat
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   mpstat
+
+@@
+
+

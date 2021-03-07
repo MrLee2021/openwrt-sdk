@@ -1,0 +1,19 @@
+Source-Makefile: package/ramips/applications/smtplog/Makefile
+Package: smtplog
+Submenu: Applications
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lua +luasocket +uci +libuci-lua
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: Collect logs by email.
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Collect logs and sent to an email address.
+  For user privacy concern, do NOT abuse it.
+
+@@
+
+

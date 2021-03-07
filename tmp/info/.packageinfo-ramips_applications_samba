@@ -1,0 +1,28 @@
+Source-Makefile: package/ramips/applications/samba/Makefile
+Package: samba-server
+Submenu: Applications
+Version: 4.0.24-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libaio +libpthread +libz
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: MTK Properties
+Title: Samba Server
+Maintainer: 
+Source: samba-4.0.24.tar.gz
+Type: ipkg
+Description:  The Samba software suite is a collection of programs that implements the
+ SMB protocol for UNIX systems, allowing you to serve files and printers to
+ Windows, NT, OS/2 and DOS clients. This protocol is sometimes also referred
+ to as the LanManager or Netbios protocol.
+
+@@
+Config:
+	config PACKAGE_SAMBA_MAX_DEBUG_LEVEL
+		int "Maximum level of compiled-in debug messages"
+		depends on PACKAGE_samba-server
+		default -1
+
+@@
+
+

@@ -1,0 +1,2 @@
+/etc/strongswan.d/charon/led.conf
+/usr/lib/ipsec/plugins/libstrongswan-led.so

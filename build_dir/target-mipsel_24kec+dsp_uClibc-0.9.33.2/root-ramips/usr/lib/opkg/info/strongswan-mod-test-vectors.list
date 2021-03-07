@@ -1,0 +1,2 @@
+/etc/strongswan.d/charon/test-vectors.conf
+/usr/lib/ipsec/plugins/libstrongswan-test-vectors.so

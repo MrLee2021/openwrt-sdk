@@ -1,0 +1,8 @@
+Package: webui
+Version: 1
+Depends: libc
+Source: package/webui
+Section: Ralink SDK Mango
+Architecture: ramips_24kec
+Installed-Size: 74440
+Description:  This package provides  UCI for wifi Configuration.

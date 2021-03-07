@@ -1,0 +1,6 @@
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/ubus-2014-09-17/CMakeFiles/cli.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/ubus-2014-09-17/examples/CMakeFiles/client.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/ubus-2014-09-17/examples/CMakeFiles/server.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/ubus-2014-09-17/CMakeFiles/ubus.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/ubus-2014-09-17/lua/CMakeFiles/ubus_lua.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/ubus-2014-09-17/CMakeFiles/ubusd.dir

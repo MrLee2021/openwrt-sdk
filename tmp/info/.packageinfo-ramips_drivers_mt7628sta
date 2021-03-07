@@ -1,0 +1,22 @@
+Source-Makefile: package/ramips/drivers/mt7628sta/Makefile
+Package: kmod-mt7628sta
+Menu: 1
+Submenu: Drivers
+Version: <LINUX_VERSION>+4.0.1.4-
+Depends: @TARGET_ramips_mt7628 +kmod-cfg80211-normal +wpa-supplicant-20
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: MTK MT7628 wifi STA driver
+Maintainer: 
+Source: MT7628-STA-4.0.1.4.tar.bz2
+Type: ipkg
+Description: MTK MT7628 wifi STA driver
+
+@@
+Config:
+	source "package/ramips/drivers/mt7628sta/config.in"
+@@
+
+

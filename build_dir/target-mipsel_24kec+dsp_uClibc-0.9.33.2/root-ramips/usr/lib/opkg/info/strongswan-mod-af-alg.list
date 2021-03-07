@@ -1,0 +1,2 @@
+/etc/strongswan.d/charon/af-alg.conf
+/usr/lib/ipsec/plugins/libstrongswan-af-alg.so

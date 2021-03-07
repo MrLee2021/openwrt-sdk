@@ -1,0 +1,9 @@
+Package: vsftpd
+Version: 3.0.2-6
+Depends: libc
+Source: feeds/packages/net/vsftpd
+Section: net
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: ramips_24kec
+Installed-Size: 42165
+Description:  A fast and secure FTP server (no TLS)

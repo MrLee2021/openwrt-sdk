@@ -1,0 +1,3 @@
+/usr/lib/ipsec/plugins/libstrongswan-attr-sql.so
+/usr/lib/ipsec/pool
+/etc/strongswan.d/charon/attr-sql.conf

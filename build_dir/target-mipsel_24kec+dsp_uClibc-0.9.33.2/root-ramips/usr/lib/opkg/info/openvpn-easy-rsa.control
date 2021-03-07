@@ -1,0 +1,8 @@
+Package: openvpn-easy-rsa
+Version: 2013-01-30-2
+Depends: libc, openssl-util
+Source: package/network/services/openvpn-easy-rsa
+Section: net
+Architecture: ramips_24kec
+Installed-Size: 10143
+Description:  Simple shell scripts to manage a Certificate Authority

@@ -1,0 +1,39 @@
+Source-Makefile: package/feeds/luci/luci-app-https-dns-proxy/Makefile
+Package: luci-app-https-dns-proxy
+Submenu: 3. Applications
+Version: x-12
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +luci-compat +luci-mod-admin-full +https-dns-proxy
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: DNS Over HTTPS Proxy Web UI
+Maintainer: Stan Grishin <stangri@melmac.net>
+Source: 
+Type: ipkg
+Feed: luci
+Description:    Provides Web UI for DNS Over HTTPS Proxy
+Stan Grishin <stangri@melmac.net>
+@@
+
+Package: luci-i18n-https-dns-proxy-https-dns-proxy.pot
+Default: LUCI_LANG_https-dns-proxy.pot||(ALL&&m)
+Version: x-12
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread luci-app-https-dns-proxy
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: luci-app-https-dns-proxy - https-dns-proxy.pot translation
+Maintainer: Stan Grishin <stangri@melmac.net>
+Source: 
+Type: ipkg
+Hidden: 1
+Feed: luci
+Description:     Translation for luci-app-https-dns-proxy - 
+Stan Grishin <stangri@melmac.net>
+@@
+
+

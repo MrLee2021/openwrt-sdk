@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-theme-openwrt-2020/Makefile
+Package: luci-theme-openwrt-2020
+Submenu: 4. Themes
+Version: x
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+Section: luci
+Category: LuCI
+Title: LuCI modern OpenWrt theme
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description: LuCI modern OpenWrt theme
+
+@@
+
+

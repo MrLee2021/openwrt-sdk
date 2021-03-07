@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-app-softether/Makefile
+Package: luci-app-softether
+Submenu: 3. Applications
+Version: x
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +softethervpn5-client
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+Section: luci
+Category: LuCI
+Title: Softether management application
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description: Softether management application
+
+@@
+
+

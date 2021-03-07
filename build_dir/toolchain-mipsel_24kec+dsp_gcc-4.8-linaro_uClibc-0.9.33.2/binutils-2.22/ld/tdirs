@@ -1,0 +1,6 @@
+tdir_elf32ltsmip=mipsel-openwrt-linux-uclibc
+tdir_elf32btsmip=mipsel-openwrt-linux-uclibc
+tdir_elf32ltsmipn32=mipsel-openwrt-linux-uclibc
+tdir_elf64ltsmip=mipsel-openwrt-linux-uclibc
+tdir_elf32btsmipn32=mipsel-openwrt-linux-uclibc
+tdir_elf64btsmip=mipsel-openwrt-linux-uclibc

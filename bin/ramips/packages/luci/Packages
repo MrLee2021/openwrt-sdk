@@ -1,0 +1,112 @@
+Package: luci-app-accesscontrol
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, accesscontrol
+Source: feeds/luci/contrib/package/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ramips_24kec
+Installed-Size: 3480
+Filename: luci-app-accesscontrol_0.12+git-16.038.38474-0d510b2-1_ramips_24kec.ipk
+Size: 4067
+MD5Sum: 48147320936ad4aff79e3043df2a147d
+SHA256sum: 6d3d3c10367cf1dd073f5cc0e0649acb558cd432f465cfae0d4d5838bea98cc7
+Description:  LuCI Support for accesscontrol
+
+Package: luci-app-ipsec-vpnd
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, strongswan, strongswan-minimal, strongswan-mod-xauth-generic, strongswan-mod-kernel-libipsec
+Source: feeds/luci/contrib/package/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ramips_24kec
+Installed-Size: 5917
+Filename: luci-app-ipsec-vpnd_0.12+git-16.038.38474-0d510b2-1_ramips_24kec.ipk
+Size: 6591
+MD5Sum: 0a5cf40e970b1d4970247ee6b181d288
+SHA256sum: 4f11f988bf8c125b0bb8c56b264c7c3d50f9177d8e90d33bca734876b1a9f6f7
+Description:  IPSec VPN Server IKEv1 with PSK and Xauth
+
+Package: luci-app-openvpn-server
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, openvpn-server
+Source: feeds/luci/contrib/package/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ramips_24kec
+Installed-Size: 22802
+Filename: luci-app-openvpn-server_0.12+git-16.038.38474-0d510b2-1_ramips_24kec.ipk
+Size: 23386
+MD5Sum: af1b5d7a036fc573a6e9eaeae2bbea39
+SHA256sum: 78c22ada4c7adb35ef74edd139d057c13d4d8caab0cbcaa76ef4e701c2ee25a5
+Description:  LuCI Support for OpenVPN
+
+Package: luci-app-openvpn
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, openvpn
+Source: feeds/luci/contrib/package/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ramips_24kec
+Installed-Size: 60856
+Filename: luci-app-openvpn_0.12+git-16.038.38474-0d510b2-1_ramips_24kec.ipk
+Size: 61551
+MD5Sum: cba0bcc3a9d0029be722908f293c2403
+SHA256sum: 183aeec85349212f9ca63285584b04559faca07a797fefc6d6e49cb2672bef27
+Description:  LuCI Support for OpenVPN
+
+Package: luci-app-samba4
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, samba40-server
+Source: feeds/luci/contrib/package/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ramips_24kec
+Installed-Size: 19581
+Filename: luci-app-samba4_0.12+git-16.038.38474-0d510b2-1_ramips_24kec.ipk
+Size: 20233
+MD5Sum: 26bdad949b3c926d10924483d4a3324a
+SHA256sum: 99a3bad4064024591813bcd56b5709f02f27f90efa7713fc53fdb194f6bfceaf
+Description:  Network Shares - Samba SMB/CIFS module
+
+Package: luci-app-samba
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, samba36-server
+Source: feeds/luci/contrib/package/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ramips_24kec
+Installed-Size: 12442
+Filename: luci-app-samba_0.12+git-16.038.38474-0d510b2-1_ramips_24kec.ipk
+Size: 13076
+MD5Sum: 3ed40f9c604abeada20703a20284f360
+SHA256sum: b93af7937779535885ff5a34861875a511c825bf62e94fbc1f631f4ccc5a44f5
+Description:  Network Shares - Samba SMB/CIFS module
+
+Package: luci-app-snmpd
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, snmp
+Source: feeds/luci/contrib/package/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ramips_24kec
+Installed-Size: 1557
+Filename: luci-app-snmpd_0.12+git-16.038.38474-0d510b2-1_ramips_24kec.ipk
+Size: 2145
+MD5Sum: 96e4d6c5b7c260b79f9bed498636039f
+SHA256sum: 52729ded5ee2a03b2b75f0d39edd17417bf8c8a32b00d1cd2adfa36a78095d56
+Description:  LuCI Support for snmp
+
+Package: luci-app-vsftpd
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, vsftpd
+Source: feeds/luci/contrib/package/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ramips_24kec
+Installed-Size: 4946
+Filename: luci-app-vsftpd_0.12+git-16.038.38474-0d510b2-1_ramips_24kec.ipk
+Size: 5554
+MD5Sum: 71ffb3e2a0b60ca3f60b0eb944779e76
+SHA256sum: ae0504facdd47ae5b34db055b5d227c6b79ec9b973a420944b0ad0bb6c506c21
+Description:  LuCI support for VSFTPD
+

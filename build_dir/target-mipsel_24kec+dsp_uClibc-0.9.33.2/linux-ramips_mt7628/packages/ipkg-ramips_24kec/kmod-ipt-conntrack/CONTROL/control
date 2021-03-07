@@ -1,0 +1,16 @@
+Package: kmod-ipt-conntrack
+Version: 3.10.14-1
+Depends: kernel (=3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ipt-core
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ramips_24kec
+Installed-Size: 37330
+Description:  Netfilter (IPv4) kernel modules for connection tracking
+ Includes:
+ - conntrack
+ - defrag
+ - iptables_raw
+ - NOTRACK
+ - state

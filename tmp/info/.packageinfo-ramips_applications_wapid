@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/wapid/Makefile
+Package: wapid
+Submenu: Applications
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ramips +libopenssl
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: Wapid
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   wapid tool
+
+@@
+
+

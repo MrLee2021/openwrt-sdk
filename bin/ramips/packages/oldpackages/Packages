@@ -1,0 +1,57 @@
+Package: libmysqlclient-r
+Version: 5.1.73-1
+Depends: libc, uclibcxx, zlib, libpthread
+Source: feeds/oldpackages/libs/mysql
+Section: libs
+Architecture: ramips_24kec
+Installed-Size: 165963
+Filename: libmysqlclient-r_5.1.73-1_ramips_24kec.ipk
+Size: 162197
+MD5Sum: ad590cb1814a53f7c159619dac9dab49
+SHA256sum: fb1a4ec21dcb8dc33a481f5e5365d893ce4a25d59142e02da4a2ad86b33e9f02
+Description:  MySQL client library threadsafe
+
+Package: libopenldap
+Version: 2.4.39-1
+Depends: libc, libopenssl, libsasl2, libpthread
+Source: feeds/oldpackages/libs/openldap
+Section: libs
+Maintainer: W. Michael Petullo <mike@flyn.org>
+Architecture: ramips_24kec
+Installed-Size: 170048
+Filename: libopenldap_2.4.39-1_ramips_24kec.ipk
+Size: 170715
+MD5Sum: a4d10bc50aca349e0d4f12cd8c314281
+SHA256sum: 469513092e46ca5d3866b1d28acfd35d835b066293c9c36d5952ce86de85b717
+Description:  OpenLDAP Software is an open source implementation of the
+ Lightweight Directory Access Protocol (LDAP).
+ This package contains the shared LDAP client libraries, needed by other programs.
+
+Package: libsasl2
+Version: 2.1.23-2
+Depends: libc
+Source: feeds/oldpackages/libs/cyrus-sasl
+License: BSD-4c BSD
+LicenseFiles: COPYING cmulocal/COPYING saslauthd/COPYING
+Section: libs
+Architecture: ramips_24kec
+Installed-Size: 63630
+Filename: libsasl2_2.1.23-2_ramips_24kec.ipk
+Size: 64182
+MD5Sum: 45615077b19e6877e3daa0cd5ecafe8a
+SHA256sum: 0fb89449bb5b4a5fa24ce36e9ff4ed62e3406e549c9369e41fe296540bea4cc4
+Description:  A general purpose authentication library
+
+Package: ntpclient
+Version: 2007_365-4
+Depends: libc, librt
+Source: feeds/oldpackages/net/ntpclient
+Section: net
+Architecture: ramips_24kec
+Installed-Size: 12055
+Filename: ntpclient_2007_365-4_ramips_24kec.ipk
+Size: 12630
+MD5Sum: 1988da6817b54fcbd8e89b69745eb4c1
+SHA256sum: 093529489cf4ea3f97d8e1262de1e4b869f901a915597c3901940fdbf4657749
+Description:  NTP client for setting system time from NTP servers.
+

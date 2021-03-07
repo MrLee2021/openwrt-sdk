@@ -1,0 +1,17 @@
+Source-Makefile: package/webui/Makefile
+Package: webui
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: Ralink SDK Mango
+Category: Ralink SDK Mango
+Title: setwifi by web
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	This package provides  UCI for wifi Configuration.
+
+@@
+
+

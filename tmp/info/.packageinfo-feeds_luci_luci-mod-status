@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-mod-status/Makefile
+Package: luci-mod-status
+Submenu: 2. Modules
+Version: x
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +luci-base +libiwinfo +libiwinfo-lua
+Menu-Depends: 
+Provides: 
+Build-Depends: iwinfo lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+Section: luci
+Category: LuCI
+Title: LuCI Status Pages
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description: LuCI Status Pages
+
+@@
+
+

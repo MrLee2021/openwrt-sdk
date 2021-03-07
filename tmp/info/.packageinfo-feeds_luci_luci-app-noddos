@@ -1,0 +1,58 @@
+Source-Makefile: package/feeds/luci/luci-app-noddos/Makefile
+Package: luci-app-noddos
+Submenu: 3. Applications
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +luci +noddos
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: Noddos Service Web UI
+Maintainer: Steven Hessing <steven.hessing@gmail.com>
+Source: 
+Type: ipkg
+Feed: luci
+Description:    Provides Web UI for Noddos service.
+Steven Hessing <steven.hessing@gmail.com>
+@@
+
+Package: luci-i18n-noddos-ru
+Default: LUCI_LANG_ru||(ALL&&m)
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread luci-app-noddos
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: luci-app-noddos - ru translation
+Maintainer: Steven Hessing <steven.hessing@gmail.com>
+Source: 
+Type: ipkg
+Hidden: 1
+Feed: luci
+Description:     Translation for luci-app-noddos - Русский (Russian)
+Steven Hessing <steven.hessing@gmail.com>
+@@
+
+Package: luci-i18n-noddos-ja
+Default: LUCI_LANG_ja||(ALL&&m)
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread luci-app-noddos
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: luci-app-noddos - ja translation
+Maintainer: Steven Hessing <steven.hessing@gmail.com>
+Source: 
+Type: ipkg
+Hidden: 1
+Feed: luci
+Description:     Translation for luci-app-noddos - 日本語 (Japanese)
+Steven Hessing <steven.hessing@gmail.com>
+@@
+
+

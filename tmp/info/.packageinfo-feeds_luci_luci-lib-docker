@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-lib-docker/Makefile
+Package: luci-lib-docker
+Submenu: 1. Collections
+Version: x
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @(aarch64||arm||x86_64) +luci-lib-jsonc
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+Section: luci
+Category: LuCI
+Title: LuCI library for docker
+Maintainer: lisaac <lisaac.cn@gmail.com> Florian Eckert <fe@dev.tdt.de>
+Source: 
+Type: ipkg
+Feed: luci
+Description:    Docker Engine API for LuCI
+lisaac <lisaac.cn@gmail.com> Florian Eckert <fe@dev.tdt.de>
+@@
+
+

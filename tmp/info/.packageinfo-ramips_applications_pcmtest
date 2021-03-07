@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/pcmtest/Makefile
+Package: pcmtest
+Submenu: Applications
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +kmod-mtk-pcm
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: PCM Test Command
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   An program to test PCM driver and interface. 
+
+@@
+
+

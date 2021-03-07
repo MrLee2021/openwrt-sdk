@@ -1,0 +1,2 @@
+/etc/strongswan.d/charon/socket-dynamic.conf
+/usr/lib/ipsec/plugins/libstrongswan-socket-dynamic.so

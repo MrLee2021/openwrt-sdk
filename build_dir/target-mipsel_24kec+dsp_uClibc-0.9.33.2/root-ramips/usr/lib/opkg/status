@@ -1,0 +1,1752 @@
+Package: snmp-utils
+Version: 5.4.4-1
+Depends: libc, libnetsnmp
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-eap-identity
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-usb-storage
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-scsi-core, kmod-usb-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-led
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: libuci-lua
+Version: 2014-04-11.1-1
+Depends: libc, libuci, liblua
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: samba36-server
+Version: 3.6.25-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: libc
+Version: 0.9.33.2-1
+Depends: libgcc
+Status: install hold installed
+Essential: yes
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: kmod-l2tp
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ipv6
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: kmod-crypto-user
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-hash, kmod-crypto-manager, kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-mod-curl
+Version: 5.3.2-1
+Depends: libc, strongswan, libcurl
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: opkg
+Version: 9c97d5ecd795709c8584e972bfdf3aee3a5b846d-7
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/opkg.conf f2a12fa3f9b334c36bee8e3fb979b0c1
+Installed-Time: 1612512454
+
+Package: ntpclient
+Version: 2007_365-4
+Depends: libc, librt
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/config/ntpclient 1cf9d075c4e42397f8cd9dbc58864334
+Installed-Time: 1612512455
+
+Package: iperf
+Version: 2.0.5-1
+Depends: libc, uclibcxx
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: wget
+Version: 1.16-1
+Depends: libc, libpcre, libopenssl, librt
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512456
+
+Package: kmod-usb-core
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-nls-base
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: ip
+Version: 3.15.0-1
+Depends: libc, libnl-tiny
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/iproute2/rt_tables a1313318d6778fe6b8c680248ef5a463
+Installed-Time: 1612512453
+
+Package: strongswan-mod-farp
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: libpthread
+Version: 0.9.33.2-1
+Depends: libgcc
+Status: install hold installed
+Essential: yes
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: ubus
+Version: 2014-09-17-4c4f35cf2230d70b9ddd87638ca911e8a563f2f3
+Depends: libc, libubus, libblobmsg-json, ubusd
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: kmod-crypto-manager
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-hash, kmod-crypto-pcompress, kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: kmod-crypto-pcompress
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-constraints
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: strongswan-mod-socket-dynamic
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: busybox
+Version: 1.22.1-3
+Depends: libc
+Status: install user installed
+Essential: yes
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: odhcpd
+Version: 2014-09-25-a6e2953843eaf6c93764f9feef10466e7a84ec85
+Depends: libc, libubox, libuci, libubus
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: ip-full
+Version: 3.15.0-1
+Depends: libc, libnl-tiny
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/iproute2/rt_tables a1313318d6778fe6b8c680248ef5a463
+Installed-Time: 1612512453
+
+Package: kmod-crypto-iv
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-manager, kmod-crypto-rng, kmod-crypto-wq, kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: libubus-lua
+Version: 2014-09-17-4c4f35cf2230d70b9ddd87638ca911e8a563f2f3
+Depends: libc, libubus, liblua
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: kmod-crypto-hash
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: libopenldap
+Version: 2.4.39-1
+Depends: libc, libopenssl, libsasl2, libpthread
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/openldap/ldap.conf 7fac807f65d84394410881bc16f1198a
+Installed-Time: 1612512455
+
+Package: kmod-tun
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: libiwinfo-lua
+Version: 51
+Depends: libc, libiwinfo, liblua
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: kmod-crypto-deflate
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-lib-zlib, kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-mod-sha1
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: strongswan-mod-sha2
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: libiwinfo
+Version: 51
+Depends: libc, libnl-tiny
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+Auto-Installed: yes
+
+Package: kmod-crypto-md5
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-hash, kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: luci-app-samba
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, samba36-server
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: libcurl
+Version: 7.38.0-1
+Depends: libc, libpolarssl
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: openssl-util
+Version: 1.0.2-2
+Depends: libc, libopenssl
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/ssl/openssl.cnf 7df26c55291b33344dc15e3935dabaf3
+Installed-Time: 1612512454
+
+Package: kmod-lib-crc-ccitt
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-mod-agent
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-pkcs11
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: btnd
+Version: 1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-mod-attr-sql
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-charon
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: luci-theme-openwrt
+Version: unknown-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: kmod-ipsec
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-authenc, kmod-crypto-iv, kmod-crypto-des, kmod-crypto-hmac, kmod-crypto-md5, kmod-crypto-sha1, kmod-crypto-deflate, kmod-crypto-cbc
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: libgcrypt
+Version: 1.6.1-1
+Depends: libc, libgpg-error
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: luci-theme-bootstrap
+Version: unknown-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: kmod-pppoe
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ppp, kmod-pppox
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: kmod-pppox
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ppp
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+Auto-Installed: yes
+
+Package: strongswan-mod-openssl
+Version: 5.3.2-1
+Depends: libc, strongswan, libopenssl
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-ipt-conntrack
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ipt-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: base-files
+Version: 156-unknown
+Depends: libc, netifd, procd, jsonfilter
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/hosts 0eea71665fb6890c06421fd13aa3f849
+ /etc/inittab 33da9049fd292d4f373c3df77a50c2dc
+ /etc/group 4a116d818b2f49e14939d581ec786de1
+ /etc/passwd 8a31e6d3e2d67fc7b99f56055e9d802b
+ /etc/shadow e1194594c90be12f82b249ea540cb0da
+ /etc/profile cc981230ccc3b0708270713f7f9dc6b2
+ /etc/shells 725ba6f40dff0612f61ecd3f171bb3e1
+ /etc/sysctl.conf bc01548b9df5cf3efbeaf7ca15a475d1
+ /etc/rc.local 07324b5b651cfb84c49e16b46f336108
+ /etc/sysupgrade.conf f91aef484370cefee501d64b5725c1d2
+ /etc/config/fstab 493b1cda22d1a2dce079271cdc60fb33
+ /etc/config/system 0d4e53488a0a5d2a1d55753e0eeb8fab
+Installed-Time: 1612512453
+
+Package: libpcre
+Version: 8.35-2
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-test-vectors
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: gpio
+Version: 1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: netifd
+Version: 2014-09-08.1-46c569989f984226916fec28dd8ef152a664043e
+Depends: libc, libuci, libnl-tiny, libubus, ubus, ubusd, jshn, libubox
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-ldap
+Version: 5.3.2-1
+Depends: libc, strongswan, libopenldap
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-usb-ohci
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-usb-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-pem
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: dnsmasq
+Version: 2.71-4
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/config/dhcp 326e2116bd9bc3ecc5be4f75cd1e7647
+ /etc/dnsmasq.conf 7cf378e58d3fe5db31f4116a16c15c61
+Installed-Time: 1612512453
+
+Package: strongswan-mod-eap-mschapv2
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-mod-md4, strongswan-mod-des
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: procd
+Version: 2014-09-15-c1a558f7d0c1e6c1ffa5a47d557a7b45205eef1d
+Depends: libc, ubusd, ubus, libjson-script, ubox, libubox, libubus
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: resolveip
+Version: 2
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-eap-md5
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-crypto-hmac
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-manager, kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: ubusd
+Version: 2014-09-17-4c4f35cf2230d70b9ddd87638ca911e8a563f2f3
+Depends: libc, libubox
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan
+Version: 5.3.2-1
+Depends: libc, libpthread, ip, kmod-crypto-authenc, kmod-ipsec, kmod-ipsec4, kmod-ipsec6, kmod-ipt-ipsec, iptables-mod-ipsec
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/ipsec.secrets a5b6a67857e6bcdae7c2c1c07873deb7
+ /etc/strongswan.conf cf3d1b642d68b1af384aa0d8adf31deb
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: reg
+Version: 1
+Depends: libc, kmod-rdm
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: iptables-mod-ipsec
+Version: 1.4.21-1
+Depends: libc, iptables, kmod-ipt-ipsec
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-mod-aes
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: libgpg-error
+Version: 1.12-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: strongswan-mod-pgp
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: strongswan-mod-mysql
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-mod-sql, libmysqlclient-r
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-kernel-libipsec
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: block-mount
+Version: 2015-02-25.1-914b023e71559e033ec5a1f9840511eb1ccaf386
+Depends: libc, ubox, libubox, libuci
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: kmod-fs-vfat
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-nls-base
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-mod-xcbc
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: strongswan-mod-random
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: kmod-usb2
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-usb-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: firewall
+Version: 2014-09-19
+Depends: libc, libubox, libubus, libuci, libip4tc, libip6tc, libxtables, kmod-ipt-core, kmod-ipt-nat
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/config/firewall 9734df4698c5086988ef1b73f5f22f34
+ /etc/firewall.user f482960e5c24821f077e601d9a7f3068
+Installed-Time: 1612512453
+
+Package: libxml2
+Version: 2.9.2-2
+Depends: libc, libpthread, zlib
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: luci-app-firewall
+Version: unknown-1
+Depends: libc, firewall
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-ccm
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-pkcs1
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: libuci
+Version: 2014-04-11.1-1
+Depends: libc, libubox
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: liblua
+Version: 5.1.5-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+Auto-Installed: yes
+
+Package: strongswan-mod-pkcs8
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: libip4tc
+Version: 1.4.21-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: tcpdump
+Version: 4.5.1-4
+Depends: libc, libpcap
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-dnskey
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: kmod-ip6tables
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ipv6, kmod-ipt-core, kmod-ipt-conntrack
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: odhcp6c
+Version: 2014-12-10-722226c4f1d45c8bf4ac9189523738abcf7d648f
+Depends: libc, kmod-ipv6
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: fstools
+Version: 2015-02-25.1-914b023e71559e033ec5a1f9840511eb1ccaf386
+Depends: libc, ubox
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-utils
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: kmod-rdm
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: uci
+Version: 2014-04-11.1-1
+Depends: libc, libuci
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: lua
+Version: 5.1.5-1
+Depends: libc, liblua
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-hmac
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: ppp-mod-pppol2tp
+Version: 2.4.7-2
+Depends: libc, kmod-pppol2tp
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: dropbear
+Version: 2014.63-2
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/dropbear/dropbear_rsa_host_key d41d8cd98f00b204e9800998ecf8427e
+ /etc/dropbear/dropbear_dss_host_key d41d8cd98f00b204e9800998ecf8427e
+ /etc/config/dropbear 4ff9c827d4f95ca5082a5520c03e1419
+Installed-Time: 1612512453
+
+Package: curl
+Version: 7.38.0-1
+Depends: libc, libcurl
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: kmod-nls-utf8
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-nls-base
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: luci-theme-openwrt-2020
+Version: unknown-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-xauth-eap
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512456
+
+Package: strongswan-charon
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: xl2tpd
+Version: 1.3.6-5619e1771048e74b729804e8602f409af0f3faea
+Depends: libc, ppp-mod-pppol2tp, ip, resolveip
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/xl2tpd/xl2tpd.conf 2b7437f34b14c70b6b29383d0a6197ed
+ /etc/xl2tpd/xl2tp-secrets dc2b1ed627a89d3debb3c731da45d47b
+ /etc/ppp/options.xl2tpd bbfab931864b3db617c38e96071cf4b6
+Installed-Time: 1612512456
+
+Package: luci-app-vsftpd
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, vsftpd
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-nls-cp437
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-nls-base
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: mtd
+Version: 20
+Depends: libc, libubox
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-duplicheck
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-crypto-cbc
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-manager, kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: kmod-crypto-core
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-eap-radius
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: libjson-c
+Version: 0.11-2
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: libgcc
+Version: 4.8-linaro-1
+Status: install hold installed
+Essential: yes
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-des
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: uci2dat
+Version: 1
+Depends: libc, libuci
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-crypto-authenc
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-manager, kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: watchdog
+Version: 1
+Depends: libc, kmod-hw_wdg
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-uci
+Version: 5.3.2-1
+Depends: libc, strongswan, libuci
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-fips-prf
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-mod-sha1
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: libip6tc
+Version: 1.4.21-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: luci-app-ipsec-vpnd
+Version: 0.12+git-16.038.38474-0d510b2-1
+Depends: libc, strongswan, strongswan-minimal, strongswan-mod-xauth-generic, strongswan-mod-kernel-libipsec
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: luci-proto-ppp
+Version: unknown-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-socket-default
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: kmod-crypto-wq
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-blowfish
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: luci-mod-admin-full
+Version: unknown-1
+Depends: libc, luci-base
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: ppp
+Version: 2.4.7-2
+Depends: libc, kmod-ppp
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/ppp/chap-secrets e29cbe6021f13bd9b14d780a80f188ab
+ /etc/ppp/filter 16b01d9201be60c9d1f16dd98f449484
+ /etc/ppp/options 77741c792e70b6c733e6b09be0abfecc
+Installed-Time: 1612512454
+
+Package: strongswan-mod-resolve
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: libubox
+Version: 2014-08-04-dffbc09baf71b294185a36048166d00066d433b5
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: luci-base
+Version: unknown-1
+Depends: libc, lua, libuci-lua, libubus-lua
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/config/luci f5cecb0ba00886173676c81239b1bdc2
+Installed-Time: 1612512454
+
+Package: strongswan-mod-pubkey
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: snmpd
+Version: 5.4.4-1
+Depends: libc, libnetsnmp
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/default/snmpd 5f2dc66258ba06b7590a6aea030d5093
+ /etc/config/snmpd 10ac0e4dae63dbf9be2cc328d58cf99e
+Installed-Time: 1612512455
+
+Package: liblzo
+Version: 2.08-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-ha
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: librt
+Version: 0.9.33.2-1
+Depends: libpthread
+Status: install hold installed
+Essential: yes
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: libjson-script
+Version: 2014-08-04-dffbc09baf71b294185a36048166d00066d433b5
+Depends: libc, libubox
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-kernel-netlink
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: strongswan-mod-load-tester
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: luci-proto-ipv6
+Version: unknown-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: uclibcxx
+Version: 0.2.4-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: libblobmsg-json
+Version: 2014-08-04-dffbc09baf71b294185a36048166d00066d433b5
+Depends: libc, libjson-c, libubox
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-gcm
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-gcrypt
+Version: 5.3.2-1
+Depends: libc, strongswan, libgcrypt
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-mt7628
+Version: 3.10.14+p4rev-120395-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: iptables
+Version: 1.4.21-1
+Depends: libc, kmod-ipt-core, libip4tc, libip6tc, libxtables
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: kmod-ipt-nathelper
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ipt-core, kmod-ipt-nat
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: openvpn-openssl
+Version: 2.3.6-2
+Depends: libc, kmod-tun, liblzo, libopenssl
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/config/openvpn c9fa77e14cd0f209e9d6abe103925728
+Installed-Time: 1612512454
+
+Package: kmod-fs-ntfs
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-nls-base
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: kmod-crypto-des
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: jshn
+Version: 2014-08-04-dffbc09baf71b294185a36048166d00066d433b5
+Depends: libc, libjson-c, libubox, libblobmsg-json
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: kmod-ipt-core
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: libpcap
+Version: 1.5.3-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: kmod-ipv6
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: kmod-ipt-ipsec
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ipt-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: libpolarssl
+Version: 1.3.9-2
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: kmod-ppp
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-lib-crc-ccitt, kmod-slhc
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: openvpn-easy-rsa
+Version: 2013-01-30-2
+Depends: libc, openssl-util
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/easy-rsa/keys/serial 0ade138937c4b9cb36a28e2edb6485fc
+ /etc/easy-rsa/keys/index.txt d41d8cd98f00b204e9800998ecf8427e
+ /etc/easy-rsa/vars 3a5c2124a181dc24a0aed0a0d76d2514
+Installed-Time: 1612512454
+
+Package: strongswan-mod-smp
+Version: 5.3.2-1
+Depends: libc, strongswan, libxml2
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-default
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-charon, strongswan-mod-aes, strongswan-mod-attr, strongswan-mod-constraints, strongswan-mod-des, strongswan-mod-dnskey, strongswan-mod-fips-prf, strongswan-mod-gmp, strongswan-mod-hmac, strongswan-mod-kernel-netlink, strongswan-mod-md5, strongswan-mod-nonce, strongswan-mod-pem, strongswan-mod-pgp, strongswan-mod-pkcs1, strongswan-mod-pubkey, strongswan-mod-random, strongswan-mod-resolve, strongswan-mod-revocation, strongswan-mod-sha1, strongswan-mod-sha2, strongswan-mod-socket-default, strongswan-mod-stroke, strongswan-mod-updown, strongswan-mod-x509, strongswan-mod-xauth-generic, strongswan-mod-xcbc, strongswan-utils
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-updown
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: libubus
+Version: 2014-09-17-4c4f35cf2230d70b9ddd87638ca911e8a563f2f3
+Depends: libc, libubox
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-addrblock
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: uhttpd
+Version: 2014-10-27-fd8e5e379c23c5fbcec3e76894b839233df09067
+Depends: libc, libubox
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/config/uhttpd 76707e34feb9eca63bd06fed926efd8d
+Installed-Time: 1612512454
+Auto-Installed: yes
+
+Package: kmod-iptunnel4
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: kmod-iptunnel6
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ipv6
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: kmod-ipsec4
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ipsec, kmod-iptunnel4
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: kmod-ipsec6
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ipsec, kmod-iptunnel6
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-mod-nonce
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: strongswan-mod-xauth-generic
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: libxtables
+Version: 1.4.21-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: ip6tables
+Version: 1.4.21-1
+Depends: libc, kmod-ip6tables, iptables
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: zlib
+Version: 1.2.8-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+Auto-Installed: yes
+
+Package: ated
+Version: 1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: kmod-nls-cp850
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-nls-base
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: luci-lib-nixio
+Version: unknown-1
+Depends: libc, luci-base
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-x509
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: luci-i18n-chinese
+Version: unknown-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-unity
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-nls-iso8859-15
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-nls-base
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-mod-coupling
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-hw_wdg
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: kmod-nls-iso8859-1
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-nls-base
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-sqlite
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-mod-sql, libsqlite3
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-crypto-rng
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: luci
+Version: unknown-1
+Depends: libc, uhttpd, uhttpd-mod-ubus, luci-mod-admin-full, luci-theme-bootstrap, luci-app-firewall, luci-proto-ppp, libiwinfo-lua, luci-lib-nixio
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-dhcp
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-scsi-generic
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-scsi-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: libgmp
+Version: 6.0.0-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: libsqlite3
+Version: 3080704-1
+Depends: libc, libpthread
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-sql
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: 8021xd
+Version: 1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-mod-stroke
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-utils
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: libmysqlclient-r
+Version: 5.1.73-1
+Depends: libc, uclibcxx, zlib, libpthread
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: strongswan-mod-attr
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: eth_mac
+Version: 1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: switch
+Version: 1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-af-alg
+Version: 5.3.2-1
+Depends: libc, strongswan, kmod-crypto-user
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: ubox
+Version: 2015-02-25.1-31f0ff358b360ee461d845c1b3b5e5d38fa27925
+Depends: libc, libubox, ubusd, ubus, libubus, libuci
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: kernel
+Version: 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9
+Depends: libc
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: libnl-tiny
+Version: 0.1-3
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-revocation
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: kmod-lib-zlib
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: libnetsnmp
+Version: 5.4.4-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-nls-base
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-whitelist
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512456
+
+Package: luci-i18n-english
+Version: unknown-1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: uhttpd-mod-ubus
+Version: 2014-10-27-fd8e5e379c23c5fbcec3e76894b839233df09067
+Depends: libc, uhttpd, libubus, libblobmsg-json
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+Auto-Installed: yes
+
+Package: strongswan-mod-ctr
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: libsasl2
+Version: 2.1.23-2
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: jsonfilter
+Version: 2014-06-19-cdc760c58077f44fc40adbbe41e1556a67c1b9a9
+Depends: libc, libubox, libjson-c
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-minimal
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-charon, strongswan-mod-aes, strongswan-mod-gmp, strongswan-mod-hmac, strongswan-mod-kernel-netlink, strongswan-mod-nonce, strongswan-mod-pubkey, strongswan-mod-random, strongswan-mod-sha1, strongswan-mod-socket-default, strongswan-mod-stroke, strongswan-mod-updown, strongswan-mod-x509, strongswan-mod-xcbc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: wireless-tools
+Version: 29-5
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: kmod-crypto-sha1
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-crypto-hash, kmod-crypto-core
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+
+Package: strongswan-mod-gmp
+Version: 5.3.2-1
+Depends: libc, strongswan, libgmp
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: vsftpd
+Version: 3.0.2-6
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Conffiles:
+ /etc/vsftpd.conf b6ebd1212ac6733bc110bd0b2f506132
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: kmod-pppol2tp
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ppp, kmod-pppox, kmod-l2tp
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: libopenssl
+Version: 1.0.2-2
+Depends: libc, zlib
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: kmod-scsi-core
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9)
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: kmod-slhc
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-lib-crc-ccitt
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+Auto-Installed: yes
+
+Package: mii_mgr
+Version: 1
+Depends: libc
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-cmac
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+
+Package: ppp-mod-pppoe
+Version: 2.4.7-2
+Depends: libc, kmod-pppoe
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512454
+
+Package: strongswan-mod-md4
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+
+Package: kmod-ipt-nat
+Version: 3.10.14-1
+Depends: kernel (= 3.10.14-1-eca459a79299f983bcba4f0ae5ecb0f9), kmod-ipt-core, kmod-ipt-conntrack
+Status: install hold installed
+Architecture: ramips_24kec
+Installed-Time: 1612512453
+Auto-Installed: yes
+
+Package: strongswan-mod-md5
+Version: 5.3.2-1
+Depends: libc, strongswan
+Status: install user installed
+Architecture: ramips_24kec
+Installed-Time: 1612512455
+Auto-Installed: yes
+

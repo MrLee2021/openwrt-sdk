@@ -1,0 +1,1 @@
+cmd_crypto/authenc.ko := mipsel-openwrt-linux-uclibc-ld -r  -m elf32ltsmip -T /home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/linux-ramips_mt7628/linux-3.10.14/scripts/module-common.lds --build-id  -o crypto/authenc.ko crypto/authenc.o crypto/authenc.mod.o

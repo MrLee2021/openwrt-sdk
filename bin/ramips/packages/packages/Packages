@@ -1,0 +1,1242 @@
+Package: libgcrypt
+Version: 1.6.1-1
+Depends: libc, libgpg-error
+Source: feeds/packages/libs/libgcrypt
+Section: libs
+Maintainer: W. Michael Petullo <mike@flyn.org>
+Architecture: ramips_24kec
+Installed-Size: 300338
+Filename: libgcrypt_1.6.1-1_ramips_24kec.ipk
+Size: 298365
+MD5Sum: 53a7ed5714ea01a17cc7cd3f737c2103
+SHA256sum: 75583a6ca3337f1d983b99a57155c692b86087500b50d2670f0d50cb188bde5d
+Description:  This is a general purpose cryptographic library based on the code from
+ GnuPG. It provides functions for all cryptograhic building blocks:
+ symmetric ciphers (AES, DES, Arcfour, CAST5), hash algorithms (MD5, SHA-1,
+ RIPE-MD160, SHA-224/256, SHA-384/512), MACs (HMAC for all hash
+ algorithms), public key algorithms (RSA, DSA), large integer functions,
+ random numbers and a lot of supporting functions. Some algorithms have
+ been disabled to reduce size (Blowfish, Twofish, Serpent,
+ RC2, SEED, Camellia, CRC, MD4, TIGER-192, Whirlpool, ElGamal, ECC).
+
+Package: libgpg-error
+Version: 1.12-1
+Depends: libc
+Source: feeds/packages/libs/libgpg-error
+Section: libs
+Maintainer: W. Michael Petullo <mike@flyn.org>
+Architecture: ramips_24kec
+Installed-Size: 5670
+Filename: libgpg-error_1.12-1_ramips_24kec.ipk
+Size: 6383
+MD5Sum: b86d974aeaeb91be8b2cf1936636afa5
+SHA256sum: c79b07b83dbbb43b24abe6f5b20d54fd6a8ec818576918c3082cf605536cec62
+Description:  An helper library for common error codes and descriptions.
+ This is a library that defines common error values for all GnuPG
+ components. Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt,
+ Libksba, DirMngr, Pinentry, SmartCard Daemon and possibly more in the
+ future.
+
+Package: libnetsnmp
+Version: 5.4.4-1
+Depends: libc
+Source: feeds/packages/net/net-snmp
+License: MIT BSD-3-Clause-Clear
+Section: libs
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 331923
+Filename: libnetsnmp_5.4.4-1_ramips_24kec.ipk
+Size: 332563
+MD5Sum: 0ffbb4d16f8da74875d382de0b4cea92
+SHA256sum: be037da2391384e70ae6a50cd14247a298f31db541e3f43e6cacb7864b794694
+Description:  Simple Network Management Protocol (SNMP) is a widely used protocol for
+ monitoring the health and welfare of network equipment (eg. routers),
+ computer equipment and even devices like UPSs. Net-SNMP is a suite of
+ applications used to implement SNMP v1, SNMP v2c and SNMP v3 using both
+ IPv4 and IPv6.
+ .
+ This package contains shared libraries, needed by other programs.
+
+Package: libpcre
+Version: 8.35-2
+Depends: libc
+Source: feeds/packages/libs/pcre
+License: BSD-3c
+LicenseFiles: LICENCE
+Section: libs
+Maintainer: Thomas Heil <heil@terminal-consulting.de>
+Architecture: ramips_24kec
+Installed-Size: 83244
+Filename: libpcre_8.35-2_ramips_24kec.ipk
+Size: 83859
+MD5Sum: 654e00c28455c81cc61b38a09a0a33ed
+SHA256sum: 24a7d6d78f0373a6cabb249a66b8bc69db3257ee784e160b3e9699631ec06bc4
+Description:  A Perl Compatible Regular Expression library
+
+Package: libsqlite3
+Version: 3080704-1
+Depends: libc, libpthread
+Source: feeds/packages/libs/sqlite3
+License: PUBLICDOMAIN
+Section: libs
+Maintainer: Etienne CHAMPETIER <champetier.etienne@gmail.com>
+Architecture: ramips_24kec
+Installed-Size: 366528
+Filename: libsqlite3_3080704-1_ramips_24kec.ipk
+Size: 366717
+MD5Sum: 977053368f131c9da74da43a7b262a33
+SHA256sum: da784fd028552caa5885ec3be02fa900905565349366dc54fa2414b44148d2ea
+Description:  SQLite is a small C library that implements a self-contained, embeddable,
+ zero-configuration SQL database engine.
+ This package contains the SQLite (v3.x) shared library, used by other
+ programs.
+
+Package: libxml2
+Version: 2.9.2-2
+Depends: libc, libpthread, zlib
+Source: feeds/packages/libs/libxml2
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: ramips_24kec
+Installed-Size: 499005
+Filename: libxml2_2.9.2-2_ramips_24kec.ipk
+Size: 497130
+MD5Sum: 78a3371695e18b65f3f73a41024608cc
+SHA256sum: 4028e2d9138718a10a0f638f1134cf534223aa5754e5e04ff13d0d2b5f70572a
+Description:  A library for manipulating XML and HTML resources.
+
+Package: snmp-utils
+Version: 5.4.4-1
+Depends: libc, libnetsnmp
+Source: feeds/packages/net/net-snmp
+License: MIT BSD-3-Clause-Clear
+Section: net
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 15386
+Filename: snmp-utils_5.4.4-1_ramips_24kec.ipk
+Size: 16142
+MD5Sum: 865f4510cb9e9b04d228877000c30b54
+SHA256sum: 5d9b11196de9392b42aa81919ff87e9dd81141175a19d70a534c1781b1ffe4cb
+Description:  Simple Network Management Protocol (SNMP) is a widely used protocol for
+ monitoring the health and welfare of network equipment (eg. routers),
+ computer equipment and even devices like UPSs. Net-SNMP is a suite of
+ applications used to implement SNMP v1, SNMP v2c and SNMP v3 using both
+ IPv4 and IPv6.
+ .
+ This package contains SNMP client utilities.
+
+Package: snmpd
+Version: 5.4.4-1
+Depends: libc, libnetsnmp
+Source: feeds/packages/net/net-snmp
+License: MIT BSD-3-Clause-Clear
+Section: net
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 8853
+Filename: snmpd_5.4.4-1_ramips_24kec.ipk
+Size: 9691
+MD5Sum: 61ff50030a93a273b9977b8ef021fbe0
+SHA256sum: 3077ede55ed4d57d7c0072faa61344ecae5ca0f6a9253d9818a21c6806d2008d
+Description:  Simple Network Management Protocol (SNMP) is a widely used protocol for
+ monitoring the health and welfare of network equipment (eg. routers),
+ computer equipment and even devices like UPSs. Net-SNMP is a suite of
+ applications used to implement SNMP v1, SNMP v2c and SNMP v3 using both
+ IPv4 and IPv6.
+ .
+ This package contains the SNMP agent, dynamically linked.
+
+Package: strongswan-charon
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 184614
+Filename: strongswan-charon_5.3.2-1_ramips_24kec.ipk
+Size: 185006
+MD5Sum: 053f1ab87472fa18564dcb4ce9ef760c
+SHA256sum: b281f4dfb4be0fa4b7ee28342ebc261f1c4c6b09a0ba5c5ac10a149bcc6184ea
+Description:  StrongSwan is an OpenSource IPsec implementation for the Linux operating system.
+ This package contains charon, an IKEv2 keying daemon.
+
+Package: strongswan-default
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-charon, strongswan-mod-aes, strongswan-mod-attr, strongswan-mod-constraints, strongswan-mod-des, strongswan-mod-dnskey, strongswan-mod-fips-prf, strongswan-mod-gmp, strongswan-mod-hmac, strongswan-mod-kernel-netlink, strongswan-mod-md5, strongswan-mod-nonce, strongswan-mod-pem, strongswan-mod-pgp, strongswan-mod-pkcs1, strongswan-mod-pubkey, strongswan-mod-random, strongswan-mod-resolve, strongswan-mod-revocation, strongswan-mod-sha1, strongswan-mod-sha2, strongswan-mod-socket-default, strongswan-mod-stroke, strongswan-mod-updown, strongswan-mod-x509, strongswan-mod-xauth-generic, strongswan-mod-xcbc, strongswan-utils
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 104
+Filename: strongswan-default_5.3.2-1_ramips_24kec.ipk
+Size: 908
+MD5Sum: 009087247dd889ce4d5e7b48cac41c52
+SHA256sum: e3dfe6ea438afec05c8bf18a9bd61439ac619ebe53c112d87b92a066c4f8d592
+Description:  StrongSwan is an OpenSource IPsec implementation for the Linux operating system.
+ This meta-package contains only dependencies to match upstream defaults.
+
+Package: strongswan-minimal
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-charon, strongswan-mod-aes, strongswan-mod-gmp, strongswan-mod-hmac, strongswan-mod-kernel-netlink, strongswan-mod-nonce, strongswan-mod-pubkey, strongswan-mod-random, strongswan-mod-sha1, strongswan-mod-socket-default, strongswan-mod-stroke, strongswan-mod-updown, strongswan-mod-x509, strongswan-mod-xcbc
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 105
+Filename: strongswan-minimal_5.3.2-1_ramips_24kec.ipk
+Size: 838
+MD5Sum: 7740c641d7076f5e3ebf1d76617aa4ea
+SHA256sum: a4183974b0703d22fc4c5a66e8b4b44a501eda494da1a38a19104223a4fa1948
+Description:  StrongSwan is an OpenSource IPsec implementation for the Linux operating system.
+ This meta-package contains only dependencies for a minimal IKEv2 setup.
+
+Package: strongswan-mod-addrblock
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2746
+Filename: strongswan-mod-addrblock_5.3.2-1_ramips_24kec.ipk
+Size: 3335
+MD5Sum: bee6556b3033a2eff51517ae1a3afee9
+SHA256sum: f697b0a559f81150ecf4f13382d666e55ef71da6bbe8bd7f20cdca53057628db
+Description:  StrongSwan RFC 3779 address block constraint support plugin
+
+Package: strongswan-mod-aes
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 15839
+Filename: strongswan-mod-aes_5.3.2-1_ramips_24kec.ipk
+Size: 15828
+MD5Sum: 0ab144339653d1cbd6f0940b865d5e45
+SHA256sum: da5880a6bddda53b47d9c1a9a2aefc54dc35aa555cf4acaced61480d9f833ebe
+Description:  StrongSwan AES crypto plugin
+
+Package: strongswan-mod-af-alg
+Version: 5.3.2-1
+Depends: libc, strongswan, kmod-crypto-user
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 5411
+Filename: strongswan-mod-af-alg_5.3.2-1_ramips_24kec.ipk
+Size: 6038
+MD5Sum: e027a959223da5381cecbcd4562db8b5
+SHA256sum: 1f2fef96b1981e8cf98245abef2ef0faccd3ce831adc9e2b938c6eb8ca580526
+Description:  StrongSwan AF_ALG crypto interface to Linux Crypto API plugin
+
+Package: strongswan-mod-agent
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3890
+Filename: strongswan-mod-agent_5.3.2-1_ramips_24kec.ipk
+Size: 4463
+MD5Sum: 45a47e53ee4ade2b8d90d0c81cd75734
+SHA256sum: dfbca7cad92f84684fe16674fa762c7f2438ebfae264d25546f6824fa3367b1b
+Description:  StrongSwan SSH agent signing plugin
+
+Package: strongswan-mod-attr-sql
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-charon
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 17047
+Filename: strongswan-mod-attr-sql_5.3.2-1_ramips_24kec.ipk
+Size: 17685
+MD5Sum: 2d8f0d191ee746c32c1117d4ace0e6c3
+SHA256sum: 4ba63b08cde25b478afa4c55ac221c5aa9e7800333785f7e3a645330d9c8aa1c
+Description:  StrongSwan SQL based config plugin
+
+Package: strongswan-mod-attr
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3771
+Filename: strongswan-mod-attr_5.3.2-1_ramips_24kec.ipk
+Size: 4348
+MD5Sum: fc5dd9b3541f17fb0a8de8008990d8d0
+SHA256sum: 4dff00d1cbc4e12b4eda6d9491a0f22dae84dc06c2d388ab9461f7b73b8acc33
+Description:  StrongSwan file based config plugin
+
+Package: strongswan-mod-blowfish
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 7858
+Filename: strongswan-mod-blowfish_5.3.2-1_ramips_24kec.ipk
+Size: 8496
+MD5Sum: c40dd866a17355b660946dfd0e927b48
+SHA256sum: ffb88c82e268aa949cbbb9e1b1ad1867d60de27ba1a82fe759d492fb2aae166d
+Description:  StrongSwan Blowfish crypto plugin
+
+Package: strongswan-mod-ccm
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3550
+Filename: strongswan-mod-ccm_5.3.2-1_ramips_24kec.ipk
+Size: 4124
+MD5Sum: facd276343f9c1fb02a5ee1098d0fcec
+SHA256sum: f1ce7ca668f64c2b293299609694034838beb05586be4d06cbcbba823f3200d2
+Description:  StrongSwan CCM AEAD wrapper crypto plugin
+
+Package: strongswan-mod-cmac
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3309
+Filename: strongswan-mod-cmac_5.3.2-1_ramips_24kec.ipk
+Size: 3880
+MD5Sum: 63ecd04fb37b399f4d3f763d29dc7ace
+SHA256sum: fe5a6e851bfd56d510c11fe7ef23c229605d96897d9edd1e841f8a3f9a843312
+Description:  StrongSwan CMAC crypto plugin
+
+Package: strongswan-mod-constraints
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 4645
+Filename: strongswan-mod-constraints_5.3.2-1_ramips_24kec.ipk
+Size: 5222
+MD5Sum: 55ff4b2a7904e74c0cd5417f1e2a075b
+SHA256sum: 9bd4db9dc1c5c4d36f7d4a22a77a41015182e4331de784ef9f63c3ed050027eb
+Description:  StrongSwan advanced X509 constraint checking plugin
+
+Package: strongswan-mod-coupling
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3205
+Filename: strongswan-mod-coupling_5.3.2-1_ramips_24kec.ipk
+Size: 3815
+MD5Sum: f6923a2e88f75fb909dbec6f8014a293
+SHA256sum: 305b536eeab4778580256a0e14fb35867051a52672a0ef499c7f62f63d5b7a48
+Description:  StrongSwan IKEv2 plugin to couple peer certificates permanently to authentication plugin
+
+Package: strongswan-mod-ctr
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2416
+Filename: strongswan-mod-ctr_5.3.2-1_ramips_24kec.ipk
+Size: 2989
+MD5Sum: 4c3d26ff9b103f90b6cf6dee3b047534
+SHA256sum: b77bd2f8b3509565154b4fc4c8292f8d5404e5a4dd95fb6f2f573d799fdec308
+Description:  StrongSwan Counter Mode wrapper crypto plugin
+
+Package: strongswan-mod-curl
+Version: 5.3.2-1
+Depends: libc, strongswan, libcurl
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3633
+Filename: strongswan-mod-curl_5.3.2-1_ramips_24kec.ipk
+Size: 4210
+MD5Sum: d0d1b89a31dbd21ed11bcf5b7e82dba2
+SHA256sum: 03e1d157d5e9242e464ac4303c517b21c57832ba3b51ce3031cb62e91b5091eb
+Description:  StrongSwan cURL fetcher plugin plugin
+
+Package: strongswan-mod-des
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 8566
+Filename: strongswan-mod-des_5.3.2-1_ramips_24kec.ipk
+Size: 9153
+MD5Sum: 91758d5ad1d7aa2c781f5bca236e8e04
+SHA256sum: feac3455ab9b91f7b7c8cd5fff21bf07b9fb7ca0758313a18fdd9bed61a8f2ad
+Description:  StrongSwan DES crypto plugin
+
+Package: strongswan-mod-dhcp
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 7229
+Filename: strongswan-mod-dhcp_5.3.2-1_ramips_24kec.ipk
+Size: 7832
+MD5Sum: 3c387526b1156531e329ac63983b6e74
+SHA256sum: 8fb4f32225c8399e57d3fbc1e07bde6b4ea7750b2ac17b7cd99a725241538420
+Description:  StrongSwan DHCP based attribute provider plugin
+
+Package: strongswan-mod-dnskey
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2553
+Filename: strongswan-mod-dnskey_5.3.2-1_ramips_24kec.ipk
+Size: 3138
+MD5Sum: 830e8a9de253de23433b390a72b85ffa
+SHA256sum: 28fcf49e621d14e68a0ccb9df18328f31ccb8397fbaa1429c81c69dc2a527ca4
+Description:  StrongSwan DNS RR key decoding plugin
+
+Package: strongswan-mod-duplicheck
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 5206
+Filename: strongswan-mod-duplicheck_5.3.2-1_ramips_24kec.ipk
+Size: 5809
+MD5Sum: 13d6e0fe33e7fde58086e5ba0afcf9d1
+SHA256sum: d2702883fc2db1243e69ff0866fc55a6dbc70a06a7807d2cd5f3a3c9f773cffc
+Description:  StrongSwan advanced duplicate checking plugin
+
+Package: strongswan-mod-eap-identity
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2267
+Filename: strongswan-mod-eap-identity_5.3.2-1_ramips_24kec.ipk
+Size: 2844
+MD5Sum: bee2319edeae21516514d8f5d22c5e96
+SHA256sum: 9bbc545680593a66d93347c056f2d498757a61e949846fcd941950e1e4888eea
+Description:  StrongSwan EAP identity helper plugin
+
+Package: strongswan-mod-eap-md5
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3163
+Filename: strongswan-mod-eap-md5_5.3.2-1_ramips_24kec.ipk
+Size: 3744
+MD5Sum: e7c392ed481e4c242bcd924e977838f5
+SHA256sum: 95c571066f4c899424bd62d9e6c1c9bf7af5faa17d2544433b868f163b7e00a4
+Description:  StrongSwan EAP MD5 (CHAP) EAP auth plugin
+
+Package: strongswan-mod-eap-mschapv2
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-mod-md4, strongswan-mod-des
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 8579
+Filename: strongswan-mod-eap-mschapv2_5.3.2-1_ramips_24kec.ipk
+Size: 9197
+MD5Sum: 0595a82ea7df99f973fe730142037c25
+SHA256sum: a7760d90471b0768bf8604e11d5c6972f3ce2416a3ae93e5f70f6e6c86e80ba0
+Description:  StrongSwan EAP MS-CHAPv2 EAP auth plugin
+
+Package: strongswan-mod-eap-radius
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 28412
+Filename: strongswan-mod-eap-radius_5.3.2-1_ramips_24kec.ipk
+Size: 29007
+MD5Sum: a5fc25a70c50e959c2d0a1dcc132e98f
+SHA256sum: e1400adf59c21330c7c014dba433c7496c524103952fb4e3b2e945705d87607e
+Description:  StrongSwan EAP RADIUS auth plugin
+
+Package: strongswan-mod-farp
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3280
+Filename: strongswan-mod-farp_5.3.2-1_ramips_24kec.ipk
+Size: 3847
+MD5Sum: 90dee1f2c2d1b5b4db6f9ce311ea06b0
+SHA256sum: 3e4c3a5fdf505d22aad2d5d3b4bab5e768005e5d9f6aac4a4ab105fd3c7faafc
+Description:  StrongSwan fake arp respsonses plugin
+
+Package: strongswan-mod-fips-prf
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-mod-sha1
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2575
+Filename: strongswan-mod-fips-prf_5.3.2-1_ramips_24kec.ipk
+Size: 3158
+MD5Sum: fd5c614e97f8008cf97d6bf41298576e
+SHA256sum: 3b8c9ff912f78720cf77b75a9f40a2a10b0a217df17860723709ec5b5d3afb18
+Description:  StrongSwan FIPS PRF crypto plugin
+
+Package: strongswan-mod-gcm
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3766
+Filename: strongswan-mod-gcm_5.3.2-1_ramips_24kec.ipk
+Size: 4346
+MD5Sum: 028ae939469cbedcf29c9e86deb968e8
+SHA256sum: 4e334b6617be07827e1d50bdd0b5b064856662e833bcd98d7529ef403f02b5f9
+Description:  StrongSwan GCM AEAD wrapper crypto plugin
+
+Package: strongswan-mod-gcrypt
+Version: 5.3.2-1
+Depends: libc, strongswan, libgcrypt
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 10387
+Filename: strongswan-mod-gcrypt_5.3.2-1_ramips_24kec.ipk
+Size: 10958
+MD5Sum: 240d912b844b831adcac301b8792d3bf
+SHA256sum: 09105ab14b7f4e695d6e80be514758249de9bc3feb62f957fd9ede3b4d9b29ed
+Description:  StrongSwan libgcrypt plugin
+
+Package: strongswan-mod-gmp
+Version: 5.3.2-1
+Depends: libc, strongswan, libgmp
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 10024
+Filename: strongswan-mod-gmp_5.3.2-1_ramips_24kec.ipk
+Size: 10635
+MD5Sum: b1e76a29115f700219e6bf5f6ddc59e9
+SHA256sum: fffc75678a43c559c7a0e6732b773138e980d24828707b71d63002b2121a2c50
+Description:  StrongSwan libgmp plugin
+
+Package: strongswan-mod-ha
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 20868
+Filename: strongswan-mod-ha_5.3.2-1_ramips_24kec.ipk
+Size: 21441
+MD5Sum: fa874e9ea75b0e741bd797c06b12dc29
+SHA256sum: bb904d0fc618c4293c524607ccae88a6ed1340f9c9f30f347e8e53c245b770df
+Description:  StrongSwan high availability cluster plugin
+
+Package: strongswan-mod-hmac
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2521
+Filename: strongswan-mod-hmac_5.3.2-1_ramips_24kec.ipk
+Size: 3094
+MD5Sum: 2565f7846219044a7887053864323dfb
+SHA256sum: 472e30a503cbe06b8345f368337e4343b6b714d9136bcc5fe8fe041e301b3bb1
+Description:  StrongSwan HMAC crypto plugin
+
+Package: strongswan-mod-kernel-libipsec
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 18996
+Filename: strongswan-mod-kernel-libipsec_5.3.2-1_ramips_24kec.ipk
+Size: 19608
+MD5Sum: 546d8f7762352a8d2b1d65276f370c16
+SHA256sum: d3c65018a507404306ba4742ac815e75a7b291bfa33805467290499fe11e0ce5
+Description:  StrongSwan libipsec kernel interface plugin
+
+Package: strongswan-mod-kernel-netlink
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 28671
+Filename: strongswan-mod-kernel-netlink_5.3.2-1_ramips_24kec.ipk
+Size: 29242
+MD5Sum: 193947b3dbaec3eceb5d376098add9d7
+SHA256sum: 3339e55107eac043313cf3a2db30c9ba9c15fe066377583f098eda7a02334bf5
+Description:  StrongSwan netlink kernel interface plugin
+
+Package: strongswan-mod-ldap
+Version: 5.3.2-1
+Depends: libc, strongswan, libopenldap
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2728
+Filename: strongswan-mod-ldap_5.3.2-1_ramips_24kec.ipk
+Size: 3305
+MD5Sum: adf15ace8deb52c6f238b73374993e34
+SHA256sum: aa46d6d0e6ee8c3bf61a291e9e442ba622c59a9f03d2eb797ae5dd6543867686
+Description:  StrongSwan LDAP plugin
+
+Package: strongswan-mod-led
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2910
+Filename: strongswan-mod-led_5.3.2-1_ramips_24kec.ipk
+Size: 3486
+MD5Sum: ecaaae6a13bb8eb1ea7ba23beb14e41a
+SHA256sum: e1f2188e41e7d9107989e7420abf9f3227fcb09406116860ead5685b29f4ff39
+Description:  StrongSwan LED blink on IKE activity plugin
+
+Package: strongswan-mod-load-tester
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 13127
+Filename: strongswan-mod-load-tester_5.3.2-1_ramips_24kec.ipk
+Size: 13741
+MD5Sum: 3a982fd6dccef22779c248c47af6e245
+SHA256sum: 2f1e5566d24803263c70cf74c938bbdee5cc9d4c155ad55479427fbe7ee14843
+Description:  StrongSwan load testing plugin
+
+Package: strongswan-mod-md4
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3171
+Filename: strongswan-mod-md4_5.3.2-1_ramips_24kec.ipk
+Size: 3745
+MD5Sum: b665e0cd4ff189088e2e50f83e27f5b0
+SHA256sum: 19c8c6e31c64eb54ba84592a3f1b8ff751a2c1765cd9dabd8ea6b3d2520604ec
+Description:  StrongSwan MD4 crypto plugin
+
+Package: strongswan-mod-md5
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 4204
+Filename: strongswan-mod-md5_5.3.2-1_ramips_24kec.ipk
+Size: 4758
+MD5Sum: 6ae44cb975cf9ac7229acb7eee8a1a8d
+SHA256sum: 2b52c2291db4098e891cb4c4a7abc460d57aa54ed23bd77467ed14680d684068
+Description:  StrongSwan MD5 crypto plugin
+
+Package: strongswan-mod-mysql
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-mod-sql, libmysqlclient-r
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 5461
+Filename: strongswan-mod-mysql_5.3.2-1_ramips_24kec.ipk
+Size: 6065
+MD5Sum: f346a34d2e5c8e92758a1b33a17e1e32
+SHA256sum: a3a61fafdc0acc378bd1155f2fdd2e3e7f4bcb9747f9dfea03b07e2384494c22
+Description:  StrongSwan MySQL database interface plugin
+
+Package: strongswan-mod-nonce
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 1728
+Filename: strongswan-mod-nonce_5.3.2-1_ramips_24kec.ipk
+Size: 2325
+MD5Sum: aee0a9d7c9d3a796691275859f9b04e2
+SHA256sum: a14a260466ad8f278824b311b2020f6a974905f57f35438a2262f568c4bc7189
+Description:  StrongSwan nonce genereation plugin
+
+Package: strongswan-mod-openssl
+Version: 5.3.2-1
+Depends: libc, strongswan, libopenssl
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 27170
+Filename: strongswan-mod-openssl_5.3.2-1_ramips_24kec.ipk
+Size: 27703
+MD5Sum: 2413bbed152d16c453d225ac01d11296
+SHA256sum: ca41be5e7c99f2480a3164fff13d3acca98977675d559c52f3719aa7c8e94591
+Description:  StrongSwan OpenSSL crypto plugin
+
+Package: strongswan-mod-pem
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 5897
+Filename: strongswan-mod-pem_5.3.2-1_ramips_24kec.ipk
+Size: 6495
+MD5Sum: 2cc0c9032e025cdfb276bee120f9e466
+SHA256sum: b462fe970ed3b6f95da15fb0155cdcb83b2f3d3b7b077f66f45adc8993e53e83
+Description:  StrongSwan PEM decoding plugin
+
+Package: strongswan-mod-pgp
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 5963
+Filename: strongswan-mod-pgp_5.3.2-1_ramips_24kec.ipk
+Size: 6567
+MD5Sum: 2a0f7c9df2961697a87ba781110267b2
+SHA256sum: 82967d9c5d5bdec024c4466c083e47aeb4831a21e29590c506ae67acdfbb0017
+Description:  StrongSwan PGP key decoding plugin
+
+Package: strongswan-mod-pkcs11
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 23075
+Filename: strongswan-mod-pkcs11_5.3.2-1_ramips_24kec.ipk
+Size: 23537
+MD5Sum: b3f9c4f98a8792e7ebcd12ac743576cb
+SHA256sum: 6af508f8e7d4a24aab5b946fa0dcd9b9ff094ee3a57862d8952e5c58b87cf00c
+Description:  StrongSwan PKCS11 key decoding plugin
+
+Package: strongswan-mod-pkcs1
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 4174
+Filename: strongswan-mod-pkcs1_5.3.2-1_ramips_24kec.ipk
+Size: 4762
+MD5Sum: e092d7f2616a100acae4cfd4995f2bc8
+SHA256sum: e8a542911579aaef95e161435f10283d9bba85434b36698d7368cc9898b3796a
+Description:  StrongSwan PKCS1 key decoding plugin
+
+Package: strongswan-mod-pkcs8
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2663
+Filename: strongswan-mod-pkcs8_5.3.2-1_ramips_24kec.ipk
+Size: 3237
+MD5Sum: 072d6a13ed4873ccc9a56a4b035642a2
+SHA256sum: 03dac0eb910b6d93ec906be70f7d727666b937565afebcedbdcd8b33ffd3225f
+Description:  StrongSwan PKCS8 key decoding plugin
+
+Package: strongswan-mod-pubkey
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2701
+Filename: strongswan-mod-pubkey_5.3.2-1_ramips_24kec.ipk
+Size: 3282
+MD5Sum: 61e1627740ab406f2e6327a1bc29526a
+SHA256sum: a3c14436bea5d78fb3eee5273990d015fa9bf23c6c48b9d26d890670108796ec
+Description:  StrongSwan raw public key plugin
+
+Package: strongswan-mod-random
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2682
+Filename: strongswan-mod-random_5.3.2-1_ramips_24kec.ipk
+Size: 3255
+MD5Sum: 825f66de6c2beeca1258888ad3cfe280
+SHA256sum: fda89bf658e57a6f58949f77ae7fbd30f92af26702379c7ae871303aa0495181
+Description:  StrongSwan RNG plugin
+
+Package: strongswan-mod-resolve
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3511
+Filename: strongswan-mod-resolve_5.3.2-1_ramips_24kec.ipk
+Size: 4085
+MD5Sum: 6f98684e689c15cb604fe26c3386651d
+SHA256sum: bfe6654639302c0d15d41a65a24b86d84c967d2487ded5db2539407593d674a7
+Description:  StrongSwan DNS resolver plugin
+
+Package: strongswan-mod-revocation
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 5516
+Filename: strongswan-mod-revocation_5.3.2-1_ramips_24kec.ipk
+Size: 6099
+MD5Sum: 6d1a6df6c4a5b936d4952a8244847b0a
+SHA256sum: 82415f67d3f2cd129bc87dba14112e4e9012e5178b68662e585e1305392a79bf
+Description:  StrongSwan X509 CRL/OCSP revocation plugin
+
+Package: strongswan-mod-sha1
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 4841
+Filename: strongswan-mod-sha1_5.3.2-1_ramips_24kec.ipk
+Size: 5391
+MD5Sum: 58c10ce8331bd63c480ccbd80f4b67de
+SHA256sum: 49a363011e571d5733b064b6161e54054df093bcd5cc8c073cd655f2a0c4667a
+Description:  StrongSwan SHA1 crypto plugin
+
+Package: strongswan-mod-sha2
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 5710
+Filename: strongswan-mod-sha2_5.3.2-1_ramips_24kec.ipk
+Size: 6285
+MD5Sum: d2d76453c972cd2567a39393aab173f8
+SHA256sum: 03b0a6973877e908dbd38601904c2684b75be5c5076ae86e49c855bf99b0b9cb
+Description:  StrongSwan SHA2 crypto plugin
+
+Package: strongswan-mod-smp
+Version: 5.3.2-1
+Depends: libc, strongswan, libxml2
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 6312
+Filename: strongswan-mod-smp_5.3.2-1_ramips_24kec.ipk
+Size: 6893
+MD5Sum: da92a3e8db98efbdf5629286aff82711
+SHA256sum: 029b6ca9effdc23ffd627424c79015950b4e7606e1e214229c2dacd2100da77b
+Description:  StrongSwan SMP configuration and control interface plugin
+
+Package: strongswan-mod-socket-default
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 5202
+Filename: strongswan-mod-socket-default_5.3.2-1_ramips_24kec.ipk
+Size: 5800
+MD5Sum: 152177503fc42d18d552a460e2191b6b
+SHA256sum: 9a2231b6535c42b7e4eb23dc1d2b4d4775204d833bc6cda4a17b6d138e8ab8a2
+Description:  StrongSwan default socket implementation for charon plugin
+
+Package: strongswan-mod-socket-dynamic
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 4676
+Filename: strongswan-mod-socket-dynamic_5.3.2-1_ramips_24kec.ipk
+Size: 5280
+MD5Sum: 9f1553d69969acec8deca9d796f41c51
+SHA256sum: 90beabee2bb0e6b8a333f53c1d7a8786f1df8c9b342df04de211765a494ecc36
+Description:  StrongSwan dynamic socket implementation for charon plugin
+
+Package: strongswan-mod-sql
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 7326
+Filename: strongswan-mod-sql_5.3.2-1_ramips_24kec.ipk
+Size: 7924
+MD5Sum: 2dcad3877e10ef829f44034a41b58ca9
+SHA256sum: ffe05ac5c612d8b5c60560ea2f91758d414ad3e5f6e7426da68ee903eb4a12d0
+Description:  StrongSwan SQL database interface plugin
+
+Package: strongswan-mod-sqlite
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-mod-sql, libsqlite3
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3989
+Filename: strongswan-mod-sqlite_5.3.2-1_ramips_24kec.ipk
+Size: 4585
+MD5Sum: 35e7b8a9cf60060cd14034938914c7be
+SHA256sum: 91da84538873360f5b15ec42556899284dabd8af18aff4c2a449f107d2f7d5a5
+Description:  StrongSwan SQLite database interface plugin
+
+Package: strongswan-mod-stroke
+Version: 5.3.2-1
+Depends: libc, strongswan, strongswan-utils
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 70218
+Filename: strongswan-mod-stroke_5.3.2-1_ramips_24kec.ipk
+Size: 70884
+MD5Sum: 5fe1edca3e1af6f1ee3092866d020fb5
+SHA256sum: 1e8bf621bf53cfac9882666ccac0a05bf1d509160acee9b296fa95fd44d663fa
+Description:  StrongSwan Stroke plugin
+
+Package: strongswan-mod-test-vectors
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 37136
+Filename: strongswan-mod-test-vectors_5.3.2-1_ramips_24kec.ipk
+Size: 37557
+MD5Sum: 914da0a10bdefda04fb7406dcccf96d4
+SHA256sum: d4af8c24b2585a0f129da6f134e59c67f5230b2e300fe7cc8a5ab5c882ddcf48
+Description:  StrongSwan crypto test vectors plugin
+
+Package: strongswan-mod-uci
+Version: 5.3.2-1
+Depends: libc, strongswan, libuci
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 6232
+Filename: strongswan-mod-uci_5.3.2-1_ramips_24kec.ipk
+Size: 6830
+MD5Sum: faa7db1d7b37fc43dbe1f6539ac161ff
+SHA256sum: 775555e5a29684ecd9637e45bbf4786e1d7e376fb7f4a6b811b277a77092357d
+Description:  StrongSwan UCI config interface plugin
+
+Package: strongswan-mod-unity
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 5714
+Filename: strongswan-mod-unity_5.3.2-1_ramips_24kec.ipk
+Size: 6298
+MD5Sum: 6a2bef8e238241f1ce052176a5594ce7
+SHA256sum: af4279120d6e13bab70e6ab9ef6d33042a2eb54ea7cf7dc48cc5b624b4fdfa13
+Description:  StrongSwan Cisco Unity extension plugin
+
+Package: strongswan-mod-updown
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 8545
+Filename: strongswan-mod-updown_5.3.2-1_ramips_24kec.ipk
+Size: 9161
+MD5Sum: 597d1fde796fec524f82f9d1ded93c87
+SHA256sum: 91632342faf1ccbc81749afc7db631ee8c79f0c985ece0f260892eebc5dfebd9
+Description:  StrongSwan updown firewall plugin
+
+Package: strongswan-mod-whitelist
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 5812
+Filename: strongswan-mod-whitelist_5.3.2-1_ramips_24kec.ipk
+Size: 6412
+MD5Sum: 29b6101810104447d08aef6f9c3046fd
+SHA256sum: f3c4f352fd17002e6e76dd3842035e395e14cc347d13f0103318b4f1ef94b8ec
+Description:  StrongSwan peer identity whitelisting plugin
+
+Package: strongswan-mod-x509
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 28007
+Filename: strongswan-mod-x509_5.3.2-1_ramips_24kec.ipk
+Size: 28273
+MD5Sum: a358f3786f18f7e1cc926f0c02a4d576
+SHA256sum: 6388994f6a717e43da57875c33054dbec064d5439c7ffd87405c6ad7390f14fa
+Description:  StrongSwan x509 certificate plugin
+
+Package: strongswan-mod-xauth-eap
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3090
+Filename: strongswan-mod-xauth-eap_5.3.2-1_ramips_24kec.ipk
+Size: 3670
+MD5Sum: 8cf522137da8cf643f1644e282c9404d
+SHA256sum: b1ae29eaf0b9f621a36d74dfe6cffe1f66e61535df980e090c4ba0c1f5104ec5
+Description:  StrongSwan EAP XAuth backend plugin
+
+Package: strongswan-mod-xauth-generic
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3092
+Filename: strongswan-mod-xauth-generic_5.3.2-1_ramips_24kec.ipk
+Size: 3668
+MD5Sum: de0303bab4aa0845d464829dc7dd5e72
+SHA256sum: 3aa27f05fa422c9212b5ad6f8ce4fec6b2ea768df7a2a1557c2d97437dcebd5c
+Description:  StrongSwan generic XAuth backend plugin
+
+Package: strongswan-mod-xcbc
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3270
+Filename: strongswan-mod-xcbc_5.3.2-1_ramips_24kec.ipk
+Size: 3844
+MD5Sum: 9c984ceea352011bc94801849bc9bfbd
+SHA256sum: 5ec98045f8c486b4f52f52a2c6f7a4c94ed7cea085ada33acf0c191d1093f607
+Description:  StrongSwan xcbc crypto plugin
+
+Package: strongswan-utils
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 37899
+Filename: strongswan-utils_5.3.2-1_ramips_24kec.ipk
+Size: 38628
+MD5Sum: aa65518977323e540a9a41cf5dfed209
+SHA256sum: 253dc8cfe0f81b759cb2c315955011d7aa33a10d4a7f2801ef0bdf8d07102f65
+Description:  StrongSwan is an OpenSource IPsec implementation for the Linux operating system.
+ This package contains the pki & scepclient utilities.
+
+Package: strongswan
+Version: 5.3.2-1
+Depends: libc, libpthread, ip, kmod-crypto-authenc, kmod-ipsec, kmod-ipsec4, kmod-ipsec6, kmod-ipt-ipsec, iptables-mod-ipsec
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 131999
+Filename: strongswan_5.3.2-1_ramips_24kec.ipk
+Size: 132276
+MD5Sum: ee4f8aee20bd2bdfa1e39c65326e7447
+SHA256sum: 743e9658b03afe1d347456abdfc91b8d84d3cae22767f86688cfb7f257c749e6
+Description:  StrongSwan is an OpenSource IPsec implementation for the Linux operating system.
+ This package contains shared libraries and scripts.
+
+Package: vsftpd
+Version: 3.0.2-6
+Depends: libc
+Source: feeds/packages/net/vsftpd
+Section: net
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: ramips_24kec
+Installed-Size: 42165
+Filename: vsftpd_3.0.2-6_ramips_24kec.ipk
+Size: 42750
+MD5Sum: d7f4208b79c1ac84507ffd645ed531ff
+SHA256sum: 5e4591836003da569eea6b81b8e46cc9dd6b502d4c5c54f5ad4e67cd92b57f59
+Description:  A fast and secure FTP server (no TLS)
+
+Package: wget
+Version: 1.16-1
+Depends: libc, libpcre, libopenssl, librt
+Source: feeds/packages/net/wget
+Section: net
+Maintainer: Maxim Storchak <m.storchak@gmail.com>
+Architecture: ramips_24kec
+Installed-Size: 183701
+Filename: wget_1.16-1_ramips_24kec.ipk
+Size: 183961
+MD5Sum: 46ae2fc164e69797cc446bb513fbb7d2
+SHA256sum: 013154f98c09b43de15af6c1bd4e193617b7c70a991a34e715b09a12a1d4fbd0
+Description:  Wget is a network utility to retrieve files from the Web using http
+ and ftp, the two most widely used Internet protocols. It works
+ non-interactively, so it will work in the background, after having
+ logged off. The program supports recursive retrieval of web-authoring
+ pages as well as ftp sites -- you can use wget to make mirrors of
+ archives and home pages or to travel the Web like a WWW robot.
+ This package is built with SSL support.
+
+Package: xl2tpd
+Version: 1.3.6-5619e1771048e74b729804e8602f409af0f3faea
+Depends: libc, ppp-mod-pppol2tp, ip, resolveip
+Source: feeds/packages/net/xl2tpd
+Section: net
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Architecture: ramips_24kec
+Installed-Size: 44416
+Filename: xl2tpd_1.3.6-5619e1771048e74b729804e8602f409af0f3faea_ramips_24kec.ipk
+Size: 45245
+MD5Sum: 77a466c45d7d7f11a7545a82da845ac5
+SHA256sum: 3fb23a00c7e4fbf747aab691d64bb953da3fb78902478ceb69ed68516badb573
+Description:  l2tpd is the open source implementation of the L2TP tunneling protocol (RFC2661).
+ It does implement both LAC and LNS role in a L2TP networking architecture. The
+ main goal of this protocol is to tunnel PPP frame trough an IP network.
+

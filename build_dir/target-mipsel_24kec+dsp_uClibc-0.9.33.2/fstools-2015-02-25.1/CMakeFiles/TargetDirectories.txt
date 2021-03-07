@@ -1,0 +1,8 @@
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/fstools-2015-02-25.1/CMakeFiles/blkid-tiny.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/fstools-2015-02-25.1/CMakeFiles/block.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/fstools-2015-02-25.1/CMakeFiles/fstools.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/fstools-2015-02-25.1/CMakeFiles/jffs2reset.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/fstools-2015-02-25.1/CMakeFiles/mount_root.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/fstools-2015-02-25.1/CMakeFiles/snapshot_tool.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/fstools-2015-02-25.1/CMakeFiles/ubi.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/fstools-2015-02-25.1/CMakeFiles/ubi-utils.dir

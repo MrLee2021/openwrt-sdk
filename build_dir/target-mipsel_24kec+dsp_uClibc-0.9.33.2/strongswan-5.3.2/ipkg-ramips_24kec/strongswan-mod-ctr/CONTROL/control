@@ -1,0 +1,10 @@
+Package: strongswan-mod-ctr
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 2416
+Description:  StrongSwan Counter Mode wrapper crypto plugin

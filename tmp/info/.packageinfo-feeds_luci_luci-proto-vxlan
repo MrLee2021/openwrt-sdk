@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-proto-vxlan/Makefile
+Package: luci-proto-vxlan
+Submenu: 5. Protocols
+Version: x
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +vxlan
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+Section: luci
+Category: LuCI
+Title: Support for Virtual eXtensible Local Area Network (VXLAN, RFC7348)
+Maintainer: Wojciech Jowsa <wojciech.jowsa@gmail.com>
+Source: 
+Type: ipkg
+Feed: luci
+Description: Support for Virtual eXtensible Local Area Network (VXLAN, RFC7348)
+Wojciech Jowsa <wojciech.jowsa@gmail.com>
+@@
+
+

@@ -1,0 +1,9 @@
+/usr/lib/lua/luci/view/themes/openwrt2020/header.htm
+/usr/lib/lua/luci/view/themes/openwrt2020/footer.htm
+/www/luci-static/openwrt2020/spinner.svg
+/www/luci-static/openwrt2020/GalanoGrotesqueW00-Regular.woff2
+/www/luci-static/openwrt2020/logo.svg
+/etc/uci-defaults/30_luci-theme-openwrt-2020
+/www/luci-static/openwrt2020/favicon.png
+/www/luci-static/openwrt2020/cascade.css
+/www/luci-static/resources/menu-openwrt2020.js

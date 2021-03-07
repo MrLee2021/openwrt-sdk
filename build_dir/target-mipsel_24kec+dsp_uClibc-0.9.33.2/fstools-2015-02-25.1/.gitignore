@@ -1,0 +1,14 @@
+jffs2reset
+mount_root
+snapshot_tool
+ubi
+block
+fs-state
+*.so
+*.a
+.*
+Makefile
+CMakeCache.txt
+CMakeFiles
+*.cmake
+install_manifest.txt

@@ -1,0 +1,18 @@
+Source-Makefile: package/feeds/luci/rpcd-mod-rad2-enc/Makefile
+Package: rpcd-mod-rad2-enc
+Version: 20190109
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +rpcd +python3 +python3-passlib
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: Radicale 2.x Hashing RPC module
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description:   Python3 password hashing module for use Radicale 2.x LuCI app
+
+@@
+
+

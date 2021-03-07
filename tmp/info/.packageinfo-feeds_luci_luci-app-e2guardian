@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-app-e2guardian/Makefile
+Package: luci-app-e2guardian
+Submenu: 3. Applications
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +luci-mod-admin-full +e2guardian
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: E2Guardian LuCI Interface
+Maintainer: Marko Ratkaj <marko.ratkaj@sartura.hr>
+Source: 
+Type: ipkg
+Feed: luci
+Description: E2Guardian LuCI Interface
+Marko Ratkaj <marko.ratkaj@sartura.hr>
+@@
+
+

@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-proto-vpnc/Makefile
+Package: luci-proto-vpnc
+Submenu: 5. Protocols
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +vpnc
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: Support for VPNC VPN
+Maintainer: Daniel Dickinson <openwrt@daniel.thecshore.com>
+Source: 
+Type: ipkg
+Feed: luci
+Description: Support for VPNC VPN
+Daniel Dickinson <openwrt@daniel.thecshore.com>
+@@
+
+

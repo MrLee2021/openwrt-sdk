@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/wpa-supplicant-20/Makefile
+Package: wpa-supplicant-20
+Submenu: Applications
+Version: 2.0-0
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libnl
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: MTK Properties
+Title: WPA Supplicant V2.0
+Maintainer: Hua Shao <hua.shao@mediatek.com>
+Source: wpa_supplicant-2.0.tar.gz
+Type: ipkg
+Description:   WPA Supplicant V2.0
+Hua Shao <hua.shao@mediatek.com>
+@@
+
+

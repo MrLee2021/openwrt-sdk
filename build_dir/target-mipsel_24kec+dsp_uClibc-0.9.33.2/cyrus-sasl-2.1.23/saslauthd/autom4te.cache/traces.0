@@ -1,0 +1,3038 @@
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/amversion.m4:17: -1- AC_DEFUN([AM_AUTOMAKE_VERSION], [am__api_version='1.11'
+dnl Some users find AM_AUTOMAKE_VERSION and mistake it for a way to
+dnl require some minimum version.  Point them to the right macro.
+m4_if([$1], [1.11.6], [],
+      [AC_FATAL([Do not call $0, use AM_INIT_AUTOMAKE([$1]).])])dnl
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/amversion.m4:36: -1- AC_DEFUN([AM_SET_CURRENT_AUTOMAKE_VERSION], [AM_AUTOMAKE_VERSION([1.11.6])dnl
+m4_ifndef([AC_AUTOCONF_VERSION],
+  [m4_copy([m4_PACKAGE_VERSION], [AC_AUTOCONF_VERSION])])dnl
+_AM_AUTOCONF_VERSION(m4_defn([AC_AUTOCONF_VERSION]))])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/auxdir.m4:49: -1- AC_DEFUN([AM_AUX_DIR_EXPAND], [dnl Rely on autoconf to set up CDPATH properly.
+AC_PREREQ([2.50])dnl
+# expand $ac_aux_dir to an absolute path
+am_aux_dir=`cd $ac_aux_dir && pwd`
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/cond.m4:15: -1- AC_DEFUN([AM_CONDITIONAL], [AC_PREREQ(2.52)dnl
+ ifelse([$1], [TRUE],  [AC_FATAL([$0: invalid condition: $1])],
+	[$1], [FALSE], [AC_FATAL([$0: invalid condition: $1])])dnl
+AC_SUBST([$1_TRUE])dnl
+AC_SUBST([$1_FALSE])dnl
+_AM_SUBST_NOTMAKE([$1_TRUE])dnl
+_AM_SUBST_NOTMAKE([$1_FALSE])dnl
+m4_define([_AM_COND_VALUE_$1], [$2])dnl
+if $2; then
+  $1_TRUE=
+  $1_FALSE='#'
+else
+  $1_TRUE='#'
+  $1_FALSE=
+fi
+AC_CONFIG_COMMANDS_PRE(
+[if test -z "${$1_TRUE}" && test -z "${$1_FALSE}"; then
+  AC_MSG_ERROR([[conditional "$1" was never defined.
+Usually this means the macro was only invoked conditionally.]])
+fi])])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/depend.m4:28: -1- AC_DEFUN([_AM_DEPENDENCIES], [AC_REQUIRE([AM_SET_DEPDIR])dnl
+AC_REQUIRE([AM_OUTPUT_DEPENDENCY_COMMANDS])dnl
+AC_REQUIRE([AM_MAKE_INCLUDE])dnl
+AC_REQUIRE([AM_DEP_TRACK])dnl
+
+ifelse([$1], CC,   [depcc="$CC"   am_compiler_list=],
+       [$1], CXX,  [depcc="$CXX"  am_compiler_list=],
+       [$1], OBJC, [depcc="$OBJC" am_compiler_list='gcc3 gcc'],
+       [$1], UPC,  [depcc="$UPC"  am_compiler_list=],
+       [$1], GCJ,  [depcc="$GCJ"  am_compiler_list='gcc3 gcc'],
+                   [depcc="$$1"   am_compiler_list=])
+
+AC_CACHE_CHECK([dependency style of $depcc],
+               [am_cv_$1_dependencies_compiler_type],
+[if test -z "$AMDEP_TRUE" && test -f "$am_depcomp"; then
+  # We make a subdir and do the tests there.  Otherwise we can end up
+  # making bogus files that we don't know about and never remove.  For
+  # instance it was reported that on HP-UX the gcc test will end up
+  # making a dummy file named `D' -- because `-MD' means `put the output
+  # in D'.
+  rm -rf conftest.dir
+  mkdir conftest.dir
+  # Copy depcomp to subdir because otherwise we won't find it if we're
+  # using a relative directory.
+  cp "$am_depcomp" conftest.dir
+  cd conftest.dir
+  # We will build objects and dependencies in a subdirectory because
+  # it helps to detect inapplicable dependency modes.  For instance
+  # both Tru64's cc and ICC support -MD to output dependencies as a
+  # side effect of compilation, but ICC will put the dependencies in
+  # the current directory while Tru64 will put them in the object
+  # directory.
+  mkdir sub
+
+  am_cv_$1_dependencies_compiler_type=none
+  if test "$am_compiler_list" = ""; then
+     am_compiler_list=`sed -n ['s/^#*\([a-zA-Z0-9]*\))$/\1/p'] < ./depcomp`
+  fi
+  am__universal=false
+  m4_case([$1], [CC],
+    [case " $depcc " in #(
+     *\ -arch\ *\ -arch\ *) am__universal=true ;;
+     esac],
+    [CXX],
+    [case " $depcc " in #(
+     *\ -arch\ *\ -arch\ *) am__universal=true ;;
+     esac])
+
+  for depmode in $am_compiler_list; do
+    # Setup a source with many dependencies, because some compilers
+    # like to wrap large dependency lists on column 80 (with \), and
+    # we should not choose a depcomp mode which is confused by this.
+    #
+    # We need to recreate these files for each test, as the compiler may
+    # overwrite some of them when testing with obscure command lines.
+    # This happens at least with the AIX C compiler.
+    : > sub/conftest.c
+    for i in 1 2 3 4 5 6; do
+      echo '#include "conftst'$i'.h"' >> sub/conftest.c
+      # Using `: > sub/conftst$i.h' creates only sub/conftst1.h with
+      # Solaris 8's {/usr,}/bin/sh.
+      touch sub/conftst$i.h
+    done
+    echo "${am__include} ${am__quote}sub/conftest.Po${am__quote}" > confmf
+
+    # We check with `-c' and `-o' for the sake of the "dashmstdout"
+    # mode.  It turns out that the SunPro C++ compiler does not properly
+    # handle `-M -o', and we need to detect this.  Also, some Intel
+    # versions had trouble with output in subdirs
+    am__obj=sub/conftest.${OBJEXT-o}
+    am__minus_obj="-o $am__obj"
+    case $depmode in
+    gcc)
+      # This depmode causes a compiler race in universal mode.
+      test "$am__universal" = false || continue
+      ;;
+    nosideeffect)
+      # after this tag, mechanisms are not by side-effect, so they'll
+      # only be used when explicitly requested
+      if test "x$enable_dependency_tracking" = xyes; then
+	continue
+      else
+	break
+      fi
+      ;;
+    msvc7 | msvc7msys | msvisualcpp | msvcmsys)
+      # This compiler won't grok `-c -o', but also, the minuso test has
+      # not run yet.  These depmodes are late enough in the game, and
+      # so weak that their functioning should not be impacted.
+      am__obj=conftest.${OBJEXT-o}
+      am__minus_obj=
+      ;;
+    none) break ;;
+    esac
+    if depmode=$depmode \
+       source=sub/conftest.c object=$am__obj \
+       depfile=sub/conftest.Po tmpdepfile=sub/conftest.TPo \
+       $SHELL ./depcomp $depcc -c $am__minus_obj sub/conftest.c \
+         >/dev/null 2>conftest.err &&
+       grep sub/conftst1.h sub/conftest.Po > /dev/null 2>&1 &&
+       grep sub/conftst6.h sub/conftest.Po > /dev/null 2>&1 &&
+       grep $am__obj sub/conftest.Po > /dev/null 2>&1 &&
+       ${MAKE-make} -s -f confmf > /dev/null 2>&1; then
+      # icc doesn't choke on unknown options, it will just issue warnings
+      # or remarks (even with -Werror).  So we grep stderr for any message
+      # that says an option was ignored or not supported.
+      # When given -MP, icc 7.0 and 7.1 complain thusly:
+      #   icc: Command line warning: ignoring option '-M'; no argument required
+      # The diagnosis changed in icc 8.0:
+      #   icc: Command line remark: option '-MP' not supported
+      if (grep 'ignoring option' conftest.err ||
+          grep 'not supported' conftest.err) >/dev/null 2>&1; then :; else
+        am_cv_$1_dependencies_compiler_type=$depmode
+        break
+      fi
+    fi
+  done
+
+  cd ..
+  rm -rf conftest.dir
+else
+  am_cv_$1_dependencies_compiler_type=none
+fi
+])
+AC_SUBST([$1DEPMODE], [depmode=$am_cv_$1_dependencies_compiler_type])
+AM_CONDITIONAL([am__fastdep$1], [
+  test "x$enable_dependency_tracking" != xno \
+  && test "$am_cv_$1_dependencies_compiler_type" = gcc3])
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/depend.m4:164: -1- AC_DEFUN([AM_SET_DEPDIR], [AC_REQUIRE([AM_SET_LEADING_DOT])dnl
+AC_SUBST([DEPDIR], ["${am__leading_dot}deps"])dnl
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/depend.m4:172: -1- AC_DEFUN([AM_DEP_TRACK], [AC_ARG_ENABLE(dependency-tracking,
+[  --disable-dependency-tracking  speeds up one-time build
+  --enable-dependency-tracking   do not reject slow dependency extractors])
+if test "x$enable_dependency_tracking" != xno; then
+  am_depcomp="$ac_aux_dir/depcomp"
+  AMDEPBACKSLASH='\'
+  am__nodep='_no'
+fi
+AM_CONDITIONAL([AMDEP], [test "x$enable_dependency_tracking" != xno])
+AC_SUBST([AMDEPBACKSLASH])dnl
+_AM_SUBST_NOTMAKE([AMDEPBACKSLASH])dnl
+AC_SUBST([am__nodep])dnl
+_AM_SUBST_NOTMAKE([am__nodep])dnl
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/depout.m4:14: -1- AC_DEFUN([_AM_OUTPUT_DEPENDENCY_COMMANDS], [{
+  # Autoconf 2.62 quotes --file arguments for eval, but not when files
+  # are listed without --file.  Let's play safe and only enable the eval
+  # if we detect the quoting.
+  case $CONFIG_FILES in
+  *\'*) eval set x "$CONFIG_FILES" ;;
+  *)   set x $CONFIG_FILES ;;
+  esac
+  shift
+  for mf
+  do
+    # Strip MF so we end up with the name of the file.
+    mf=`echo "$mf" | sed -e 's/:.*$//'`
+    # Check whether this is an Automake generated Makefile or not.
+    # We used to match only the files named `Makefile.in', but
+    # some people rename them; so instead we look at the file content.
+    # Grep'ing the first line is not enough: some people post-process
+    # each Makefile.in and add a new line on top of each file to say so.
+    # Grep'ing the whole file is not good either: AIX grep has a line
+    # limit of 2048, but all sed's we know have understand at least 4000.
+    if sed -n 's,^#.*generated by automake.*,X,p' "$mf" | grep X >/dev/null 2>&1; then
+      dirpart=`AS_DIRNAME("$mf")`
+    else
+      continue
+    fi
+    # Extract the definition of DEPDIR, am__include, and am__quote
+    # from the Makefile without running `make'.
+    DEPDIR=`sed -n 's/^DEPDIR = //p' < "$mf"`
+    test -z "$DEPDIR" && continue
+    am__include=`sed -n 's/^am__include = //p' < "$mf"`
+    test -z "am__include" && continue
+    am__quote=`sed -n 's/^am__quote = //p' < "$mf"`
+    # When using ansi2knr, U may be empty or an underscore; expand it
+    U=`sed -n 's/^U = //p' < "$mf"`
+    # Find all dependency output files, they are included files with
+    # $(DEPDIR) in their names.  We invoke sed twice because it is the
+    # simplest approach to changing $(DEPDIR) to its actual value in the
+    # expansion.
+    for file in `sed -n "
+      s/^$am__include $am__quote\(.*(DEPDIR).*\)$am__quote"'$/\1/p' <"$mf" | \
+	 sed -e 's/\$(DEPDIR)/'"$DEPDIR"'/g' -e 's/\$U/'"$U"'/g'`; do
+      # Make sure the directory exists.
+      test -f "$dirpart/$file" && continue
+      fdir=`AS_DIRNAME(["$file"])`
+      AS_MKDIR_P([$dirpart/$fdir])
+      # echo "creating $dirpart/$file"
+      echo '# dummy' > "$dirpart/$file"
+    done
+  done
+}
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/depout.m4:75: -1- AC_DEFUN([AM_OUTPUT_DEPENDENCY_COMMANDS], [AC_CONFIG_COMMANDS([depfiles],
+     [test x"$AMDEP_TRUE" != x"" || _AM_OUTPUT_DEPENDENCY_COMMANDS],
+     [AMDEP_TRUE="$AMDEP_TRUE" ac_aux_dir="$ac_aux_dir"])
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/init.m4:26: -1- AC_DEFUN([AM_INIT_AUTOMAKE], [AC_PREREQ([2.62])dnl
+dnl Autoconf wants to disallow AM_ names.  We explicitly allow
+dnl the ones we care about.
+m4_pattern_allow([^AM_[A-Z]+FLAGS$])dnl
+AC_REQUIRE([AM_SET_CURRENT_AUTOMAKE_VERSION])dnl
+AC_REQUIRE([AC_PROG_INSTALL])dnl
+if test "`cd $srcdir && pwd`" != "`pwd`"; then
+  # Use -I$(srcdir) only when $(srcdir) != ., so that make's output
+  # is not polluted with repeated "-I."
+  AC_SUBST([am__isrc], [' -I$(srcdir)'])_AM_SUBST_NOTMAKE([am__isrc])dnl
+  # test to see if srcdir already configured
+  if test -f $srcdir/config.status; then
+    AC_MSG_ERROR([source directory already configured; run "make distclean" there first])
+  fi
+fi
+
+# test whether we have cygpath
+if test -z "$CYGPATH_W"; then
+  if (cygpath --version) >/dev/null 2>/dev/null; then
+    CYGPATH_W='cygpath -w'
+  else
+    CYGPATH_W=echo
+  fi
+fi
+AC_SUBST([CYGPATH_W])
+
+# Define the identity of the package.
+dnl Distinguish between old-style and new-style calls.
+m4_ifval([$2],
+[m4_ifval([$3], [_AM_SET_OPTION([no-define])])dnl
+ AC_SUBST([PACKAGE], [$1])dnl
+ AC_SUBST([VERSION], [$2])],
+[_AM_SET_OPTIONS([$1])dnl
+dnl Diagnose old-style AC_INIT with new-style AM_AUTOMAKE_INIT.
+m4_if(m4_ifdef([AC_PACKAGE_NAME], 1)m4_ifdef([AC_PACKAGE_VERSION], 1), 11,,
+  [m4_fatal([AC_INIT should be called with package and version arguments])])dnl
+ AC_SUBST([PACKAGE], ['AC_PACKAGE_TARNAME'])dnl
+ AC_SUBST([VERSION], ['AC_PACKAGE_VERSION'])])dnl
+
+_AM_IF_OPTION([no-define],,
+[AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE", [Name of package])
+ AC_DEFINE_UNQUOTED(VERSION, "$VERSION", [Version number of package])])dnl
+
+# Some tools Automake needs.
+AC_REQUIRE([AM_SANITY_CHECK])dnl
+AC_REQUIRE([AC_ARG_PROGRAM])dnl
+AM_MISSING_PROG(ACLOCAL, aclocal-${am__api_version})
+AM_MISSING_PROG(AUTOCONF, autoconf)
+AM_MISSING_PROG(AUTOMAKE, automake-${am__api_version})
+AM_MISSING_PROG(AUTOHEADER, autoheader)
+AM_MISSING_PROG(MAKEINFO, makeinfo)
+AC_REQUIRE([AM_PROG_INSTALL_SH])dnl
+AC_REQUIRE([AM_PROG_INSTALL_STRIP])dnl
+AC_REQUIRE([AM_PROG_MKDIR_P])dnl
+# We need awk for the "check" target.  The system "awk" is bad on
+# some platforms.
+AC_REQUIRE([AC_PROG_AWK])dnl
+AC_REQUIRE([AC_PROG_MAKE_SET])dnl
+AC_REQUIRE([AM_SET_LEADING_DOT])dnl
+_AM_IF_OPTION([tar-ustar], [_AM_PROG_TAR([ustar])],
+	      [_AM_IF_OPTION([tar-pax], [_AM_PROG_TAR([pax])],
+			     [_AM_PROG_TAR([v7])])])
+_AM_IF_OPTION([no-dependencies],,
+[AC_PROVIDE_IFELSE([AC_PROG_CC],
+		  [_AM_DEPENDENCIES(CC)],
+		  [define([AC_PROG_CC],
+			  defn([AC_PROG_CC])[_AM_DEPENDENCIES(CC)])])dnl
+AC_PROVIDE_IFELSE([AC_PROG_CXX],
+		  [_AM_DEPENDENCIES(CXX)],
+		  [define([AC_PROG_CXX],
+			  defn([AC_PROG_CXX])[_AM_DEPENDENCIES(CXX)])])dnl
+AC_PROVIDE_IFELSE([AC_PROG_OBJC],
+		  [_AM_DEPENDENCIES(OBJC)],
+		  [define([AC_PROG_OBJC],
+			  defn([AC_PROG_OBJC])[_AM_DEPENDENCIES(OBJC)])])dnl
+])
+_AM_IF_OPTION([silent-rules], [AC_REQUIRE([AM_SILENT_RULES])])dnl
+dnl The `parallel-tests' driver may need to know about EXEEXT, so add the
+dnl `am__EXEEXT' conditional if _AM_COMPILER_EXEEXT was seen.  This macro
+dnl is hooked onto _AC_COMPILER_EXEEXT early, see below.
+AC_CONFIG_COMMANDS_PRE(dnl
+[m4_provide_if([_AM_COMPILER_EXEEXT],
+  [AM_CONDITIONAL([am__EXEEXT], [test -n "$EXEEXT"])])])dnl
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/init.m4:126: -1- AC_DEFUN([_AC_AM_CONFIG_HEADER_HOOK], [# Compute $1's index in $config_headers.
+_am_arg=$1
+_am_stamp_count=1
+for _am_header in $config_headers :; do
+  case $_am_header in
+    $_am_arg | $_am_arg:* )
+      break ;;
+    * )
+      _am_stamp_count=`expr $_am_stamp_count + 1` ;;
+  esac
+done
+echo "timestamp for $_am_arg" >`AS_DIRNAME(["$_am_arg"])`/stamp-h[]$_am_stamp_count])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/install-sh.m4:14: -1- AC_DEFUN([AM_PROG_INSTALL_SH], [AC_REQUIRE([AM_AUX_DIR_EXPAND])dnl
+if test x"${install_sh}" != xset; then
+  case $am_aux_dir in
+  *\ * | *\	*)
+    install_sh="\${SHELL} '$am_aux_dir/install-sh'" ;;
+  *)
+    install_sh="\${SHELL} $am_aux_dir/install-sh"
+  esac
+fi
+AC_SUBST(install_sh)])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/lead-dot.m4:12: -1- AC_DEFUN([AM_SET_LEADING_DOT], [rm -rf .tst 2>/dev/null
+mkdir .tst 2>/dev/null
+if test -d .tst; then
+  am__leading_dot=.
+else
+  am__leading_dot=_
+fi
+rmdir .tst 2>/dev/null
+AC_SUBST([am__leading_dot])])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/make.m4:14: -1- AC_DEFUN([AM_MAKE_INCLUDE], [am_make=${MAKE-make}
+cat > confinc << 'END'
+am__doit:
+	@echo this is the am__doit target
+.PHONY: am__doit
+END
+# If we don't find an include directive, just comment out the code.
+AC_MSG_CHECKING([for style of include used by $am_make])
+am__include="#"
+am__quote=
+_am_result=none
+# First try GNU make style include.
+echo "include confinc" > confmf
+# Ignore all kinds of additional output from `make'.
+case `$am_make -s -f confmf 2> /dev/null` in #(
+*the\ am__doit\ target*)
+  am__include=include
+  am__quote=
+  _am_result=GNU
+  ;;
+esac
+# Now try BSD make style include.
+if test "$am__include" = "#"; then
+   echo '.include "confinc"' > confmf
+   case `$am_make -s -f confmf 2> /dev/null` in #(
+   *the\ am__doit\ target*)
+     am__include=.include
+     am__quote="\""
+     _am_result=BSD
+     ;;
+   esac
+fi
+AC_SUBST([am__include])
+AC_SUBST([am__quote])
+AC_MSG_RESULT([$_am_result])
+rm -f confinc confmf
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/missing.m4:14: -1- AC_DEFUN([AM_MISSING_PROG], [AC_REQUIRE([AM_MISSING_HAS_RUN])
+$1=${$1-"${am_missing_run}$2"}
+AC_SUBST($1)])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/missing.m4:24: -1- AC_DEFUN([AM_MISSING_HAS_RUN], [AC_REQUIRE([AM_AUX_DIR_EXPAND])dnl
+AC_REQUIRE_AUX_FILE([missing])dnl
+if test x"${MISSING+set}" != xset; then
+  case $am_aux_dir in
+  *\ * | *\	*)
+    MISSING="\${SHELL} \"$am_aux_dir/missing\"" ;;
+  *)
+    MISSING="\${SHELL} $am_aux_dir/missing" ;;
+  esac
+fi
+# Use eval to expand $SHELL
+if eval "$MISSING --run true"; then
+  am_missing_run="$MISSING --run "
+else
+  am_missing_run=
+  AC_MSG_WARN([`missing' script is too old or missing])
+fi
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/mkdirp.m4:14: -1- AC_DEFUN([AM_PROG_MKDIR_P], [AC_PREREQ([2.60])dnl
+AC_REQUIRE([AC_PROG_MKDIR_P])dnl
+dnl Automake 1.8 to 1.9.6 used to define mkdir_p.  We now use MKDIR_P,
+dnl while keeping a definition of mkdir_p for backward compatibility.
+dnl @MKDIR_P@ is magic: AC_OUTPUT adjusts its value for each Makefile.
+dnl However we cannot define mkdir_p as $(MKDIR_P) for the sake of
+dnl Makefile.ins that do not define MKDIR_P, so we do our own
+dnl adjustment using top_builddir (which is defined more often than
+dnl MKDIR_P).
+AC_SUBST([mkdir_p], ["$MKDIR_P"])dnl
+case $mkdir_p in
+  [[\\/$]]* | ?:[[\\/]]*) ;;
+  */*) mkdir_p="\$(top_builddir)/$mkdir_p" ;;
+esac
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/options.m4:14: -1- AC_DEFUN([_AM_MANGLE_OPTION], [[_AM_OPTION_]m4_bpatsubst($1, [[^a-zA-Z0-9_]], [_])])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/options.m4:20: -1- AC_DEFUN([_AM_SET_OPTION], [m4_define(_AM_MANGLE_OPTION([$1]), 1)])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/options.m4:26: -1- AC_DEFUN([_AM_SET_OPTIONS], [m4_foreach_w([_AM_Option], [$1], [_AM_SET_OPTION(_AM_Option)])])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/options.m4:32: -1- AC_DEFUN([_AM_IF_OPTION], [m4_ifset(_AM_MANGLE_OPTION([$1]), [$2], [$3])])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/runlog.m4:14: -1- AC_DEFUN([AM_RUN_LOG], [{ echo "$as_me:$LINENO: $1" >&AS_MESSAGE_LOG_FD
+   ($1) >&AS_MESSAGE_LOG_FD 2>&AS_MESSAGE_LOG_FD
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&AS_MESSAGE_LOG_FD
+   (exit $ac_status); }])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/sanity.m4:14: -1- AC_DEFUN([AM_SANITY_CHECK], [AC_MSG_CHECKING([whether build environment is sane])
+# Just in case
+sleep 1
+echo timestamp > conftest.file
+# Reject unsafe characters in $srcdir or the absolute working directory
+# name.  Accept space and tab only in the latter.
+am_lf='
+'
+case `pwd` in
+  *[[\\\"\#\$\&\'\`$am_lf]]*)
+    AC_MSG_ERROR([unsafe absolute working directory name]);;
+esac
+case $srcdir in
+  *[[\\\"\#\$\&\'\`$am_lf\ \	]]*)
+    AC_MSG_ERROR([unsafe srcdir value: `$srcdir']);;
+esac
+
+# Do `set' in a subshell so we don't clobber the current shell's
+# arguments.  Must try -L first in case configure is actually a
+# symlink; some systems play weird games with the mod time of symlinks
+# (eg FreeBSD returns the mod time of the symlink's containing
+# directory).
+if (
+   set X `ls -Lt "$srcdir/configure" conftest.file 2> /dev/null`
+   if test "$[*]" = "X"; then
+      # -L didn't work.
+      set X `ls -t "$srcdir/configure" conftest.file`
+   fi
+   rm -f conftest.file
+   if test "$[*]" != "X $srcdir/configure conftest.file" \
+      && test "$[*]" != "X conftest.file $srcdir/configure"; then
+
+      # If neither matched, then we have a broken ls.  This can happen
+      # if, for instance, CONFIG_SHELL is bash and it inherits a
+      # broken ls alias from the environment.  This has actually
+      # happened.  Such a system could not be considered "sane".
+      AC_MSG_ERROR([ls -t appears to fail.  Make sure there is not a broken
+alias in your environment])
+   fi
+
+   test "$[2]" = conftest.file
+   )
+then
+   # Ok.
+   :
+else
+   AC_MSG_ERROR([newly created file is older than distributed files!
+Check your system clock])
+fi
+AC_MSG_RESULT(yes)])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/silent.m4:14: -1- AC_DEFUN([AM_SILENT_RULES], [AC_ARG_ENABLE([silent-rules],
+[  --enable-silent-rules          less verbose build output (undo: `make V=1')
+  --disable-silent-rules         verbose build output (undo: `make V=0')])
+case $enable_silent_rules in
+yes) AM_DEFAULT_VERBOSITY=0;;
+no)  AM_DEFAULT_VERBOSITY=1;;
+*)   AM_DEFAULT_VERBOSITY=m4_if([$1], [yes], [0], [1]);;
+esac
+dnl
+dnl A few `make' implementations (e.g., NonStop OS and NextStep)
+dnl do not support nested variable expansions.
+dnl See automake bug#9928 and bug#10237.
+am_make=${MAKE-make}
+AC_CACHE_CHECK([whether $am_make supports nested variables],
+   [am_cv_make_support_nested_variables],
+   [if AS_ECHO([['TRUE=$(BAR$(V))
+BAR0=false
+BAR1=true
+V=1
+am__doit:
+	@$(TRUE)
+.PHONY: am__doit']]) | $am_make -f - >/dev/null 2>&1; then
+  am_cv_make_support_nested_variables=yes
+else
+  am_cv_make_support_nested_variables=no
+fi])
+if test $am_cv_make_support_nested_variables = yes; then
+  dnl Using `$V' instead of `$(V)' breaks IRIX make.
+  AM_V='$(V)'
+  AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+else
+  AM_V=$AM_DEFAULT_VERBOSITY
+  AM_DEFAULT_V=$AM_DEFAULT_VERBOSITY
+fi
+AC_SUBST([AM_V])dnl
+AM_SUBST_NOTMAKE([AM_V])dnl
+AC_SUBST([AM_DEFAULT_V])dnl
+AM_SUBST_NOTMAKE([AM_DEFAULT_V])dnl
+AC_SUBST([AM_DEFAULT_VERBOSITY])dnl
+AM_BACKSLASH='\'
+AC_SUBST([AM_BACKSLASH])dnl
+_AM_SUBST_NOTMAKE([AM_BACKSLASH])dnl
+])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/strip.m4:19: -1- AC_DEFUN([AM_PROG_INSTALL_STRIP], [AC_REQUIRE([AM_PROG_INSTALL_SH])dnl
+# Installed binaries are usually stripped using `strip' when the user
+# run `make install-strip'.  However `strip' might not be the right
+# tool to use in cross-compilation environments, therefore Automake
+# will honor the `STRIP' environment variable to overrule this program.
+dnl Don't test for $cross_compiling = yes, because it might be `maybe'.
+if test "$cross_compiling" != no; then
+  AC_CHECK_TOOL([STRIP], [strip], :)
+fi
+INSTALL_STRIP_PROGRAM="\$(install_sh) -c -s"
+AC_SUBST([INSTALL_STRIP_PROGRAM])])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/substnot.m4:14: -1- AC_DEFUN([_AM_SUBST_NOTMAKE])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/substnot.m4:19: -1- AC_DEFUN([AM_SUBST_NOTMAKE], [_AM_SUBST_NOTMAKE($@)])
+m4trace:/home/ubuntu/openwrt-sdk/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/../host/share/aclocal-1.11/tar.m4:24: -1- AC_DEFUN([_AM_PROG_TAR], [# Always define AMTAR for backward compatibility.  Yes, it's still used
+# in the wild :-(  We should find a proper way to deprecate it ...
+AC_SUBST([AMTAR], ['$${TAR-tar}'])
+m4_if([$1], [v7],
+     [am__tar='$${TAR-tar} chof - "$$tardir"' am__untar='$${TAR-tar} xf -'],
+     [m4_case([$1], [ustar],, [pax],,
+              [m4_fatal([Unknown tar format])])
+AC_MSG_CHECKING([how to create a $1 tar archive])
+# Loop over all known methods to create a tar archive until one works.
+_am_tools='gnutar m4_if([$1], [ustar], [plaintar]) pax cpio none'
+_am_tools=${am_cv_prog_tar_$1-$_am_tools}
+# Do not fold the above two line into one, because Tru64 sh and
+# Solaris sh will not grok spaces in the rhs of `-'.
+for _am_tool in $_am_tools
+do
+  case $_am_tool in
+  gnutar)
+    for _am_tar in tar gnutar gtar;
+    do
+      AM_RUN_LOG([$_am_tar --version]) && break
+    done
+    am__tar="$_am_tar --format=m4_if([$1], [pax], [posix], [$1]) -chf - "'"$$tardir"'
+    am__tar_="$_am_tar --format=m4_if([$1], [pax], [posix], [$1]) -chf - "'"$tardir"'
+    am__untar="$_am_tar -xf -"
+    ;;
+  plaintar)
+    # Must skip GNU tar: if it does not support --format= it doesn't create
+    # ustar tarball either.
+    (tar --version) >/dev/null 2>&1 && continue
+    am__tar='tar chf - "$$tardir"'
+    am__tar_='tar chf - "$tardir"'
+    am__untar='tar xf -'
+    ;;
+  pax)
+    am__tar='pax -L -x $1 -w "$$tardir"'
+    am__tar_='pax -L -x $1 -w "$tardir"'
+    am__untar='pax -r'
+    ;;
+  cpio)
+    am__tar='find "$$tardir" -print | cpio -o -H $1 -L'
+    am__tar_='find "$tardir" -print | cpio -o -H $1 -L'
+    am__untar='cpio -i -H $1 -d'
+    ;;
+  none)
+    am__tar=false
+    am__tar_=false
+    am__untar=false
+    ;;
+  esac
+
+  # If the value was cached, stop now.  We just wanted to have am__tar
+  # and am__untar set.
+  test -n "${am_cv_prog_tar_$1}" && break
+
+  # tar/untar a dummy directory, and stop if the command works
+  rm -rf conftest.dir
+  mkdir conftest.dir
+  echo GrepMe > conftest.dir/file
+  AM_RUN_LOG([tardir=conftest.dir && eval $am__tar_ >conftest.tar])
+  rm -rf conftest.dir
+  if test -s conftest.tar; then
+    AM_RUN_LOG([$am__untar <conftest.tar])
+    grep GrepMe conftest.dir/file >/dev/null 2>&1 && break
+  fi
+done
+rm -rf conftest.dir
+
+AC_CACHE_VAL([am_cv_prog_tar_$1], [am_cv_prog_tar_$1=$_am_tool])
+AC_MSG_RESULT([$am_cv_prog_tar_$1])])
+AC_SUBST([am__tar])
+AC_SUBST([am__untar])
+])
+m4trace:../config/kerberos_v4.m4:3: -1- AC_DEFUN([SASL_DES_CHK], [
+AC_ARG_WITH(des, [  --with-des=DIR          with DES (look in DIR) [yes] ],
+	with_des=$withval,
+	with_des=yes)
+
+LIB_DES=""
+if test "$with_des" != no; then
+  if test -d $with_des; then
+    CPPFLAGS="$CPPFLAGS -I${with_des}/include"
+    LDFLAGS="$LDFLAGS -L${with_des}/lib"
+  fi
+
+  if test "$with_openssl" != no; then
+    dnl check for openssl installing -lcrypto, then make vanilla check
+    AC_CHECK_LIB(crypto, des_cbc_encrypt, [
+        AC_CHECK_HEADER(openssl/des.h, [AC_DEFINE(WITH_SSL_DES,[],[Use OpenSSL DES Implementation])
+                                       LIB_DES="-lcrypto";
+                                       with_des=yes],
+                       with_des=no)],
+        with_des=no, $LIB_RSAREF)
+
+    dnl same test again, different symbol name
+    if test "$with_des" = no; then
+      AC_CHECK_LIB(crypto, DES_cbc_encrypt, [
+        AC_CHECK_HEADER(openssl/des.h, [AC_DEFINE(WITH_SSL_DES,[],[Use OpenSSL DES Implementation])
+                                       LIB_DES="-lcrypto";
+                                       with_des=yes],
+                       with_des=no)],
+        with_des=no, $LIB_RSAREF)
+    fi
+  fi
+
+  if test "$with_des" = no; then
+    AC_CHECK_LIB(des, des_cbc_encrypt, [LIB_DES="-ldes";
+                                        with_des=yes], with_des=no)
+  fi
+
+  if test "$with_des" = no; then
+     AC_CHECK_LIB(des425, des_cbc_encrypt, [LIB_DES="-ldes425";
+                                       with_des=yes], with_des=no)
+  fi
+
+  if test "$with_des" = no; then
+     AC_CHECK_LIB(des524, des_cbc_encrypt, [LIB_DES="-ldes524";
+                                       with_des=yes], with_des=no)
+  fi
+
+  if test "$with_des" = no; then
+    dnl if openssl is around, we might be able to use that for des
+
+    dnl if openssl has been compiled with the rsaref2 libraries,
+    dnl we need to include the rsaref libraries in the crypto check
+    LIB_RSAREF=""
+    AC_CHECK_LIB(rsaref, RSAPublicEncrypt,
+                 LIB_RSAREF="-lRSAglue -lrsaref"; cmu_have_rsaref=yes,
+                 cmu_have_rsaref=no)
+
+    AC_CHECK_LIB(crypto, des_cbc_encrypt, [
+	AC_CHECK_HEADER(openssl/des.h, [AC_DEFINE(WITH_SSL_DES,[],[Use OpenSSL DES Implementation])
+					LIB_DES="-lcrypto";
+					with_des=yes],
+			with_des=no)], 
+        with_des=no, $LIB_RSAREF)
+  fi
+fi
+
+if test "$with_des" != no; then
+  AC_DEFINE(WITH_DES,[],[Use DES])
+fi
+
+AC_SUBST(LIB_DES)
+])
+m4trace:../config/kerberos_v4.m4:76: -1- AC_DEFUN([SASL_KERBEROS_V4_CHK], [
+  AC_REQUIRE([SASL_DES_CHK])
+
+  AC_ARG_ENABLE(krb4, [  --enable-krb4           enable KERBEROS_V4 authentication [[no]] ],
+    krb4=$enableval,
+    krb4=no)
+
+  if test "$krb4" != no; then
+    dnl In order to compile kerberos4, we need libkrb and libdes.
+    dnl (We've already gotten libdes from SASL_DES_CHK)
+    dnl we might need -lresolv for kerberos
+    AC_CHECK_LIB(resolv,res_search)
+
+    dnl if we were ambitious, we would look more aggressively for the
+    dnl krb4 install
+    if test -d ${krb4}; then
+       AC_CACHE_CHECK(for Kerberos includes, cyrus_krbinclude, [
+         for krbhloc in include/kerberosIV include/kerberos include
+         do
+           if test -f ${krb4}/${krbhloc}/krb.h ; then
+             cyrus_krbinclude=${krb4}/${krbhloc}
+             break
+           fi
+         done
+         ])
+
+       if test -n "${cyrus_krbinclude}"; then
+         CPPFLAGS="$CPPFLAGS -I${cyrus_krbinclude}"
+       fi
+       LDFLAGS="$LDFLAGS -L$krb4/lib"
+    fi
+
+    if test "$with_des" != no; then
+      AC_CHECK_HEADER(krb.h, [
+        AC_CHECK_LIB(com_err, com_err, [
+	  AC_CHECK_LIB(krb, krb_mk_priv,
+                     [COM_ERR="-lcom_err"; SASL_KRB_LIB="-lkrb"; krb4lib="yes"],
+                     krb4lib=no, $LIB_DES -lcom_err)], [
+    	  AC_CHECK_LIB(krb, krb_mk_priv,
+                     [COM_ERR=""; SASL_KRB_LIB="-lkrb"; krb4lib="yes"],
+                     krb4lib=no, $LIB_DES)])], krb4="no")
+
+      if test "$krb4" != "no" -a "$krb4lib" = "no"; then
+	AC_CHECK_LIB(krb4, krb_mk_priv,
+                     [COM_ERR=""; SASL_KRB_LIB="-lkrb4"; krb4=yes],
+                     krb4=no, $LIB_DES)
+      fi
+      if test "$krb4" = no; then
+          AC_WARN(No Kerberos V4 found)
+      fi
+    else
+      AC_WARN(No DES library found for Kerberos V4 support)
+      krb4=no
+    fi
+  fi
+
+  if test "$krb4" != no; then
+    cmu_save_LIBS="$LIBS"
+    LIBS="$LIBS $SASL_KRB_LIB"
+    AC_CHECK_FUNCS(krb_get_err_text)
+    LIBS="$cmu_save_LIBS"
+  fi
+
+  AC_MSG_CHECKING(KERBEROS_V4)
+  if test "$krb4" != no; then
+    AC_MSG_RESULT(enabled)
+    SASL_MECHS="$SASL_MECHS libkerberos4.la"
+    SASL_STATIC_SRCS="$SASL_STATIC_SRCS ../plugins/kerberos4.c"
+    SASL_STATIC_OBJS="$SASL_STATIC_OBJS kerberos4.o"
+    AC_DEFINE(STATIC_KERBEROS4,[],[User KERBEROS_V4 Staticly])
+    AC_DEFINE(HAVE_KRB,[],[Do we have Kerberos 4 Support?])
+    SASL_KRB_LIB="$SASL_KRB_LIB $LIB_DES $COM_ERR"
+  else
+    AC_MSG_RESULT(disabled)
+  fi
+  AC_SUBST(SASL_KRB_LIB)
+])
+m4trace:../config/sasldb.m4:6: -1- AC_DEFUN([SASL_DB_CHECK], [
+cmu_save_LIBS="$LIBS"
+AC_ARG_WITH(dblib, [  --with-dblib=DBLIB      set the DB library to use [berkeley] ],
+  dblib=$withval,
+  dblib=auto_detect)
+
+CYRUS_BERKELEY_DB_OPTS()
+
+SASL_DB_LIB=""
+
+case "$dblib" in
+dnl this is unbelievably painful due to confusion over what db-3 should be
+dnl named.  arg.
+  berkeley)
+	CYRUS_BERKELEY_DB_CHK()
+	CPPFLAGS="${CPPFLAGS} ${BDB_INCADD}"
+	SASL_DB_INC=$BDB_INCADD
+	SASL_DB_LIB="${BDB_LIBADD}"
+	;;
+  gdbm)
+	AC_ARG_WITH(gdbm,[  --with-gdbm=PATH        use gdbm from PATH],
+                    with_gdbm="${withval}")
+
+        case "$with_gdbm" in
+           ""|yes)
+               AC_CHECK_HEADER(gdbm.h, [
+			AC_CHECK_LIB(gdbm, gdbm_open, SASL_DB_LIB="-lgdbm",
+                                           dblib="no")],
+			dblib="no")
+               ;;
+           *)
+               if test -d $with_gdbm; then
+                 CPPFLAGS="${CPPFLAGS} -I${with_gdbm}/include"
+                 LDFLAGS="${LDFLAGS} -L${with_gdbm}/lib"
+                 SASL_DB_LIB="-lgdbm" 
+               else
+                 with_gdbm="no"
+               fi
+       esac
+	;;
+  ndbm)
+	dnl We want to attempt to use -lndbm if we can, just in case
+	dnl there's some version of it installed and overriding libc
+	AC_CHECK_HEADER(ndbm.h, [
+			AC_CHECK_LIB(ndbm, dbm_open, SASL_DB_LIB="-lndbm", [
+				AC_CHECK_FUNC(dbm_open,,dblib="no")])],
+				dblib="no")
+	;;
+  auto_detect)
+        dnl How about berkeley db?
+	CYRUS_BERKELEY_DB_CHK()
+	if test "$dblib" = no; then
+	  dnl How about ndbm?
+	  AC_CHECK_HEADER(ndbm.h, [
+		AC_CHECK_LIB(ndbm, dbm_open,
+			     dblib="ndbm"; SASL_DB_LIB="-lndbm",
+		   	     dblib="weird")],
+		   dblib="no")
+	  if test "$dblib" = "weird"; then
+	    dnl Is ndbm in the standard library?
+            AC_CHECK_FUNC(dbm_open, dblib="ndbm", dblib="no")
+	  fi
+
+	  if test "$dblib" = no; then
+            dnl Can we use gdbm?
+   	    AC_CHECK_HEADER(gdbm.h, [
+		AC_CHECK_LIB(gdbm, gdbm_open, dblib="gdbm";
+					     SASL_DB_LIB="-lgdbm", dblib="no")],
+  			     dblib="no")
+	  fi
+	else
+	  dnl we took Berkeley
+	  CPPFLAGS="${CPPFLAGS} ${BDB_INCADD}"
+	  SASL_DB_INC=$BDB_INCADD
+          SASL_DB_LIB="${BDB_LIBADD}"
+	fi
+	;;
+  none)
+	;;
+  no)
+	;;
+  *)
+	AC_MSG_WARN([Bad DB library implementation specified;])
+	AC_ERROR([Use either \"berkeley\", \"gdbm\", \"ndbm\" or \"none\"])
+	dblib=no
+	;;
+esac
+LIBS="$cmu_save_LIBS"
+
+AC_MSG_CHECKING(DB library to use)
+AC_MSG_RESULT($dblib)
+
+SASL_DB_BACKEND="db_${dblib}.lo"
+SASL_DB_BACKEND_STATIC="db_${dblib}.o allockey.o"
+SASL_DB_BACKEND_STATIC_SRCS="../sasldb/db_${dblib}.c ../sasldb/allockey.c"
+SASL_DB_UTILS="saslpasswd2 sasldblistusers2"
+SASL_DB_MANS="saslpasswd2.8 sasldblistusers2.8"
+
+case "$dblib" in
+  gdbm) 
+    SASL_MECHS="$SASL_MECHS libsasldb.la"
+    AC_DEFINE(SASL_GDBM,[],[Use GDBM for SASLdb])
+    ;;
+  ndbm)
+    SASL_MECHS="$SASL_MECHS libsasldb.la"
+    AC_DEFINE(SASL_NDBM,[],[Use NDBM for SASLdb])
+    ;;
+  berkeley)
+    SASL_MECHS="$SASL_MECHS libsasldb.la"
+    AC_DEFINE(SASL_BERKELEYDB,[],[Use BerkeleyDB for SASLdb])
+    ;;
+  *)
+    AC_MSG_WARN([Disabling SASL authentication database support])
+    dnl note that we do not add libsasldb.la to SASL_MECHS, since it
+    dnl will just fail to load anyway.
+    SASL_DB_BACKEND="db_none.lo"
+    SASL_DB_BACKEND_STATIC="db_none.o"
+    SASL_DB_BACKEND_STATIC_SRCS="../sasldb/db_none.c"
+    SASL_DB_UTILS=""
+    SASL_DB_MANS=""
+    SASL_DB_LIB=""
+    ;;
+esac
+
+if test "$enable_static" = yes; then
+    if test "$dblib" != "none"; then
+      SASL_STATIC_SRCS="$SASL_STATIC_SRCS ../plugins/sasldb.c $SASL_DB_BACKEND_STATIC_SRCS"
+      SASL_STATIC_OBJS="$SASL_STATIC_OBJS sasldb.o $SASL_DB_BACKEND_STATIC"
+      AC_DEFINE(STATIC_SASLDB,[],[Link SASLdb Staticly])
+    else
+      SASL_STATIC_OBJS="$SASL_STATIC_OBJS $SASL_DB_BACKEND_STATIC"
+      SASL_STATIC_SRCS="$SASL_STATIC_SRCS $SASL_DB_BACKEND_STATIC_SRCS"
+    fi
+fi
+
+AC_SUBST(SASL_DB_UTILS)
+AC_SUBST(SASL_DB_MANS)
+AC_SUBST(SASL_DB_BACKEND)
+AC_SUBST(SASL_DB_BACKEND_STATIC)
+AC_SUBST(SASL_DB_INC)
+AC_SUBST(SASL_DB_LIB)
+])
+m4trace:../config/sasldb.m4:150: -1- AC_DEFUN([SASL_DB_PATH_CHECK], [
+AC_ARG_WITH(dbpath, [  --with-dbpath=PATH      set the DB path to use [/etc/sasldb2] ],
+  dbpath=$withval,
+  dbpath=/etc/sasldb2)
+AC_MSG_CHECKING(DB path to use)
+AC_MSG_RESULT($dbpath)
+AC_DEFINE_UNQUOTED(SASL_DB_PATH, "$dbpath", [Path to default SASLdb database])])
+m4trace:../cmulocal/afs.m4:8: -1- AC_DEFUN([CMU_AFS_INC_WHERE1], [
+cmu_save_CPPFLAGS=$CPPFLAGS
+CPPFLAGS="$cmu_save_CPPFLAGS -I$1"
+AC_TRY_COMPILE([#include <afs/param.h>],
+[#ifndef SYS_NAME
+choke me
+#endif
+int foo;],
+ac_cv_found_afs_inc=yes,
+ac_cv_found_afs_inc=no)
+CPPFLAGS=$cmu_save_CPPFLAGS
+])
+m4trace:../cmulocal/afs.m4:21: -1- AC_DEFUN([CMU_AFS_LIB_WHERE1], [
+save_LIBS="$LIBS"
+save_LDFLAGS="$LDFLAGS"
+
+LIBS="-lauth $1/afs/util.a $LIB_SOCKET $LIBS"
+LDFLAGS="-L$1 -L$1/afs $LDFLAGS"
+dnl suppress caching
+AC_TRY_LINK([],[afsconf_Open();], ac_cv_found_afs_lib=yes, ac_cv_found_afs_lib=no)
+LIBS="$save_LIBS"
+LDFLAGS="$save_LDFLAGS"
+])
+m4trace:../cmulocal/afs.m4:33: -1- AC_DEFUN([CMU_AFS_WHERE], [
+AC_REQUIRE([CMU_FIND_LIB_SUBDIR])
+   for i in $1; do
+      AC_MSG_CHECKING(for AFS in $i)
+      CMU_AFS_INC_WHERE1("$i/include")
+      ac_cv_found_lwp_inc=$ac_cv_found_afs_inc
+      CMU_TEST_INCPATH($i/include, lwp) 
+      ac_cv_found_afs_inc=$ac_cv_found_lwp_inc
+      if test "$ac_cv_found_afs_inc" = "yes"; then
+        CMU_AFS_LIB_WHERE1("$i/$CMU_LIB_SUBDIR")
+        if test "$ac_cv_found_afs_lib" = "yes"; then
+          ac_cv_afs_where=$i
+          AC_MSG_RESULT(found)
+          break
+        else
+          AC_MSG_RESULT(not found)
+        fi
+      else
+        AC_MSG_RESULT(not found)
+      fi
+    done
+])
+m4trace:../cmulocal/afs.m4:56: -1- AC_DEFUN([CMU_AFS], [
+AC_REQUIRE([CMU_FIND_LIB_SUBDIR])
+AC_REQUIRE([CMU_SOCKETS])
+AC_REQUIRE([CMU_LIBSSL])
+AC_ARG_WITH(AFS,
+	[  --with-afs=PREFIX      Compile with AFS support],
+	[if test "X$with_AFS" = "X"; then
+		with_AFS=yes
+	fi])
+
+	if test "X$with_AFS" != "X"; then
+	  ac_cv_afs_where=$with_AFS
+	fi
+	if test "X$ac_cv_afs_where" = "X"; then
+	  CMU_AFS_WHERE(/usr/afsws /usr/local /usr/athena /Library/OpenAFS/Tools)
+	fi
+
+	AC_MSG_CHECKING(whether to include AFS)
+	if test "X$ac_cv_afs_where" = "Xno" -o "X$ac_cv_afs_where" = "X"; then
+	  ac_cv_found_afs=no
+	  AC_MSG_RESULT(no)
+	else
+	  ac_cv_found_afs=yes
+	  AC_MSG_RESULT(yes)
+	  AFS_INC_DIR="$ac_cv_afs_where/include"
+	  AFS_LIB_DIR="$ac_cv_afs_where/$CMU_LIB_SUBDIR"
+	  AFS_TOP_DIR="$ac_cv_afs_where"
+	  AFS_INC_FLAGS="-I${AFS_INC_DIR}"
+          AFS_LIB_FLAGS="-L${AFS_LIB_DIR} -L${AFS_LIB_DIR}/afs"
+          cmu_save_LIBS="$LIBS"
+          cmu_save_CPPFLAGS="$CPPFLAGS"
+          CPPFLAGS="$CPPFLAGS ${AFS_INC_FLAGS}"
+	  cmu_save_LDFLAGS="$LDFLAGS"
+ 	  LDFLAGS="$cmu_save_LDFLAGS ${AFS_LIB_FLAGS}"
+                        
+          AC_CHECK_HEADERS(afs/stds.h)
+
+          AC_MSG_CHECKING([if libdes is needed])
+          AC_TRY_LINK([],[des_quad_cksum();],AFS_DES_LIB="",AFS_DES_LIB="maybe")
+          if test "X$AFS_DES_LIB" != "X"; then
+              LIBS="$cmu_save_LIBS -ldes"
+              AC_TRY_LINK([], [des_quad_cksum();],AFS_DES_LIB="yes")
+              if test "X$AFS_DES_LIB" = "Xyes"; then
+                  AC_MSG_RESULT([yes])
+    	          AFS_LIBDES="-ldes"
+    	          AFS_LIBDESA="${AFS_LIB_DIR}/libdes.a"
+    	      else
+   	          LIBS="$cmu_save_LIBS $LIBSSL_LIB_FLAGS"
+ 	          AC_TRY_LINK([],
+	          [des_quad_cksum();],AFS_DES_LIB="libcrypto")
+	          if test "X$AFS_DES_LIB" = "Xlibcrypto"; then
+	              AC_MSG_RESULT([libcrypto])
+		      AFS_LIBDES="$LIBSSL_LIB_FLAGS"
+	              AFS_LIBDESA="$LIBSSL_LIB_FLAGS"
+    	          else
+   	              LIBS="$cmu_save_LIBS -L$LIBSSL_LIB_DIR -ldescompat $LIBSSL_LIB_FLAGS"
+ 	              AC_TRY_LINK([],
+	              [des_quad_cksum();],AFS_DES_LIB="libcrypto+descompat")
+	              if test "X$AFS_DES_LIB" = "Xlibcrypto+descompat"; then
+	                  AC_MSG_RESULT([libcrypto+descompat])
+		          AFS_LIBDES="-L$LIBSSL_LIB_DIR -ldescompat $LIBSSL_LIB_FLAGS"
+	                  AFS_LIBDESA="-L$LIBSSL_LIB_DIR -ldescompat $LIBSSL_LIB_FLAGS"
+	              else
+         	          AC_MSG_RESULT([unknown])
+	                  AC_MSG_ERROR([Could not use -ldes])
+	              fi 
+	          fi 
+	      fi 
+	  else
+             AC_MSG_RESULT([no])
+          fi
+
+
+	  AFS_CLIENT_LIBS_STATIC="${AFS_LIB_DIR}/afs/libvolser.a ${AFS_LIB_DIR}/afs/libvldb.a ${AFS_LIB_DIR}/afs/libkauth.a ${AFS_LIB_DIR}/afs/libprot.a ${AFS_LIB_DIR}/libubik.a ${AFS_LIB_DIR}/afs/libauth.a ${AFS_LIB_DIR}/librxkad.a ${AFS_LIB_DIR}/librx.a ${AFS_LIB_DIR}/afs/libsys.a ${AFS_LIB_DIR}/librx.a ${AFS_LIB_DIR}/liblwp.a ${AFS_LIBDESA} ${AFS_LIB_DIR}/afs/libcmd.a ${AFS_LIB_DIR}/afs/libcom_err.a ${AFS_LIB_DIR}/afs/util.a"
+          AFS_KTC_LIBS_STATIC="${AFS_LIB_DIR}/afs/libauth.a ${AFS_LIB_DIR}/afs/libsys.a ${AFS_LIB_DIR}/librx.a ${AFS_LIB_DIR}/liblwp.a ${AFS_LIBDESA} ${AFS_LIB_DIR}/afs/libcom_err.a ${AFS_LIB_DIR}/afs/util.a"
+	  AFS_CLIENT_LIBS="-lvolser -lvldb -lkauth -lprot -lubik -lauth -lrxkad -lrx ${AFS_LIB_DIR}/afs/libsys.a -lrx -llwp ${AFS_LIBDES} -lcmd -lcom_err ${AFS_LIB_DIR}/afs/util.a"
+	  AFS_RX_LIBS="-lauth -lrxkad -lrx ${AFS_LIB_DIR}/afs/libsys.a -lrx -llwp ${AFS_LIBDES} -lcmd -lcom_err ${AFS_LIB_DIR}/afs/util.a"
+          AFS_KTC_LIBS="-lauth ${AFS_LIB_DIR}/afs/libsys.a -lrx -llwp ${AFS_LIBDES} -lcom_err ${AFS_LIB_DIR}/afs/util.a"
+
+          LIBS="$cmu_save_LIBS $AFS_CLIENT_LIBS ${LIB_SOCKET}"
+          AC_CHECK_FUNC(des_pcbc_init)
+          if test "X$ac_cv_func_des_pcbc_init" != "Xyes"; then
+           AC_CHECK_LIB(descompat, des_pcbc_init, AFS_DESCOMPAT_LIB="-ldescompat")
+           if test "X$AFS_DESCOMPAT_LIB" != "X" ; then
+                AFS_CLIENT_LIBS_STATIC="$AFS_CLIENT_LIBS_STATIC $AFS_DESCOMPAT_LIB"
+                AFS_KTC_LIBS_STATIC="$AFS_KTC_LIBS_STATIC $AFS_DESCOMPAT_LIB"
+                AFS_CLIENT_LIBS="$AFS_CLIENT_LIBS $AFS_DESCOMPAT_LIB"
+                AFS_KTC_LIBS="$AFS_KTC_LIBS $AFS_DESCOMPAT_LIB"
+           else
+
+           AC_MSG_CHECKING([if rxkad needs des_pcbc_init])
+           AC_TRY_LINK(,[tkt_DecodeTicket();],RXKAD_PROBLEM=no,RXKAD_PROBLEM=maybe)
+            if test "$RXKAD_PROBLEM" = "maybe"; then
+              AC_TRY_LINK([int des_pcbc_init() { return 0;}],
+              [tkt_DecodeTicket();],RXKAD_PROBLEM=yes,RXKAD_PROBLEM=error)
+              if test "$RXKAD_PROBLEM" = "yes"; then
+                    AC_MSG_RESULT([yes])
+                    AC_MSG_ERROR([cannot use rxkad])
+              else
+                    AC_MSG_RESULT([unknown])        
+                    AC_MSG_ERROR([Unknown error testing rxkad])
+              fi
+            else
+              AC_MSG_RESULT([no])
+            fi
+           fi
+          fi
+
+          LIBS="$cmu_save_LIBS"
+          AC_CHECK_FUNC(flock)
+          LIBS="$cmu_save_LIBS ${AFS_CLIENT_LIBS} ${LIB_SOCKET}"
+          if test "X$ac_cv_func_flock" != "Xyes"; then
+             AC_MSG_CHECKING([if AFS needs flock])
+             AC_TRY_LINK([#include <afs/param.h>
+#ifdef HAVE_AFS_STDS_H
+#include <afs/stds.h>
+#endif
+#include <ubik.h>
+#include <afs/cellconfig.h>
+#include <afs/auth.h>
+#include <afs/volser.h>
+struct ubik_client * cstruct;
+int sigvec() {return 0;}
+extern int UV_SetSecurity();],
+             [vsu_ClientInit(1,"","",0,
+                             &cstruct,UV_SetSecurity)],
+             AFS_FLOCK=no,AFS_FLOCK=yes)
+             if test $AFS_FLOCK = "no"; then
+                AC_MSG_RESULT([no])
+             else
+               AC_MSG_RESULT([yes])
+               LDFLAGS="$LDFLAGS -L/usr/ucblib"
+               AC_CHECK_LIB(ucb, flock,:, [AC_CHECK_LIB(BSD, flock)])
+             fi
+          fi
+          LIBS="$cmu_save_LIBS"
+          AC_CHECK_FUNC(sigvec)
+          LIBS="$cmu_save_LIBS ${AFS_CLIENT_LIBS} ${LIB_SOCKET}"
+          if test "X$ac_cv_func_sigvec" != "Xyes"; then
+             AC_MSG_CHECKING([if AFS needs sigvec])
+             AC_TRY_LINK([#include <afs/param.h>
+#ifdef HAVE_AFS_STDS_H
+#include <afs/stds.h>
+#endif
+#include <ubik.h>
+#include <afs/cellconfig.h>
+#include <afs/auth.h>
+#include <afs/volser.h>
+struct ubik_client * cstruct;
+int flock() {return 0;}
+extern int UV_SetSecurity();],
+             [vsu_ClientInit(1,"","",0,
+                             &cstruct,UV_SetSecurity)],
+             AFS_SIGVEC=no,AFS_SIGVEC=yes)
+             if test $AFS_SIGVEC = "no"; then
+                AC_MSG_RESULT([no])
+             else
+               AC_MSG_RESULT([yes])
+               LDFLAGS="$LDFLAGS -L/usr/ucblib"
+               AC_CHECK_LIB(ucb, sigvec,:,[AC_CHECK_LIB(BSD, sigvec)])
+             fi
+          fi
+          if test "$ac_cv_lib_ucb_flock" = "yes" -o "$ac_cv_lib_ucb_sigvec" = "yes"; then
+             AFS_LIB_FLAGS="${AFS_LIB_FLAGS} -L/usr/ucblib -R/usr/ucblib"
+          fi
+          if test "$ac_cv_lib_ucb_flock" = "yes" -o "$ac_cv_lib_ucb_sigvec" = "yes"; then
+             AFS_BSD_LIB="-lucb"
+          elif test "$ac_cv_lib_BSD_flock" = "yes" -o "$ac_cv_lib_BSD_sigvec" = "yes"; then
+             AFS_BSD_LIB="-lBSD"
+          fi
+          if test "X$AFS_BSD_LIB" != "X" ; then
+                AFS_CLIENT_LIBS_STATIC="$AFS_CLIENT_LIBS_STATIC $AFS_BSD_LIB"
+                AFS_KTC_LIBS_STATIC="$AFS_KTC_LIBS_STATIC $AFS_BSD_LIB"
+                AFS_CLIENT_LIBS="$AFS_CLIENT_LIBS $AFS_BSD_LIB"
+                AFS_RX_LIBS="$AFS_CLIENT_LIBS $AFS_BSD_LIB"
+                AFS_KTC_LIBS="$AFS_KTC_LIBS $AFS_BSD_LIB"
+          fi
+
+          AC_MSG_CHECKING([if libaudit is needed])
+	  AFS_LIBAUDIT=""
+          LIBS="$cmu_save_LIBS $AFS_CLIENT_LIBS ${LIB_SOCKET}"
+          AC_TRY_LINK([#include <afs/param.h>
+#ifdef HAVE_AFS_STDS_H
+#include <afs/stds.h>
+#endif
+#include <afs/cellconfig.h>
+#include <afs/auth.h>],
+          [afsconf_SuperUser();],AFS_AUDIT_LIB="",AFS_AUDIT_LIB="maybe")
+          if test "X$AFS_AUDIT_LIB" != "X"; then
+          LIBS="$cmu_save_LIBS -lvolser -lvldb -lkauth -lprot -lubik -lauth -laudit -lrxkad -lrx ${AFS_LIB_DIR}/afs/libsys.a -lrx -llwp ${AFS_LIBDES} -lcmd -lcom_err ${AFS_LIB_DIR}/afs/util.a $AFS_BSD_LIB $AFS_DESCOMPAT_LIB $LIB_SOCKET"
+             AC_TRY_LINK([#include <afs/param.h>
+#ifdef HAVE_AFS_STDS_H
+#include <afs/stds.h>
+#endif
+#include <afs/cellconfig.h>
+#include <afs/auth.h>],
+             [afsconf_SuperUser();],AFS_AUDIT_LIB="yes")
+             if test "X$AFS_AUDIT_LIB" = "Xyes"; then
+                 AC_MSG_RESULT([yes])
+	         AFS_LIBAUDIT="-laudit"
+	         AFS_CLIENT_LIBS_STATIC="${AFS_LIB_DIR}/afs/libvolser.a ${AFS_LIB_DIR}/afs/libvldb.a ${AFS_LIB_DIR}/afs/libkauth.a ${AFS_LIB_DIR}/afs/libprot.a ${AFS_LIB_DIR}/libubik.a ${AFS_LIB_DIR}/afs/libauth.a ${AFS_LIB_DIR}/afs/libaudit.a ${AFS_LIB_DIR}/librxkad.a ${AFS_LIB_DIR}/librx.a ${AFS_LIB_DIR}/afs/libsys.a ${AFS_LIB_DIR}/librx.a ${AFS_LIB_DIR}/liblwp.a ${AFS_LIBDESA} ${AFS_LIB_DIR}/afs/libcmd.a ${AFS_LIB_DIR}/afs/libcom_err.a ${AFS_LIB_DIR}/afs/util.a"
+                 AFS_CLIENT_LIBS="-lvolser -lvldb -lkauth -lprot -lubik -lauth -laudit -lrxkad -lrx ${AFS_LIB_DIR}/afs/libsys.a -lrx -llwp ${AFS_LIBDES} -lcmd -lcom_err ${AFS_LIB_DIR}/afs/util.a $AFS_BSD_LIB $AFS_DESCOMPAT_LIB"
+                 AFS_RX_LIBS="-lauth -laudit -lrxkad -lrx ${AFS_LIB_DIR}/afs/libsys.a -lrx -llwp ${AFS_LIBDES} -lcmd -lcom_err ${AFS_LIB_DIR}/afs/util.a $AFS_BSD_LIB $AFS_DESCOMPAT_LIB"
+             else
+                 AC_MSG_RESULT([unknown])
+                 AC_MSG_ERROR([Could not use -lauth while testing for -laudit])
+             fi 
+          else
+             AC_MSG_RESULT([no])
+          fi
+
+	  AC_CHECK_FUNCS(VL_ProbeServer)
+          AC_MSG_CHECKING([if new-style afs_ integer types are defined])
+          AC_CACHE_VAL(ac_cv_afs_int32,
+dnl The next few lines contain a quoted argument to egrep
+dnl It is critical that there be no leading or trailing whitespace
+dnl or newlines
+[AC_EGREP_CPP(dnl
+changequote(<<,>>)dnl
+<<(^|[^a-zA-Z_0-9])afs_int32[^a-zA-Z_0-9]>>dnl
+changequote([,]), [#include <afs/param.h>
+#ifdef HAVE_AFS_STDS_H
+#include <afs/stds.h>
+#endif],
+ac_cv_afs_int32=yes, ac_cv_afs_int32=no)])
+          AC_MSG_RESULT($ac_cv_afs_int32)
+          if test $ac_cv_afs_int32 = yes ; then
+            AC_DEFINE(HAVE_AFS_INT32,, [AFS provides new "unambiguous" type names])
+          else
+            AC_DEFINE(afs_int16, int16, [it's a type definition])
+            AC_DEFINE(afs_int32, int32, [it's a type definition])
+            AC_DEFINE(afs_uint16, u_int16, [it's a type definition])
+            AC_DEFINE(afs_uint32, u_int32, [it's a type definition])
+          fi
+
+          CPPFLAGS="${cmu_save_CPPFLAGS}"
+          LDFLAGS="${cmu_save_LDFLAGS}"
+          LIBS="${cmu_save_LIBS}"
+	  AC_DEFINE(AFS_ENV,, [Use AFS. (find what needs this and nuke it)])
+          AC_DEFINE(AFS,, [Use AFS. (find what needs this and nuke it)])
+          AC_SUBST(AFS_CLIENT_LIBS_STATIC)
+          AC_SUBST(AFS_KTC_LIBS_STATIC)
+          AC_SUBST(AFS_CLIENT_LIBS)
+          AC_SUBST(AFS_RX_LIBS)
+          AC_SUBST(AFS_KTC_LIBS)
+          AC_SUBST(AFS_INC_FLAGS)
+          AC_SUBST(AFS_LIB_FLAGS)
+	  AC_SUBST(AFS_TOP_DIR)
+	  AC_SUBST(AFS_LIBAUDIT)
+	  AC_SUBST(AFS_LIBDES)
+          AC_SUBST(AFS_LIBDESA)
+       	fi
+	])
+m4trace:../cmulocal/afs.m4:310: -1- AC_DEFUN([CMU_NEEDS_AFS], [AC_REQUIRE([CMU_AFS])
+if test "$ac_cv_found_afs" != "yes"; then
+        AC_ERROR([Cannot continue without AFS])
+fi])
+m4trace:../cmulocal/berkdb.m4:3: -1- AC_DEFUN([CMU_DB_INC_WHERE1], [
+saved_CPPFLAGS=$CPPFLAGS
+CPPFLAGS="$saved_CPPFLAGS -I$1"
+AC_TRY_COMPILE([#include <db.h>],
+[DB *db;
+db_create(&db, NULL, 0);
+db->open(db, "foo.db", NULL, DB_UNKNOWN, DB_RDONLY, 0644);],
+ac_cv_found_db_inc=yes,
+ac_cv_found_db_inc=no)
+CPPFLAGS=$saved_CPPFLAGS
+])
+m4trace:../cmulocal/berkdb.m4:15: -1- AC_DEFUN([CMU_DB_INC_WHERE], [
+   for i in $1; do
+      AC_MSG_CHECKING(for db headers in $i)
+      CMU_DB_INC_WHERE1($i)
+      CMU_TEST_INCPATH($i, db)
+      if test "$ac_cv_found_db_inc" = "yes"; then
+        ac_cv_db_where_inc=$i
+        AC_MSG_RESULT(found)
+        break
+      else
+        AC_MSG_RESULT(not found)
+      fi
+    done
+])
+m4trace:../cmulocal/berkdb.m4:34: -1- AC_DEFUN([CMU_DB3_LIB_WHERE1], [
+AC_REQUIRE([CMU_AFS])
+AC_REQUIRE([CMU_KRB4])
+saved_LIBS=$LIBS
+  LIBS="$saved_LIBS -L$1 -ldb-3"
+AC_TRY_LINK([#include <db.h>],
+[db_env_create(NULL, 0);],
+[ac_cv_found_db_3_lib=yes],
+ac_cv_found_db_3_lib=no)
+LIBS=$saved_LIBS
+])
+m4trace:../cmulocal/berkdb.m4:45: -1- AC_DEFUN([CMU_DB4_LIB_WHERE1], [
+AC_REQUIRE([CMU_AFS])
+AC_REQUIRE([CMU_KRB4])
+saved_LIBS=$LIBS
+LIBS="$saved_LIBS -L$1 -ldb-4"
+AC_TRY_LINK([#include <db.h>],
+[db_env_create(NULL, 0);],
+[ac_cv_found_db_4_lib=yes],
+ac_cv_found_db_4_lib=no)
+LIBS=$saved_LIBS
+])
+m4trace:../cmulocal/berkdb.m4:57: -1- AC_DEFUN([CMU_DB_LIB_WHERE], [
+   for i in $1; do
+      AC_MSG_CHECKING(for db libraries in $i)
+if test "$enable_db4" = "yes"; then
+      CMU_DB4_LIB_WHERE1($i)
+      CMU_TEST_LIBPATH($i, [db-4])
+      ac_cv_found_db_lib=$ac_cv_found_db_4_lib
+else
+      CMU_DB3_LIB_WHERE1($i)
+      CMU_TEST_LIBPATH($i, [db-3])
+      ac_cv_found_db_lib=$ac_cv_found_db_3_lib
+fi
+      if test "$ac_cv_found_db_lib" = "yes" ; then
+        ac_cv_db_where_lib=$i
+        AC_MSG_RESULT(found)
+        break
+      else
+        AC_MSG_RESULT(not found)
+      fi
+    done
+])
+m4trace:../cmulocal/berkdb.m4:79: -1- AC_DEFUN([CMU_USE_DB], [
+AC_REQUIRE([CMU_FIND_LIB_SUBDIR])
+AC_ARG_WITH(db,
+	[  --with-db=PREFIX      Compile with db support],
+	[if test "X$with_db" = "X"; then
+		with_db=yes
+	fi])
+AC_ARG_WITH(db-lib,
+	[  --with-db-lib=dir     use db libraries in dir],
+	[if test "$withval" = "yes" -o "$withval" = "no"; then
+		AC_MSG_ERROR([No argument for --with-db-lib])
+	fi])
+AC_ARG_WITH(db-include,
+	[  --with-db-include=dir use db headers in dir],
+	[if test "$withval" = "yes" -o "$withval" = "no"; then
+		AC_MSG_ERROR([No argument for --with-db-include])
+	fi])
+AC_ARG_ENABLE(db4,
+	[  --enable-db4          use db 4.x libraries])
+	
+	if test "X$with_db" != "X"; then
+	  if test "$with_db" != "yes"; then
+	    ac_cv_db_where_lib=$with_db/$CMU_LIB_SUBDIR
+	    ac_cv_db_where_inc=$with_db/include
+	  fi
+	fi
+
+	if test "X$with_db_lib" != "X"; then
+	  ac_cv_db_where_lib=$with_db_lib
+	fi
+	if test "X$ac_cv_db_where_lib" = "X"; then
+	  CMU_DB_LIB_WHERE(/usr/athena/$CMU_LIB_SUBDIR /usr/$CMU_LIB_SUBDIR /usr/local/$CMU_LIB_SUBDIR)
+	fi
+
+	if test "X$with_db_include" != "X"; then
+	  ac_cv_db_where_inc=$with_db_include
+	fi
+	if test "X$ac_cv_db_where_inc" = "X"; then
+	  CMU_DB_INC_WHERE(/usr/athena/include /usr/local/include)
+	fi
+
+	AC_MSG_CHECKING(whether to include db)
+	if test "X$ac_cv_db_where_lib" = "X" -o "X$ac_cv_db_where_inc" = "X"; then
+	  ac_cv_found_db=no
+	  AC_MSG_RESULT(no)
+	else
+	  ac_cv_found_db=yes
+	  AC_MSG_RESULT(yes)
+	  DB_INC_DIR=$ac_cv_db_where_inc
+	  DB_LIB_DIR=$ac_cv_db_where_lib
+	  DB_INC_FLAGS="-I${DB_INC_DIR}"
+          if test "$enable_db4" = "yes"; then
+	     DB_LIB_FLAGS="-L${DB_LIB_DIR} -ldb-4"
+          else
+	     DB_LIB_FLAGS="-L${DB_LIB_DIR} -ldb-3"
+          fi
+          dnl Do not force configure.in to put these in CFLAGS and LIBS unconditionally
+          dnl Allow makefile substitutions....
+          AC_SUBST(DB_INC_FLAGS)
+          AC_SUBST(DB_LIB_FLAGS)
+	  if test "X$RPATH" = "X"; then
+		RPATH=""
+	  fi
+	  case "${host}" in
+	    *-*-linux*)
+	      if test "X$RPATH" = "X"; then
+	        RPATH="-Wl,-rpath,${DB_LIB_DIR}"
+	      else 
+		RPATH="${RPATH}:${DB_LIB_DIR}"
+	      fi
+	      ;;
+	    *-*-hpux*)
+	      if test "X$RPATH" = "X"; then
+	        RPATH="-Wl,+b${DB_LIB_DIR}"
+	      else 
+		RPATH="${RPATH}:${DB_LIB_DIR}"
+	      fi
+	      ;;
+	    *-*-irix*)
+	      if test "X$RPATH" = "X"; then
+	        RPATH="-Wl,-rpath,${DB_LIB_DIR}"
+	      else 
+		RPATH="${RPATH}:${DB_LIB_DIR}"
+	      fi
+	      ;;
+	    *-*-solaris2*)
+	      if test "$ac_cv_prog_gcc" = yes; then
+		if test "X$RPATH" = "X"; then
+		  RPATH="-Wl,-R${DB_LIB_DIR}"
+		else 
+		  RPATH="${RPATH}:${DB_LIB_DIR}"
+		fi
+	      else
+	        RPATH="${RPATH} -R${DB_LIB_DIR}"
+	      fi
+	      ;;
+	  esac
+	  AC_SUBST(RPATH)
+	fi
+	])
+m4trace:../cmulocal/berkdb.m4:204: -1- AC_DEFUN([CYRUS_BERKELEY_DB_CHK_LIB], [
+	BDB_SAVE_LDFLAGS=$LDFLAGS
+
+	if test -d $with_bdb_lib; then
+	    CMU_ADD_LIBPATH_TO($with_bdb_lib, LDFLAGS)
+	    CMU_ADD_LIBPATH_TO($with_bdb_lib, BDB_LIBADD)
+	else
+	    BDB_LIBADD=""
+	fi
+
+	saved_LIBS=$LIBS
+        for dbname in db-4.4 db4.4 db44 db-4.3 db4.3 db43 db-4.2 db4.2 db42 db-4.1 db4.1 db41 db-4.0 db4.0 db-4 db40 db4 db-3.3 db3.3 db33 db-3.2 db3.2 db32 db-3.1 db3.1 db31 db-3 db30 db3 db
+          do
+	    LIBS="$saved_LIBS -l$dbname"
+	    AC_TRY_LINK([#include <db.h>],
+	    [db_create(NULL, NULL, 0);],
+	    BDB_LIBADD="$BDB_LIBADD -l$dbname"; dblib="berkeley"; dbname=db,
+            dblib="no")
+	    if test "$dblib" = "berkeley"; then break; fi
+          done
+        if test "$dblib" = "no"; then
+	    LIBS="$saved_LIBS -ldb"
+	    AC_TRY_LINK([#include <db.h>],
+	    [db_open(NULL, 0, 0, 0, NULL, NULL, NULL);],
+	    BDB_LIBADD="$BDB_LIBADD -ldb"; dblib="berkeley"; dbname=db,
+            dblib="no")
+        fi
+	LIBS=$saved_LIBS
+
+	LDFLAGS=$BDB_SAVE_LDFLAGS
+])
+m4trace:../cmulocal/berkdb.m4:237: -1- AC_DEFUN([CYRUS_BERKELEY_DB_OPTS], [
+AC_ARG_WITH(bdb-libdir,
+	[  --with-bdb-libdir=DIR   Berkeley DB lib files are in DIR],
+	with_bdb_lib=$withval,
+	[ test "${with_bdb_lib+set}" = set || with_bdb_lib=none])
+AC_ARG_WITH(bdb-incdir,
+	[  --with-bdb-incdir=DIR   Berkeley DB include files are in DIR],
+	with_bdb_inc=$withval,
+	[ test "${with_bdb_inc+set}" = set || with_bdb_inc=none ])
+])
+m4trace:../cmulocal/berkdb.m4:249: -1- AC_DEFUN([CYRUS_BERKELEY_DB_CHK], [
+	AC_REQUIRE([CYRUS_BERKELEY_DB_OPTS])
+
+	cmu_save_CPPFLAGS=$CPPFLAGS
+
+	if test -d $with_bdb_inc; then
+	    CPPFLAGS="$CPPFLAGS -I$with_bdb_inc"
+	    BDB_INCADD="-I$with_bdb_inc"
+	else
+	    BDB_INCADD=""
+	fi
+
+	dnl Note that FreeBSD puts it in a wierd place
+        dnl (but they should use with-bdb-incdir)
+        AC_CHECK_HEADER(db.h,
+                        [CYRUS_BERKELEY_DB_CHK_LIB()],
+                        dblib="no")
+
+	CPPFLAGS=$cmu_save_CPPFLAGS
+])
+m4trace:../cmulocal/bsd_sockets.m4:9: -1- AC_DEFUN([CMU_SOCKETS], [
+	save_LIBS="$LIBS"
+	LIB_SOCKET=""
+	AC_CHECK_FUNC(connect, :,
+		AC_CHECK_LIB(nsl, gethostbyname,
+			     LIB_SOCKET="-lnsl $LIB_SOCKET")
+		AC_CHECK_LIB(socket, connect,
+			     LIB_SOCKET="-lsocket $LIB_SOCKET")
+	)
+	LIBS="$LIB_SOCKET $save_LIBS"
+	AC_CHECK_FUNC(res_search, :,
+		LIBS="-lresolv $LIB_SOCKET $save_LIBS"
+		AC_TRY_LINK([[
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <arpa/nameser.h>
+#ifdef HAVE_ARPA_NAMESER_COMPAT_H
+#include <arpa/nameser_compat.h>
+#endif
+#include <resolv.h>]],[[
+const char host[12]="openafs.org";
+u_char ans[1024];
+res_search( host, C_IN, T_MX, (u_char *)&ans, sizeof(ans));
+return 0;
+]], LIB_SOCKET="-lresolv $LIB_SOCKET")
+        )
+	LIBS="$LIB_SOCKET $save_LIBS"
+	AC_CHECK_FUNCS(dn_expand dns_lookup)
+	LIBS="$save_LIBS"
+	AC_SUBST(LIB_SOCKET)
+	])
+m4trace:../cmulocal/c-attribute.m4:9: -1- AC_DEFUN([CMU_C___ATTRIBUTE__], [
+AC_MSG_CHECKING(for __attribute__)
+AC_CACHE_VAL(ac_cv___attribute__, [
+AC_TRY_COMPILE([
+#include <stdlib.h>
+],
+[
+static void foo(void) __attribute__ ((noreturn));
+
+static void
+foo(void)
+{
+  exit(1);
+}
+],
+ac_cv___attribute__=yes,
+ac_cv___attribute__=no)])
+if test "$ac_cv___attribute__" = "yes"; then
+  AC_DEFINE(HAVE___ATTRIBUTE__, 1, [define if your compiler has __attribute__])
+fi
+AC_MSG_RESULT($ac_cv___attribute__)
+])
+m4trace:../cmulocal/common.m4:3: -1- AC_DEFUN([CMU_TEST_LIBPATH], [
+changequote(<<, >>)
+define(<<CMU_AC_CV_FOUND>>, translit(ac_cv_found_$2_lib, <<- *>>, <<__p>>))
+changequote([, ])
+if test "$CMU_AC_CV_FOUND" = "yes"; then
+  if test \! -r "$1/lib$2.a" -a \! -r "$1/lib$2.so" -a \! -r "$1/lib$2.sl" -a \! -r "$1/lib$2.dylib"; then
+    CMU_AC_CV_FOUND=no
+  fi
+fi
+])
+m4trace:../cmulocal/common.m4:14: -1- AC_DEFUN([CMU_TEST_INCPATH], [
+changequote(<<, >>)
+define(<<CMU_AC_CV_FOUND>>, translit(ac_cv_found_$2_inc, [ *], [_p]))
+changequote([, ])
+if test "$CMU_AC_CV_FOUND" = "yes"; then
+  if test \! -r "$1/$2.h"; then
+    CMU_AC_CV_FOUND=no
+  fi
+fi
+])
+m4trace:../cmulocal/common.m4:26: -1- AC_DEFUN([CMU_CHECK_HEADER_NOCACHE], [dnl Do the transliteration at runtime so arg 1 can be a shell variable.
+ac_safe=`echo "$1" | sed 'y%./+-%__p_%'`
+AC_MSG_CHECKING([for $1])
+AC_TRY_CPP([#include <$1>], eval "ac_cv_header_$ac_safe=yes",
+  eval "ac_cv_header_$ac_safe=no")
+if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
+  AC_MSG_RESULT(yes)
+  ifelse([$2], , :, [$2])
+else
+  AC_MSG_RESULT(no)
+ifelse([$3], , , [$3
+])dnl
+fi
+])
+m4trace:../cmulocal/common.m4:42: -1- AC_DEFUN([CMU_FIND_LIB_SUBDIR], [dnl
+AC_ARG_WITH([lib-subdir], AC_HELP_STRING([--with-lib-subdir=DIR],[Find libraries in DIR instead of lib]))
+AC_CHECK_SIZEOF(long)
+AC_CACHE_CHECK([what directory libraries are found in], [ac_cv_cmu_lib_subdir],
+[test "X$with_lib_subdir" = "Xyes" && with_lib_subdir=
+test "X$with_lib_subdir" = "Xno" && with_lib_subdir=
+if test "X$with_lib_subdir" = "X" ; then
+  ac_cv_cmu_lib_subdir=lib
+  if test $ac_cv_sizeof_long -eq 4 ; then
+    test -d /usr/lib32 && ac_cv_cmu_lib_subdir=lib32
+  fi
+  if test $ac_cv_sizeof_long -eq 8 ; then
+    test -d /usr/lib64 && ac_cv_cmu_lib_subdir=lib64
+  fi
+else
+  ac_cv_cmu_lib_subdir=$with_lib_subdir
+fi])
+AC_SUBST(CMU_LIB_SUBDIR, $ac_cv_cmu_lib_subdir)
+])
+m4trace:../cmulocal/cyrus.m4:12: -1- AC_DEFUN([CMU_ADD_LIBPATH], [
+  # this is CMU ADD LIBPATH
+  if test "$andrew_runpath_switch" = "none" ; then
+	LDFLAGS="-L$1 ${LDFLAGS}"
+  else
+	LDFLAGS="-L$1 $andrew_runpath_switch$1 ${LDFLAGS}"
+  fi
+])
+m4trace:../cmulocal/cyrus.m4:23: -1- AC_DEFUN([CMU_ADD_LIBPATH_TO], [
+  # this is CMU ADD LIBPATH TO
+  if test "$andrew_runpath_switch" = "none" ; then
+	$2="-L$1 ${$2}"
+  else
+	$2="-L$1 ${$2} $andrew_runpath_switch$1"
+  fi
+])
+m4trace:../cmulocal/cyrus.m4:33: -1- AC_DEFUN([CMU_GUESS_RUNPATH_SWITCH], [
+   # CMU GUESS RUNPATH SWITCH
+  AC_CACHE_CHECK(for runpath switch, andrew_runpath_switch, [
+    # first, try -R
+    SAVE_LDFLAGS="${LDFLAGS}"
+    LDFLAGS="-R /usr/lib"
+    AC_TRY_LINK([],[],[andrew_runpath_switch="-R"], [
+  	LDFLAGS="-Wl,-rpath,/usr/lib"
+    AC_TRY_LINK([],[],[andrew_runpath_switch="-Wl,-rpath,"],
+    [andrew_runpath_switch="none"])
+    ])
+  LDFLAGS="${SAVE_LDFLAGS}"
+  ])])
+m4trace:../cmulocal/init_automake.m4:5: -1- AC_DEFUN([CMU_INIT_AUTOMAKE], [
+	AC_REQUIRE([AM_INIT_AUTOMAKE])
+	ACLOCAL="$ACLOCAL -I \$(top_srcdir)/cmulocal"
+	])
+m4trace:../cmulocal/ipv6.m4:4: -1- AC_DEFUN([IPv6_CHECK_FUNC], [
+AC_CHECK_FUNC($1, [dnl
+  ac_cv_lib_socket_$1=no
+  ac_cv_lib_inet6_$1=no
+], [dnl
+  AC_CHECK_LIB(socket, $1, [dnl
+    LIBS="$LIBS -lsocket"
+    ac_cv_lib_inet6_$1=no
+  ], [dnl
+    AC_MSG_CHECKING([whether your system has IPv6 directory])
+    AC_CACHE_VAL(ipv6_cv_dir, [dnl
+      for ipv6_cv_dir in /usr/local/v6 /usr/inet6 no; do
+	if test $ipv6_cv_dir = no -o -d $ipv6_cv_dir; then
+	  break
+	fi
+      done])dnl
+    AC_MSG_RESULT($ipv6_cv_dir)
+    if test $ipv6_cv_dir = no; then
+      ac_cv_lib_inet6_$1=no
+    else
+      if test x$ipv6_libinet6 = x; then
+	ipv6_libinet6=no
+	SAVELDFLAGS="$LDFLAGS"
+	LDFLAGS="$LDFLAGS -L$ipv6_cv_dir/lib"
+      fi
+      AC_CHECK_LIB(inet6, $1, [dnl
+	if test $ipv6_libinet6 = no; then
+	  ipv6_libinet6=yes
+	  LIBS="$LIBS -linet6"
+	fi],)dnl
+      if test $ipv6_libinet6 = no; then
+	LDFLAGS="$SAVELDFLAGS"
+      fi
+    fi])dnl
+])dnl
+ipv6_cv_$1=no
+if test $ac_cv_func_$1 = yes -o $ac_cv_lib_socket_$1 = yes \
+     -o $ac_cv_lib_inet6_$1 = yes
+then
+  ipv6_cv_$1=yes
+fi
+if test $ipv6_cv_$1 = no; then
+  if test $1 = getaddrinfo; then
+    for ipv6_cv_pfx in o n; do
+      AC_EGREP_HEADER(${ipv6_cv_pfx}$1, netdb.h,
+		      [AC_CHECK_FUNC(${ipv6_cv_pfx}$1)])
+      if eval test X\$ac_cv_func_${ipv6_cv_pfx}$1 = Xyes; then
+        AC_DEFINE(HAVE_GETADDRINFO,[],[Do we have a getaddrinfo?])
+        ipv6_cv_$1=yes
+        break
+      fi
+    done
+  fi
+fi
+if test $ipv6_cv_$1 = yes; then
+  ifelse([$2], , :, [$2])
+else
+  ifelse([$3], , :, [$3])
+fi])
+m4trace:../cmulocal/ipv6.m4:66: -1- AC_DEFUN([IPv6_CHECK_SS_FAMILY], [
+AC_MSG_CHECKING([whether you have ss_family in struct sockaddr_storage])
+AC_CACHE_VAL(ipv6_cv_ss_family, [dnl
+AC_TRY_COMPILE([#include <sys/types.h>
+#include <sys/socket.h>],
+	[struct sockaddr_storage ss; int i = ss.ss_family;],
+	[ipv6_cv_ss_family=yes], [ipv6_cv_ss_family=no])])dnl
+if test $ipv6_cv_ss_family = yes; then
+  ifelse([$1], , AC_DEFINE(HAVE_SS_FAMILY,[],[Is there an ss_family in sockaddr_storage?]), [$1])
+else
+  ifelse([$2], , :, [$2])
+fi
+AC_MSG_RESULT($ipv6_cv_ss_family)])
+m4trace:../cmulocal/ipv6.m4:82: -1- AC_DEFUN([IPv6_CHECK_SA_LEN], [
+AC_MSG_CHECKING([whether you have sa_len in struct sockaddr])
+AC_CACHE_VAL(ipv6_cv_sa_len, [dnl
+AC_TRY_COMPILE([#include <sys/types.h>
+#include <sys/socket.h>],
+	       [struct sockaddr sa; int i = sa.sa_len;],
+	       [ipv6_cv_sa_len=yes], [ipv6_cv_sa_len=no])])dnl
+if test $ipv6_cv_sa_len = yes; then
+  ifelse([$1], , AC_DEFINE(HAVE_SOCKADDR_SA_LEN,[],[Does sockaddr have an sa_len?]), [$1])
+else
+  ifelse([$2], , :, [$2])
+fi
+AC_MSG_RESULT($ipv6_cv_sa_len)])
+m4trace:../cmulocal/ipv6.m4:98: -1- AC_DEFUN([IPv6_CHECK_SOCKLEN_T], [
+AC_MSG_CHECKING(for socklen_t)
+AC_CACHE_VAL(ipv6_cv_socklen_t, [dnl
+AC_TRY_LINK([#include <sys/types.h>
+#include <sys/socket.h>],
+	    [socklen_t len = 0;],
+	    [ipv6_cv_socklen_t=yes], [ipv6_cv_socklen_t=no])])dnl
+if test $ipv6_cv_socklen_t = yes; then
+  ifelse([$1], , AC_DEFINE(HAVE_SOCKLEN_T,[],[Do we have a socklen_t?]), [$1])
+else
+  ifelse([$2], , :, [$2])
+fi
+AC_MSG_RESULT($ipv6_cv_socklen_t)])
+m4trace:../cmulocal/kerberos_v4.m4:6: -1- AC_DEFUN([CMU_KRB_SENDAUTH_PROTO], [
+AC_MSG_CHECKING(for krb_sendauth prototype)
+AC_TRY_COMPILE(
+[#include <krb.h>
+int krb_sendauth (long options, int fd, KTEXT ktext, char *service,
+                  char *inst, char *realm, u_long checksum,
+                  MSG_DAT *msg_data, CREDENTIALS *cred,
+                  Key_schedule schedule, struct sockaddr_in *laddr,
+                  struct sockaddr_in *faddr, char *version);],
+[int foo = krb_sendauth(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0); ],
+ac_cv_krb_sendauth_proto=no,
+ac_cv_krb_sendauth_proto=yes)
+AC_MSG_RESULT($ac_cv_krb_sendauth_proto)
+if test "$ac_cv_krb_sendauth_proto" = yes; then
+        AC_DEFINE(HAVE_KRB_SENDAUTH_PROTO)dnl
+fi
+AC_MSG_RESULT($ac_cv_krb_sendauth_proto)
+])
+m4trace:../cmulocal/kerberos_v4.m4:25: -1- AC_DEFUN([CMU_KRB_SET_KEY_PROTO], [
+AC_MSG_CHECKING(for krb_set_key prototype)
+AC_CACHE_VAL(ac_cv_krb_set_key_proto, [
+cmu_save_CPPFLAGS="$CPPFLAGS"
+CPPFLAGS="${CPPFLAGS} ${KRB_INC_FLAGS}"
+AC_TRY_COMPILE(
+[#include <krb.h>
+int krb_set_key(char *key, int cvt);],
+[int foo = krb_set_key(0, 0);],
+ac_cv_krb_set_key_proto=no,
+ac_cv_krb_set_key_proto=yes)
+])
+CPPFLAGS="${cmu_save_CPPFLAGS}"
+if test "$ac_cv_krb_set_key_proto" = yes; then
+	AC_DEFINE(HAVE_KRB_SET_KEY_PROTO)dnl
+fi
+AC_MSG_RESULT($ac_cv_krb_set_key_proto)
+])
+m4trace:../cmulocal/kerberos_v4.m4:44: -1- AC_DEFUN([CMU_KRB4_32_DEFN], [
+AC_MSG_CHECKING(for KRB4_32 definition)
+AC_CACHE_VAL(ac_cv_krb4_32_defn, [
+cmu_save_CPPFLAGS="$CPPFLAGS"
+CPPFLAGS="${CPPFLAGS} ${KRB_INC_FLAGS}"
+AC_TRY_COMPILE(
+[#include <krb.h>
+],
+[KRB4_32 foo = 1;],
+ac_cv_krb4_32_defn=yes,
+ac_cv_krb4_32_defn=no)
+])
+CPPFLAGS="${cmu_save_CPPFLAGS}"
+if test "$ac_cv_krb4_32_defn" = yes; then
+	AC_DEFINE(HAVE_KRB4_32_DEFINE)dnl
+fi
+AC_MSG_RESULT($ac_cv_krb4_32_defn)
+])
+m4trace:../cmulocal/kerberos_v4.m4:63: -1- AC_DEFUN([CMU_KRB_RD_REQ_PROTO], [
+AC_MSG_CHECKING(for krb_rd_req prototype)
+AC_CACHE_VAL(ac_cv_krb_rd_req_proto, [
+cmu_save_CPPFLAGS="$CPPFLAGS"
+CPPFLAGS="${CPPFLAGS} ${KRB_INC_FLAGS}"
+AC_TRY_COMPILE(
+[#include <krb.h>
+int krb_rd_req(KTEXT authent, char *service, char *instance,
+unsigned KRB_INT32 from_addr, AUTH_DAT *ad, char *fn);],
+[int foo = krb_rd_req(0,0,0,0,0,0);],
+ac_cv_krb_rd_req_proto=no,
+ac_cv_krb_rd_req_proto=yes)
+])
+CPPFLAGS="${cmu_save_CPPFLAGS}"
+if test "$ac_cv_krb_rd_req_proto" = yes; then
+	AC_DEFINE(HAVE_KRB_RD_REQ_PROTO)dnl
+fi
+AC_MSG_RESULT($ac_cv_krb_rd_req_proto)
+])
+m4trace:../cmulocal/kerberos_v4.m4:83: -1- AC_DEFUN([CMU_KRB_INC_WHERE1], [
+saved_CPPFLAGS=$CPPFLAGS
+CPPFLAGS="$saved_CPPFLAGS -I$1"
+AC_TRY_COMPILE([#include <krb.h>],
+[struct ktext foo;],
+ac_cv_found_krb_inc=yes,
+ac_cv_found_krb_inc=no)
+if test "$ac_cv_found_krb_inc" = "no"; then
+  CPPFLAGS="$saved_CPPFLAGS -I$1 -I$1/kerberosIV"
+  AC_TRY_COMPILE([#include <krb.h>],
+  [struct ktext foo;],
+  [ac_cv_found_krb_inc=yes],
+  ac_cv_found_krb_inc=no)
+fi
+CPPFLAGS=$saved_CPPFLAGS
+])
+m4trace:../cmulocal/kerberos_v4.m4:100: -1- AC_DEFUN([CMU_KRB_INC_WHERE], [
+   for i in $1; do
+      AC_MSG_CHECKING(for kerberos headers in $i)
+      CMU_KRB_INC_WHERE1($i)
+      CMU_TEST_INCPATH($i, krb)
+      if test "$ac_cv_found_krb_inc" = "yes"; then
+        ac_cv_krb_where_inc=$i
+        AC_MSG_RESULT(found)
+        break
+      else
+        AC_MSG_RESULT(not found)
+      fi
+    done
+])
+m4trace:../cmulocal/kerberos_v4.m4:119: -1- AC_DEFUN([CMU_KRB_LIB_WHERE1], [
+saved_LIBS=$LIBS
+LIBS="$saved_LIBS -L$1 -lkrb ${KRB_LIBDES}"
+AC_TRY_LINK(,
+[dest_tkt();],
+[ac_cv_found_krb_lib=yes],
+ac_cv_found_krb_lib=no)
+LIBS=$saved_LIBS
+])
+m4trace:../cmulocal/kerberos_v4.m4:129: -1- AC_DEFUN([CMU_KRB_LIB_WHERE], [
+   for i in $1; do
+      AC_MSG_CHECKING(for kerberos libraries in $i)
+      CMU_KRB_LIB_WHERE1($i)
+      dnl deal with false positives from implicit link paths
+      CMU_TEST_LIBPATH($i, krb)
+      if test "$ac_cv_found_krb_lib" = "yes" ; then
+        ac_cv_krb_where_lib=$i
+        AC_MSG_RESULT(found)
+        break
+      else
+        AC_MSG_RESULT(not found)
+      fi
+    done
+])
+m4trace:../cmulocal/kerberos_v4.m4:145: -1- AC_DEFUN([CMU_KRB4], [
+AC_REQUIRE([CMU_FIND_LIB_SUBDIR])
+AC_REQUIRE([CMU_SOCKETS])
+AC_REQUIRE([CMU_LIBSSL])
+AC_ARG_WITH(krb4,
+	[  --with-krb4=PREFIX      Compile with Kerberos 4 support],
+	[if test "X$with_krb4" = "X"; then
+		with_krb4=yes
+	fi])
+AC_ARG_WITH(krb4-lib,
+	[  --with-krb4-lib=dir     use kerberos 4 libraries in dir],
+	[if test "$withval" = "yes" -o "$withval" = "no"; then
+		AC_MSG_ERROR([No argument for --with-krb4-lib])
+	fi])
+AC_ARG_WITH(krb4-include,
+	[  --with-krb4-include=dir use kerberos 4 headers in dir],
+	[if test "$withval" = "yes" -o "$withval" = "no"; then
+		AC_MSG_ERROR([No argument for --with-krb4-include])
+	fi])
+
+	if test "X$with_krb4" != "X"; then
+	  if test "$with_krb4" != "yes" -a "$with_krb4" != "no"; then
+	    ac_cv_krb_where_lib=$with_krb4/$CMU_LIB_SUBDIR
+	    ac_cv_krb_where_inc=$with_krb4/include
+	  fi
+	fi
+       
+	if test "$with_krb4" != "no"; then
+	  if test "X$with_krb4_lib" != "X"; then
+	    ac_cv_krb_where_lib=$with_krb4_lib
+	  fi
+	  if test "X$with_krb4_include" != "X"; then
+	    ac_cv_krb_where_inc=$with_krb4_include
+	  fi
+	  if test "X$ac_cv_krb_where_inc" = "X"; then
+	    CMU_KRB_INC_WHERE(/usr/athena/include /usr/include/kerberosIV /usr/local/include /usr/include/kerberos)
+	  fi
+
+          AC_MSG_CHECKING([if libdes is needed])
+          AC_TRY_LINK([],[des_quad_cksum();],KRB_DES_LIB="",KRB_DES_LIB="maybe")
+          if test "X$KRB_DES_LIB" != "X"; then
+              LIBS="$cmu_save_LIBS -ldes"
+              AC_TRY_LINK([], [des_quad_cksum();],KRB_DES_LIB="yes")
+              if test "X$KRB_DES_LIB" = "Xyes"; then
+                  AC_MSG_RESULT([yes])
+                  KRB_LIBDES="-ldes"
+                  KRB_LIBDESA='$(KRB_LIB_DIR)/libdes.a'
+              else
+                  LIBS="$cmu_save_LIBS $LIBSSL_LIB_FLAGS"
+                  AC_TRY_LINK([],
+                  [des_quad_cksum();],KRB_DES_LIB="libcrypto")
+                  if test "X$KRB_DES_LIB" = "Xlibcrypto"; then
+                      AC_MSG_RESULT([libcrypto])
+                      KRB_LIBDES="$LIBSSL_LIB_FLAGS"
+                      KRB_LIBDESA="$LIBSSL_LIB_FLAGS"
+                  else
+                      LIBS="$cmu_save_LIBS -L$LIBSSL_LIB_DIR -ldescompat $LIBSSL_LIB_FLAGS"
+                      AC_TRY_LINK([],
+                      [des_quad_cksum();],KRB_DES_LIB="libcrypto+descompat")
+                      if test "X$KRB_DES_LIB" = "Xlibcrypto+descompat"; then
+                          AC_MSG_RESULT([libcrypto+descompat])
+                          KRB_LIBDES="-L$LIBSSL_LIB_DIR -ldescompat $LIBSSL_LIB_FLAGS"
+                          KRB_LIBDESA="-L$LIBSSL_LIB_DIR -ldescompat $LIBSSL_LIB_FLAGS"
+                      else
+                          AC_MSG_RESULT([unknown])
+                          AC_MSG_ERROR([Could not use -ldes])
+                      fi 
+                  fi 
+              fi 
+          else
+             AC_MSG_RESULT([no])
+          fi
+          if test "X$ac_cv_krb_where_lib" = "X"; then
+            CMU_KRB_LIB_WHERE(/usr/athena/$CMU_LIB_SUBDIR /usr/local/$CMU_LIB_SUBDIR /usr/$CMU_LIB_SUBDIR)
+          fi
+	fi
+	  LIBS="${cmu_save_LIBS}"
+
+
+	AC_MSG_CHECKING([whether to include kerberos 4])
+	if test "X$ac_cv_krb_where_lib" = "X" -o "X$ac_cv_krb_where_inc" = "X"; then
+	  ac_cv_found_krb=no
+	  AC_MSG_RESULT(no)
+	else
+	  ac_cv_found_krb=yes
+	  AC_MSG_RESULT(yes)
+	  KRB_INC_DIR=$ac_cv_krb_where_inc
+	  KRB_LIB_DIR=$ac_cv_krb_where_lib
+	  KRB_INC_FLAGS="-I${KRB_INC_DIR}"
+	  KRB_LIB_FLAGS="-L${KRB_LIB_DIR} -lkrb ${KRB_LIBDES}"
+	  LIBS="${cmu_save_LIBS} ${KRB_LIB_FLAGS}"
+	  AC_CHECK_LIB(resolv, dns_lookup, KRB_LIB_FLAGS="${KRB_LIB_FLAGS} -lresolv",,"${KRB_LIB_FLAGS}")
+	  AC_CHECK_LIB(crypt, crypt, KRB_LIB_FLAGS="${KRB_LIB_FLAGS} -lcrypt",,"${KRB_LIB_FLAGS}")
+	  LIBS="${LIBS} ${KRB_LIB_FLAGS}"
+	  AC_CHECK_FUNCS(krb_get_int krb_life_to_time)
+          AC_SUBST(KRB_INC_FLAGS)
+          AC_SUBST(KRB_LIB_FLAGS)
+	  LIBS="${cmu_save_LIBS}"
+	  AC_DEFINE(HAVE_KRB4,,[Kerberos V4 is present])dnl zephyr uses this
+	  AC_DEFINE(KERBEROS,,[Use kerberos 4. find out what needs this symbol])
+	  if test "X$RPATH" = "X"; then
+		RPATH=""
+	  fi
+	  case "${host}" in
+	    *-*-linux*)
+	      if test "X$RPATH" = "X"; then
+	        RPATH="-Wl,-rpath,${KRB_LIB_DIR}"
+	      else 
+		RPATH="${RPATH}:${KRB_LIB_DIR}"
+	      fi
+	      ;;
+	    *-*-hpux*)
+	      if test "X$RPATH" = "X"; then
+	        RPATH="-Wl,+b${KRB_LIB_DIR}"
+	      else 
+		RPATH="${RPATH}:${KRB_LIB_DIR}"
+	      fi
+	      ;;
+	    *-*-irix*)
+	      if test "X$RPATH" = "X"; then
+	        RPATH="-Wl,-rpath,${KRB_LIB_DIR}"
+	      else 
+		RPATH="${RPATH}:${KRB_LIB_DIR}"
+	      fi
+	      ;;
+	    *-*-solaris2*)
+	      if test "$ac_cv_prog_gcc" = yes; then
+		if test "X$RPATH" = "X"; then
+		  RPATH="-Wl,-R${KRB_LIB_DIR}"
+		else 
+		  RPATH="${RPATH}:${KRB_LIB_DIR}"
+		fi
+	      else
+	        RPATH="${RPATH} -R${KRB_LIB_DIR}"
+	      fi
+	      ;;
+	  esac
+	  AC_SUBST(RPATH)
+	fi
+	])
+m4trace:../cmulocal/libssl.m4:6: -1- AC_DEFUN([CMU_LIBSSL_INC_WHERE1], [
+saved_CPPFLAGS=$CPPFLAGS
+CPPFLAGS="$saved_CPPFLAGS -I$1"
+CMU_CHECK_HEADER_NOCACHE(openssl/ssl.h,
+ac_cv_found_libssl_inc=yes,
+ac_cv_found_libssl_inc=no)
+CPPFLAGS=$saved_CPPFLAGS
+])
+m4trace:../cmulocal/libssl.m4:15: -1- AC_DEFUN([CMU_LIBSSL_INC_WHERE], [
+   for i in $1; do
+      AC_MSG_CHECKING(for libssl headers in $i)
+      CMU_LIBSSL_INC_WHERE1($i)
+      CMU_TEST_INCPATH($i, ssl)
+      if test "$ac_cv_found_libssl_inc" = "yes"; then
+        ac_cv_libssl_where_inc=$i
+        AC_MSG_RESULT(found)
+        break
+      else
+        AC_MSG_RESULT(not found)
+      fi
+    done
+])
+m4trace:../cmulocal/libssl.m4:30: -1- AC_DEFUN([CMU_LIBSSL_LIB_WHERE1], [
+saved_LIBS=$LIBS
+LIBS="$saved_LIBS -L$1 -lssl -lcrypto $LIB_SOCKET"
+AC_TRY_LINK(,
+[SSL_write();],
+[ac_cv_found_ssl_lib=yes],
+ac_cv_found_ssl_lib=no)
+LIBS=$saved_LIBS
+])
+m4trace:../cmulocal/libssl.m4:40: -1- AC_DEFUN([CMU_LIBSSL_LIB_WHERE], [
+   for i in $1; do
+      AC_MSG_CHECKING(for libssl libraries in $i)
+      CMU_LIBSSL_LIB_WHERE1($i)
+      dnl deal with false positives from implicit link paths
+      CMU_TEST_LIBPATH($i, ssl)
+      if test "$ac_cv_found_ssl_lib" = "yes" ; then
+        ac_cv_libssl_where_lib=$i
+        AC_MSG_RESULT(found)
+        break
+      else
+        AC_MSG_RESULT(not found)
+      fi
+    done
+])
+m4trace:../cmulocal/libssl.m4:56: -1- AC_DEFUN([CMU_LIBSSL], [
+AC_REQUIRE([CMU_FIND_LIB_SUBDIR])
+AC_REQUIRE([CMU_SOCKETS])
+AC_ARG_WITH(libssl,
+	[  --with-libssl=PREFIX      Compile with Libssl support],
+	[if test "X$with_libssl" = "X"; then
+		with_libssl=yes
+	fi])
+AC_ARG_WITH(libssl-lib,
+	[  --with-libssl-lib=dir     use libssl libraries in dir],
+	[if test "$withval" = "yes" -o "$withval" = "no"; then
+		AC_MSG_ERROR([No argument for --with-libssl-lib])
+	fi])
+AC_ARG_WITH(libssl-include,
+	[  --with-libssl-include=dir use libssl headers in dir],
+	[if test "$withval" = "yes" -o "$withval" = "no"; then
+		AC_MSG_ERROR([No argument for --with-libssl-include])
+	fi])
+
+	if test "X$with_libssl" != "X"; then
+	  if test "$with_libssl" != "yes" -a "$with_libssl" != no; then
+	    ac_cv_libssl_where_lib=$with_libssl/$CMU_LIB_SUBDIR
+	    ac_cv_libssl_where_inc=$with_libssl/include
+	  fi
+	fi
+
+	if test "$with_libssl" != "no"; then 
+	  if test "X$with_libssl_lib" != "X"; then
+	    ac_cv_libssl_where_lib=$with_libssl_lib
+	  fi
+	  if test "X$ac_cv_libssl_where_lib" = "X"; then
+	    CMU_LIBSSL_LIB_WHERE(/usr/local/$CMU_LIB_SUBDIR/openssl /usr/$CMU_LIB_SUBDIR/openssl /usr/local/$CMU_LIB_SUBDIR /usr/$CMU_LIB_SUBDIR)
+	  fi
+
+	  if test "X$with_libssl_include" != "X"; then
+	    ac_cv_libssl_where_inc=$with_libssl_include
+	  fi
+	  if test "X$ac_cv_libssl_where_inc" = "X"; then
+	    CMU_LIBSSL_INC_WHERE(/usr/local/include /usr/include)
+	  fi
+	fi
+
+	AC_MSG_CHECKING(whether to include libssl)
+	if test "X$ac_cv_libssl_where_lib" = "X" -a "X$ac_cv_libssl_where_inc" = "X"; then
+	  ac_cv_found_libssl=no
+	  AC_MSG_RESULT(no)
+	else
+	  ac_cv_found_libssl=yes
+	  AC_MSG_RESULT(yes)
+	  LIBSSL_INC_DIR=$ac_cv_libssl_where_inc
+	  LIBSSL_LIB_DIR=$ac_cv_libssl_where_lib
+	  LIBSSL_INC_FLAGS="-I${LIBSSL_INC_DIR}"
+	  LIBSSL_LIB_FLAGS="-L${LIBSSL_LIB_DIR} -lssl -lcrypto"
+	  if test "X$RPATH" = "X"; then
+		RPATH=""
+	  fi
+	  case "${host}" in
+	    *-*-linux*)
+	      if test "X$RPATH" = "X"; then
+	        RPATH="-Wl,-rpath,${LIBSSL_LIB_DIR}"
+	      else 
+ 		RPATH="${RPATH}:${LIBSSL_LIB_DIR}"
+	      fi
+	      ;;
+	    *-*-hpux*)
+	      if test "X$RPATH" = "X"; then
+	        RPATH="-Wl,+b${LIBSSL_LIB_DIR}"
+	      else 
+		RPATH="${RPATH}:${LIBSSL_LIB_DIR}"
+	      fi
+	      ;;
+	    *-*-irix*)
+	      if test "X$RPATH" = "X"; then
+	        RPATH="-Wl,-rpath,${LIBSSL_LIB_DIR}"
+	      else 
+		RPATH="${RPATH}:${LIBSSL_LIB_DIR}"
+	      fi
+	      ;;
+	    *-*-solaris2*)
+	      if test "$ac_cv_prog_gcc" = yes; then
+		if test "X$RPATH" = "X"; then
+		  RPATH="-Wl,-R${LIBSSL_LIB_DIR}"
+		else 
+		  RPATH="${RPATH}:${LIBSSL_LIB_DIR}"
+		fi
+	      else
+	        RPATH="${RPATH} -R${LIBSSL_LIB_DIR}"
+	      fi
+	      ;;
+	  esac
+	  AC_SUBST(RPATH)
+	fi
+	AC_SUBST(LIBSSL_INC_DIR)
+	AC_SUBST(LIBSSL_LIB_DIR)
+	AC_SUBST(LIBSSL_INC_FLAGS)
+	AC_SUBST(LIBSSL_LIB_FLAGS)
+	])
+m4trace:../cmulocal/openssl.m4:6: -1- AC_DEFUN([CMU_HAVE_OPENSSL], [
+AC_REQUIRE([CMU_FIND_LIB_SUBDIR])
+AC_ARG_WITH(openssl,[  --with-openssl=PATH     use OpenSSL from PATH],
+	with_openssl=$withval, with_openssl="yes")
+
+	save_CPPFLAGS=$CPPFLAGS
+	save_LDFLAGS=$LDFLAGS
+
+	if test -d $with_openssl; then
+	  CPPFLAGS="${CPPFLAGS} -I${with_openssl}/include"
+	  CMU_ADD_LIBPATH(${with_openssl}/$CMU_LIB_SUBDIR)
+	fi
+
+case "$with_openssl" in
+	no)
+	  with_openssl="no";;
+	*) 
+	  dnl if openssl has been compiled with the rsaref2 libraries,
+	  dnl we need to include the rsaref libraries in the crypto check
+                LIB_RSAREF=""
+	        AC_CHECK_LIB(rsaref, RSAPublicEncrypt,
+			cmu_have_rsaref=yes;
+			[AC_CHECK_LIB(RSAglue, RSAPublicEncrypt,
+				LIB_RSAREF="-lRSAglue -lrsaref",
+				LIB_RSAREF="-lrsaref")],
+			cmu_have_rsaref=no)
+
+		AC_CHECK_HEADER(openssl/evp.h, [
+			AC_CHECK_LIB(crypto, EVP_DigestInit,
+					with_openssl="yes",
+					with_openssl="no", $LIB_RSAREF)],
+			with_openssl=no)
+		;;
+esac
+
+	if test "$with_openssl" != "no"; then
+		AC_DEFINE(HAVE_OPENSSL,[],[Do we have OpenSSL?])
+	else
+		CPPFLAGS=$save_CPPFLAGS
+		LDFLAGS=$save_LDFLAGS
+	fi
+])
+m4trace:../cmulocal/sasl2.m4:7: -1- AC_DEFUN([SASL_GSSAPI_CHK], [AC_REQUIRE([SASL2_CRYPT_CHK])
+AC_REQUIRE([CMU_SOCKETS])
+AC_ARG_ENABLE([gssapi],
+              [AC_HELP_STRING([--enable-gssapi=<DIR>],
+                              [enable GSSAPI authentication [yes]])],
+              [gssapi=$enableval],
+              [gssapi=yes])
+AC_ARG_WITH([gss_impl],
+            [AC_HELP_STRING([--with-gss_impl={heimdal|mit|cybersafe|seam|auto}],
+                            [choose specific GSSAPI implementation [[auto]]])],
+            [gss_impl=$withval],
+            [gss_impl=auto])
+
+if test "$gssapi" != no; then
+  platform=
+  case "${host}" in
+    *-*-linux*)
+      platform=__linux
+      ;;
+    *-*-hpux*)
+      platform=__hpux
+      ;;
+    *-*-irix*)
+      platform=__irix
+      ;;
+    *-*-solaris2*)
+# When should we use __sunos?
+      platform=__solaris
+      ;;
+    *-*-aix*)
+###_AIX
+      platform=__aix
+      ;;
+    *)
+      AC_WARN([The system type is not recognized. If you believe that CyberSafe GSSAPI works on this platform, please update the configure script])
+      if test "$gss_impl" = "cybersafe"; then
+        AC_ERROR([CyberSafe was forced, cannot continue as platform is not supported])
+      fi
+      ;;
+  esac
+
+  cmu_saved_CPPFLAGS=$CPPFLAGS
+
+  if test -d ${gssapi}; then
+    CPPFLAGS="$CPPFLAGS -I$gssapi/include"
+# We want to keep -I in our CPPFLAGS, but only if we succeed
+    cmu_saved_CPPFLAGS=$CPPFLAGS
+### I am not sure how useful is this (and whether this is required at all
+### especially when we have to provide two -L flags for new CyberSafe
+    LDFLAGS="$LDFLAGS -L$gssapi/lib"
+
+    if test -n "$platform"; then
+      if test "$gss_impl" = "auto" -o "$gss_impl" = "cybersafe"; then
+        CPPFLAGS="$CPPFLAGS -D$platform"
+        if test -d "${gssapi}/appsec-sdk/include"; then
+          CPPFLAGS="$CPPFLAGS -I${gssapi}/appsec-sdk/include"
+        fi
+      fi
+    fi
+  fi
+  AC_CHECK_HEADER([gssapi.h],
+                  [AC_DEFINE(HAVE_GSSAPI_H,,
+                             [Define if you have the gssapi.h header file])],
+                  [AC_CHECK_HEADER([gssapi/gssapi.h],,
+                                   [AC_WARN([Disabling GSSAPI - no include files found]); gssapi=no])])
+
+  CPPFLAGS=$cmu_saved_CPPFLAGS
+
+fi
+
+if test "$gssapi" != no; then
+  # We need to find out which gssapi implementation we are
+  # using. Supported alternatives are: MIT Kerberos 5,
+  # Heimdal Kerberos 5 (http://www.pdc.kth.se/heimdal),
+  # CyberSafe Kerberos 5 (http://www.cybersafe.com/)
+  # and Sun SEAM (http://wwws.sun.com/software/security/kerberos/)
+  #
+  # The choice is reflected in GSSAPIBASE_LIBS
+
+  AC_CHECK_LIB(resolv,res_search)
+  if test -d ${gssapi}; then
+     gssapi_dir="${gssapi}/lib"
+     GSSAPIBASE_LIBS="-L$gssapi_dir"
+     GSSAPIBASE_STATIC_LIBS="-L$gssapi_dir"
+  else
+     # FIXME: This is only used for building cyrus, and then only as
+     # a real hack.  it needs to be fixed.
+     gssapi_dir="/usr/local/lib"
+  fi
+
+  # Check a full link against the Heimdal libraries.
+  # If this fails, check a full link against the MIT libraries.
+  # If this fails, check a full link against the CyberSafe libraries.
+  # If this fails, check a full link against the Solaris 8 and up libgss.
+
+  if test "$gss_impl" = "auto" -o "$gss_impl" = "heimdal"; then
+    gss_failed=0
+    AC_CHECK_LIB(gssapi,gss_unwrap,gss_impl="heimdal",gss_failed=1,
+                 ${GSSAPIBASE_LIBS} -lgssapi -lkrb5 -lasn1 -lroken ${LIB_CRYPT} ${LIB_DES} -lcom_err ${LIB_SOCKET})
+    if test "$gss_impl" != "auto" -a "$gss_failed" = "1"; then
+      gss_impl="failed"
+    fi
+  fi
+
+  if test "$gss_impl" = "auto" -o "$gss_impl" = "mit"; then
+    # check for libkrb5support first
+    AC_CHECK_LIB(krb5support,krb5int_getspecific,K5SUP=-lkrb5support K5SUPSTATIC=$gssapi_dir/libkrb5support.a,,${LIB_SOCKET})
+
+    gss_failed=0
+    AC_CHECK_LIB(gssapi_krb5,gss_unwrap,gss_impl="mit",gss_failed=1,
+                 ${GSSAPIBASE_LIBS} -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err ${K5SUP} ${LIB_SOCKET})
+    if test "$gss_impl" != "auto" -a "$gss_failed" = "1"; then
+      gss_impl="failed"
+    fi
+  fi
+
+  # For Cybersafe one has to set a platform define in order to make compilation work
+  if test "$gss_impl" = "auto" -o "$gss_impl" = "cybersafe"; then
+
+    cmu_saved_CPPFLAGS=$CPPFLAGS
+    cmu_saved_GSSAPIBASE_LIBS=$GSSAPIBASE_LIBS
+# FIXME - Note that the libraries are in .../lib64 for 64bit kernels
+    if test -d "${gssapi}/appsec-rt/lib"; then
+      GSSAPIBASE_LIBS="$GSSAPIBASE_LIBS -L${gssapi}/appsec-rt/lib"
+    fi
+    CPPFLAGS="$CPPFLAGS -D$platform"
+    if test -d "${gssapi}/appsec-sdk/include"; then
+      CPPFLAGS="$CPPFLAGS -I${gssapi}/appsec-sdk/include"
+    fi
+
+    gss_failed=0
+
+# Check for CyberSafe with two libraries first, than fall back to a single 
+# library (older CyberSafe)
+
+    unset ac_cv_lib_gss_csf_gss_acq_user
+    AC_CHECK_LIB(gss,csf_gss_acq_user,gss_impl="cybersafe03",
+                 [unset ac_cv_lib_gss_csf_gss_acq_user;
+                  AC_CHECK_LIB(gss,csf_gss_acq_user,gss_impl="cybersafe",
+                               gss_failed=1,$GSSAPIBASE_LIBS -lgss)],
+                 [${GSSAPIBASE_LIBS} -lgss -lcstbk5])
+
+    if test "$gss_failed" = "1"; then
+# Restore variables
+      GSSAPIBASE_LIBS=$cmu_saved_GSSAPIBASE_LIBS
+      CPPFLAGS=$cmu_saved_CPPFLAGS
+
+      if test "$gss_impl" != "auto"; then
+        gss_impl="failed"
+      fi
+    fi
+  fi
+
+  if test "$gss_impl" = "auto" -o "$gss_impl" = "seam"; then
+    gss_failed=0
+    AC_CHECK_LIB(gss,gss_unwrap,gss_impl="seam",gss_failed=1,-lgss)
+    if test "$gss_impl" != "auto" -a "$gss_failed" = "1"; then
+      gss_impl="failed"
+    fi
+  fi
+
+  if test "$gss_impl" = "mit"; then
+    GSSAPIBASE_LIBS="$GSSAPIBASE_LIBS -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err ${K5SUP}"
+    GSSAPIBASE_STATIC_LIBS="$GSSAPIBASE_LIBS $gssapi_dir/libgssapi_krb5.a $gssapi_dir/libkrb5.a $gssapi_dir/libk5crypto.a $gssapi_dir/libcom_err.a ${K5SUPSTATIC}"
+  elif test "$gss_impl" = "heimdal"; then
+    CPPFLAGS="$CPPFLAGS -DKRB5_HEIMDAL"
+    GSSAPIBASE_LIBS="$GSSAPIBASE_LIBS -lgssapi -lkrb5 -lasn1 -lroken ${LIB_CRYPT} ${LIB_DES} -lcom_err"
+    GSSAPIBASE_STATIC_LIBS="$GSSAPIBASE_STATIC_LIBS $gssapi_dir/libgssapi.a $gssapi_dir/libkrb5.a $gssapi_dir/libasn1.a $gssapi_dir/libroken.a $gssapi_dir/libcom_err.a ${LIB_CRYPT}"
+  elif test "$gss_impl" = "cybersafe03"; then
+# Version of CyberSafe with two libraries
+    CPPFLAGS="$CPPFLAGS -D$platform -I${gssapi}/appsec-sdk/include"
+    GSSAPIBASE_LIBS="$GSSAPIBASE_LIBS -lgss -lcstbk5"
+    # there is no static libgss for CyberSafe
+    GSSAPIBASE_STATIC_LIBS=none
+  elif test "$gss_impl" = "cybersafe"; then
+    CPPFLAGS="$CPPFLAGS -D$platform -I${gssapi}/appsec-sdk/include"
+    GSSAPIBASE_LIBS="$GSSAPIBASE_LIBS -lgss"
+    # there is no static libgss for CyberSafe
+    GSSAPIBASE_STATIC_LIBS=none
+  elif test "$gss_impl" = "seam"; then
+    GSSAPIBASE_LIBS=-lgss
+    # there is no static libgss on Solaris 8 and up
+    GSSAPIBASE_STATIC_LIBS=none
+  elif test "$gss_impl" = "failed"; then
+    gssapi="no"
+    GSSAPIBASE_LIBS=
+    GSSAPIBASE_STATIC_LIBS=
+    AC_WARN([Disabling GSSAPI - specified library not found])
+  else
+    gssapi="no"
+    GSSAPIBASE_LIBS=
+    GSSAPIBASE_STATIC_LIBS=
+    AC_WARN([Disabling GSSAPI - no library])
+  fi
+fi
+
+#
+# Cybersafe defines both GSS_C_NT_HOSTBASED_SERVICE and GSS_C_NT_USER_NAME
+# in gssapi\rfckrb5.h
+#
+if test "$gssapi" != "no"; then
+  if test "$gss_impl" = "cybersafe" -o "$gss_impl" = "cybersafe03"; then
+    AC_EGREP_CPP(hostbased_service_gss_nt_yes,
+                 [#include <gssapi/gssapi.h>
+                  #ifdef GSS_C_NT_HOSTBASED_SERVICE
+                    hostbased_service_gss_nt_yes
+                  #endif],
+                 [AC_DEFINE(HAVE_GSS_C_NT_HOSTBASED_SERVICE,,
+                            [Define if your GSSAPI implimentation defines GSS_C_NT_HOSTBASED_SERVICE])],
+                 [AC_WARN([Cybersafe define not found])])
+
+  elif test "$ac_cv_header_gssapi_h" = "yes"; then
+    AC_EGREP_HEADER(GSS_C_NT_HOSTBASED_SERVICE, gssapi.h,
+                    [AC_DEFINE(HAVE_GSS_C_NT_HOSTBASED_SERVICE,,
+                               [Define if your GSSAPI implimentation defines GSS_C_NT_HOSTBASED_SERVICE])])
+  elif test "$ac_cv_header_gssapi_gssapi_h"; then
+    AC_EGREP_HEADER(GSS_C_NT_HOSTBASED_SERVICE, gssapi/gssapi.h,
+                    [AC_DEFINE(HAVE_GSS_C_NT_HOSTBASED_SERVICE,,
+                               [Define if your GSSAPI implimentation defines GSS_C_NT_HOSTBASED_SERVICE])])
+  fi
+
+  if test "$gss_impl" = "cybersafe" -o "$gss_impl" = "cybersafe03"; then
+    AC_EGREP_CPP(user_name_yes_gss_nt,
+                 [#include <gssapi/gssapi.h>
+                  #ifdef GSS_C_NT_USER_NAME
+                   user_name_yes_gss_nt
+                  #endif],
+                 [AC_DEFINE(HAVE_GSS_C_NT_USER_NAME,,
+                            [Define if your GSSAPI implimentation defines GSS_C_NT_USER_NAME])],
+                 [AC_WARN([Cybersafe define not found])])
+  elif test "$ac_cv_header_gssapi_h" = "yes"; then
+    AC_EGREP_HEADER(GSS_C_NT_USER_NAME, gssapi.h,
+                    [AC_DEFINE(HAVE_GSS_C_NT_USER_NAME,,
+                               [Define if your GSSAPI implimentation defines GSS_C_NT_USER_NAME])])
+  elif test "$ac_cv_header_gssapi_gssapi_h"; then
+    AC_EGREP_HEADER(GSS_C_NT_USER_NAME, gssapi/gssapi.h,
+                    [AC_DEFINE(HAVE_GSS_C_NT_USER_NAME,,
+                               [Define if your GSSAPI implimentation defines GSS_C_NT_USER_NAME])])
+  fi
+fi
+
+GSSAPI_LIBS=""
+AC_MSG_CHECKING([GSSAPI])
+if test "$gssapi" != no; then
+  AC_MSG_RESULT([with implementation ${gss_impl}])
+  AC_CHECK_LIB(resolv,res_search,GSSAPIBASE_LIBS="$GSSAPIBASE_LIBS -lresolv")
+  SASL_MECHS="$SASL_MECHS libgssapiv2.la"
+  SASL_STATIC_OBJS="$SASL_STATIC_OBJS gssapi.o"
+  SASL_STATIC_SRCS="$SASL_STATIC_SRCS ../plugins/gssapi.c"
+
+  cmu_save_LIBS="$LIBS"
+  LIBS="$LIBS $GSSAPIBASE_LIBS"
+  AC_CHECK_FUNCS(gsskrb5_register_acceptor_identity)
+  LIBS="$cmu_save_LIBS"
+else
+  AC_MSG_RESULT([disabled])
+fi
+AC_SUBST(GSSAPI_LIBS)
+AC_SUBST(GSSAPIBASE_LIBS)
+])
+m4trace:../cmulocal/sasl2.m4:272: -1- AC_DEFUN([SASL_SET_GSSAPI_LIBS], [SASL_GSSAPI_LIBS_SET="yes"
+])
+m4trace:../cmulocal/sasl2.m4:287: -1- AC_DEFUN([CMU_SASL2], [AC_REQUIRE([SASL_GSSAPI_CHK])
+
+AC_ARG_WITH(sasl,
+            [AC_HELP_STRING([--with-sasl=DIR],[Compile with libsasl2 in <DIR>])],
+            with_sasl="$withval",
+            with_sasl="yes")
+
+AC_ARG_WITH(staticsasl,
+            [AC_HELP_STRING([--with-staticsasl=DIR],
+                            [Compile with staticly linked libsasl2 in <DIR>])],
+            [with_staticsasl="$withval";
+             if test $with_staticsasl != "no"; then
+               using_static_sasl="static"
+             fi],
+            [with_staticsasl="no"; using_static_sasl="no"])
+
+SASLFLAGS=""
+LIB_SASL=""
+
+cmu_saved_CPPFLAGS=$CPPFLAGS
+cmu_saved_LDFLAGS=$LDFLAGS
+cmu_saved_LIBS=$LIBS
+
+if test ${with_staticsasl} != "no"; then
+  if test -d ${with_staticsasl}; then
+    if test -d ${with_staticsasl}/lib64 ; then
+      ac_cv_sasl_where_lib=${with_staticsasl}/lib64
+    else
+      ac_cv_sasl_where_lib=${with_staticsasl}/lib
+    fi
+    ac_cv_sasl_where_lib=${with_staticsasl}/lib
+    ac_cv_sasl_where_inc=${with_staticsasl}/include
+
+    SASLFLAGS="-I$ac_cv_sasl_where_inc"
+    LIB_SASL="-L$ac_cv_sasl_where_lib"
+    CPPFLAGS="${cmu_saved_CPPFLAGS} -I${ac_cv_sasl_where_inc}"
+    LDFLAGS="${cmu_saved_LDFLAGS} -L${ac_cv_sasl_where_lib}"
+  else
+    with_staticsasl="/usr"
+  fi
+
+  AC_CHECK_HEADER(sasl/sasl.h,
+                  [AC_CHECK_HEADER(sasl/saslutil.h,
+                                   [for i42 in lib64 lib; do
+                                      if test -r ${with_staticsasl}/$i42/libsasl2.a; then
+                                        ac_cv_found_sasl=yes
+                                        AC_MSG_CHECKING([for static libsasl])
+                                        LIB_SASL="$LIB_SASL ${with_staticsasl}/$i42/libsasl2.a"
+                                      fi
+                                    done
+                                    if test ! "$ac_cv_found_sasl" = "yes"; then
+                                      AC_MSG_CHECKING([for static libsasl])
+                                      AC_ERROR([Could not find ${with_staticsasl}/lib*/libsasl2.a])
+                                    fi])])
+
+  AC_MSG_RESULT([found])
+
+  if test "x$SASL_GSSAPI_LIBS_SET" = "x"; then
+    LIB_SASL="$LIB_SASL $GSSAPIBASE_STATIC_LIBS"
+  else
+    SASL_GSSAPI_LIBS_SET=""
+    cmu_saved_LIBS="$GSSAPIBASE_STATIC_LIBS $cmu_saved_LIBS" 
+  fi
+fi
+
+if test -d ${with_sasl}; then
+  ac_cv_sasl_where_lib=${with_sasl}/lib
+  ac_cv_sasl_where_inc=${with_sasl}/include
+
+  DYNSASLFLAGS="-I$ac_cv_sasl_where_inc"
+  if test "$ac_cv_sasl_where_lib" != ""; then
+    CMU_ADD_LIBPATH_TO($ac_cv_sasl_where_lib, LIB_DYN_SASL)
+  fi
+  LIB_DYN_SASL="$LIB_DYN_SASL -lsasl2"
+  CPPFLAGS="${cmu_saved_CPPFLAGS} -I${ac_cv_sasl_where_inc}"
+  LDFLAGS="${cmu_saved_LDFLAGS} -L${ac_cv_sasl_where_lib}"
+fi
+
+# be sure to check for a SASLv2 specific function
+AC_CHECK_HEADER(sasl/sasl.h,
+                [AC_CHECK_HEADER(sasl/saslutil.h,
+                                 [AC_CHECK_LIB(sasl2, prop_get, 
+                                               ac_cv_found_sasl=yes,
+                                               ac_cv_found_sasl=no)],
+                                 ac_cv_found_sasl=no)],
+                ac_cv_found_sasl=no)
+
+if test "$ac_cv_found_sasl" = "yes"; then
+  if test "$ac_cv_sasl_where_lib" != ""; then
+    CMU_ADD_LIBPATH_TO($ac_cv_sasl_where_lib, DYNLIB_SASL)
+  fi
+  DYNLIB_SASL="$DYNLIB_SASL -lsasl2"
+  if test "$using_static_sasl" != "static"; then
+    LIB_SASL=$DYNLIB_SASL
+    SASLFLAGS=$DYNSASLFLAGS
+  fi
+else
+  DYNLIB_SASL=""
+  DYNSASLFLAGS=""
+  using_static_sasl="staticonly"
+fi
+
+if test "x$SASL_GSSAPI_LIBS_SET" != "x"; then
+  SASL_GSSAPI_LIBS_SET=""
+  cmu_saved_LIBS="$GSSAPIBASE_LIBS $cmu_saved_LIBS" 
+fi
+
+LIBS="$cmu_saved_LIBS"
+LDFLAGS="$cmu_saved_LDFLAGS"
+CPPFLAGS="$cmu_saved_CPPFLAGS"
+
+AC_SUBST(LIB_DYN_SASL)
+AC_SUBST(DYNSASLFLAGS)
+AC_SUBST(LIB_SASL)
+AC_SUBST(SASLFLAGS)
+])
+m4trace:../cmulocal/sasl2.m4:408: -1- AC_DEFUN([CMU_SASL2_REQUIRED], [AC_REQUIRE([CMU_SASL2])
+if test "$ac_cv_found_sasl" != "yes"; then
+  AC_ERROR([Cannot continue without libsasl2.
+Get it from ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/.])
+fi])
+m4trace:../cmulocal/sasl2.m4:418: -1- AC_DEFUN([CMU_SASL2_REQUIRE_VER], [AC_REQUIRE([CMU_SASL2_REQUIRED])
+
+cmu_saved_CPPFLAGS=$CPPFLAGS
+CPPFLAGS="$CPPFLAGS $SASLFLAGS"
+
+AC_TRY_CPP([
+#include <sasl/sasl.h>
+
+#ifndef SASL_VERSION_MAJOR
+#error SASL_VERSION_MAJOR not defined
+#endif
+#ifndef SASL_VERSION_MINOR
+#error SASL_VERSION_MINOR not defined
+#endif
+#ifndef SASL_VERSION_STEP
+#error SASL_VERSION_STEP not defined
+#endif
+
+#if SASL_VERSION_MAJOR < $1 || SASL_VERSION_MINOR < $2 || SASL_VERSION_STEP < $3
+#error SASL version is less than $1.$2.$3
+#endif
+],,
+           [AC_ERROR([Incorrect SASL headers found.  This package requires SASL $1.$2.$3 or newer.])])
+
+CPPFLAGS=$cmu_saved_CPPFLAGS
+])
+m4trace:../cmulocal/sasl2.m4:449: -1- AC_DEFUN([CMU_SASL2_CHECKAPOP_REQUIRED], [AC_REQUIRE([CMU_SASL2_REQUIRED])
+
+cmu_saved_LDFLAGS=$LDFLAGS
+
+LDFLAGS="$LDFLAGS $LIB_SASL"
+
+AC_CHECK_LIB(sasl2, sasl_checkapop,
+             [AC_DEFINE(HAVE_APOP,[],[Does SASL support APOP?])],
+             [AC_MSG_ERROR([libsasl2 without working sasl_checkapop.  Cannot continue.])])
+
+LDFLAGS=$cmu_saved_LDFLAGS
+])
+m4trace:../cmulocal/sasl2.m4:466: -1- AC_DEFUN([SASL2_CRYPT_CHK], [AC_CHECK_FUNC(crypt, cmu_have_crypt=yes,
+               [AC_CHECK_LIB(crypt, crypt,
+                             LIB_CRYPT="-lcrypt"; cmu_have_crypt=yes,
+                             cmu_have_crypt=no)])
+AC_SUBST(LIB_CRYPT)
+])
+m4trace:configure.in:1: -1- m4_pattern_forbid([^_?A[CHUM]_])
+m4trace:configure.in:1: -1- m4_pattern_forbid([_AC_])
+m4trace:configure.in:1: -1- m4_pattern_forbid([^LIBOBJS$], [do not use LIBOBJS directly, use AC_LIBOBJ (see section `AC_LIBOBJ vs LIBOBJS'])
+m4trace:configure.in:1: -1- m4_pattern_allow([^AS_FLAGS$])
+m4trace:configure.in:1: -1- m4_pattern_forbid([^_?m4_])
+m4trace:configure.in:1: -1- m4_pattern_forbid([^dnl$])
+m4trace:configure.in:1: -1- m4_pattern_forbid([^_?AS_])
+m4trace:configure.in:1: -1- m4_pattern_allow([^SHELL$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PATH_SEPARATOR$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_NAME$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_TARNAME$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_VERSION$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_STRING$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_BUGREPORT$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_URL$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^exec_prefix$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^prefix$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^program_transform_name$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^bindir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^sbindir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^libexecdir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^datarootdir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^datadir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^sysconfdir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^sharedstatedir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^localstatedir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^includedir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^oldincludedir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^docdir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^infodir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^htmldir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^dvidir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^pdfdir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^psdir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^libdir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^localedir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^mandir$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_NAME$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_TARNAME$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_VERSION$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_STRING$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_BUGREPORT$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^PACKAGE_URL$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^DEFS$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^ECHO_C$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^ECHO_N$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^ECHO_T$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^LIBS$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^build_alias$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^host_alias$])
+m4trace:configure.in:1: -1- m4_pattern_allow([^target_alias$])
+m4trace:configure.in:5: -1- m4_pattern_allow([^build$])
+m4trace:configure.in:5: -1- m4_pattern_allow([^build_cpu$])
+m4trace:configure.in:5: -1- m4_pattern_allow([^build_vendor$])
+m4trace:configure.in:5: -1- m4_pattern_allow([^build_os$])
+m4trace:configure.in:5: -1- m4_pattern_allow([^host$])
+m4trace:configure.in:5: -1- m4_pattern_allow([^host_cpu$])
+m4trace:configure.in:5: -1- m4_pattern_allow([^host_vendor$])
+m4trace:configure.in:5: -1- m4_pattern_allow([^host_os$])
+m4trace:configure.in:14: -1- m4_pattern_allow([^HAVE_SASLAUTHD$])
+m4trace:configure.in:15: -1- m4_pattern_allow([^PATH_SASLAUTHD_RUNDIR$])
+m4trace:configure.in:16: -1- AM_CONDITIONAL([SASLAUTHD], [test "$with_saslauthd" != no])
+m4trace:configure.in:16: -1- m4_pattern_allow([^SASLAUTHD_TRUE$])
+m4trace:configure.in:16: -1- m4_pattern_allow([^SASLAUTHD_FALSE$])
+m4trace:configure.in:16: -1- _AM_SUBST_NOTMAKE([SASLAUTHD_TRUE])
+m4trace:configure.in:16: -1- _AM_SUBST_NOTMAKE([SASLAUTHD_FALSE])
+m4trace:configure.in:18: -1- AM_INIT_AUTOMAKE([saslauthd], [2.1.23])
+m4trace:configure.in:18: -1- m4_pattern_allow([^AM_[A-Z]+FLAGS$])
+m4trace:configure.in:18: -1- AM_SET_CURRENT_AUTOMAKE_VERSION
+m4trace:configure.in:18: -1- AM_AUTOMAKE_VERSION([1.11.6])
+m4trace:configure.in:18: -1- _AM_AUTOCONF_VERSION([2.68])
+m4trace:configure.in:18: -1- m4_pattern_allow([^INSTALL_PROGRAM$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^INSTALL_SCRIPT$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^INSTALL_DATA$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^am__isrc$])
+m4trace:configure.in:18: -1- _AM_SUBST_NOTMAKE([am__isrc])
+m4trace:configure.in:18: -1- m4_pattern_allow([^CYGPATH_W$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^PACKAGE$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^VERSION$])
+m4trace:configure.in:18: -1- _AM_IF_OPTION([no-define], [], [AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE", [Name of package])
+ AC_DEFINE_UNQUOTED(VERSION, "$VERSION", [Version number of package])])
+m4trace:configure.in:18: -2- _AM_MANGLE_OPTION([no-define])
+m4trace:configure.in:18: -1- m4_pattern_allow([^PACKAGE$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^VERSION$])
+m4trace:configure.in:18: -1- AM_SANITY_CHECK
+m4trace:configure.in:18: -1- AM_MISSING_PROG([ACLOCAL], [aclocal-${am__api_version}])
+m4trace:configure.in:18: -1- AM_MISSING_HAS_RUN
+m4trace:configure.in:18: -1- AM_AUX_DIR_EXPAND
+m4trace:configure.in:18: -1- m4_pattern_allow([^ACLOCAL$])
+m4trace:configure.in:18: -1- AM_MISSING_PROG([AUTOCONF], [autoconf])
+m4trace:configure.in:18: -1- m4_pattern_allow([^AUTOCONF$])
+m4trace:configure.in:18: -1- AM_MISSING_PROG([AUTOMAKE], [automake-${am__api_version}])
+m4trace:configure.in:18: -1- m4_pattern_allow([^AUTOMAKE$])
+m4trace:configure.in:18: -1- AM_MISSING_PROG([AUTOHEADER], [autoheader])
+m4trace:configure.in:18: -1- m4_pattern_allow([^AUTOHEADER$])
+m4trace:configure.in:18: -1- AM_MISSING_PROG([MAKEINFO], [makeinfo])
+m4trace:configure.in:18: -1- m4_pattern_allow([^MAKEINFO$])
+m4trace:configure.in:18: -1- AM_PROG_INSTALL_SH
+m4trace:configure.in:18: -1- m4_pattern_allow([^install_sh$])
+m4trace:configure.in:18: -1- AM_PROG_INSTALL_STRIP
+m4trace:configure.in:18: -1- m4_pattern_allow([^STRIP$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^INSTALL_STRIP_PROGRAM$])
+m4trace:configure.in:18: -1- AM_PROG_MKDIR_P
+m4trace:configure.in:18: -1- m4_pattern_allow([^MKDIR_P$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^mkdir_p$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^AWK$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^SET_MAKE$])
+m4trace:configure.in:18: -1- AM_SET_LEADING_DOT
+m4trace:configure.in:18: -1- m4_pattern_allow([^am__leading_dot$])
+m4trace:configure.in:18: -1- _AM_IF_OPTION([tar-ustar], [_AM_PROG_TAR([ustar])], [_AM_IF_OPTION([tar-pax], [_AM_PROG_TAR([pax])],
+			     [_AM_PROG_TAR([v7])])])
+m4trace:configure.in:18: -2- _AM_MANGLE_OPTION([tar-ustar])
+m4trace:configure.in:18: -1- _AM_IF_OPTION([tar-pax], [_AM_PROG_TAR([pax])], [_AM_PROG_TAR([v7])])
+m4trace:configure.in:18: -2- _AM_MANGLE_OPTION([tar-pax])
+m4trace:configure.in:18: -1- _AM_PROG_TAR([v7])
+m4trace:configure.in:18: -1- m4_pattern_allow([^AMTAR$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^am__tar$])
+m4trace:configure.in:18: -1- m4_pattern_allow([^am__untar$])
+m4trace:configure.in:18: -1- _AM_IF_OPTION([no-dependencies], [], [AC_PROVIDE_IFELSE([AC_PROG_CC],
+		  [_AM_DEPENDENCIES(CC)],
+		  [define([AC_PROG_CC],
+			  defn([AC_PROG_CC])[_AM_DEPENDENCIES(CC)])])dnl
+AC_PROVIDE_IFELSE([AC_PROG_CXX],
+		  [_AM_DEPENDENCIES(CXX)],
+		  [define([AC_PROG_CXX],
+			  defn([AC_PROG_CXX])[_AM_DEPENDENCIES(CXX)])])dnl
+AC_PROVIDE_IFELSE([AC_PROG_OBJC],
+		  [_AM_DEPENDENCIES(OBJC)],
+		  [define([AC_PROG_OBJC],
+			  defn([AC_PROG_OBJC])[_AM_DEPENDENCIES(OBJC)])])dnl
+])
+m4trace:configure.in:18: -2- _AM_MANGLE_OPTION([no-dependencies])
+m4trace:configure.in:18: -1- _AM_IF_OPTION([silent-rules], [AC_REQUIRE([AM_SILENT_RULES])])
+m4trace:configure.in:18: -2- _AM_MANGLE_OPTION([silent-rules])
+m4trace:configure.in:19: -1- CMU_INIT_AUTOMAKE
+m4trace:configure.in:22: -1- m4_pattern_allow([^CC$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^CFLAGS$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^LDFLAGS$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^LIBS$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^CPPFLAGS$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^CC$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^CC$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^CC$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^CC$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^ac_ct_CC$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^EXEEXT$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^OBJEXT$])
+m4trace:configure.in:22: -1- _AM_DEPENDENCIES([CC])
+m4trace:configure.in:22: -1- AM_SET_DEPDIR
+m4trace:configure.in:22: -1- m4_pattern_allow([^DEPDIR$])
+m4trace:configure.in:22: -1- AM_OUTPUT_DEPENDENCY_COMMANDS
+m4trace:configure.in:22: -1- AM_MAKE_INCLUDE
+m4trace:configure.in:22: -1- m4_pattern_allow([^am__include$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^am__quote$])
+m4trace:configure.in:22: -1- AM_DEP_TRACK
+m4trace:configure.in:22: -1- AM_CONDITIONAL([AMDEP], [test "x$enable_dependency_tracking" != xno])
+m4trace:configure.in:22: -1- m4_pattern_allow([^AMDEP_TRUE$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^AMDEP_FALSE$])
+m4trace:configure.in:22: -1- _AM_SUBST_NOTMAKE([AMDEP_TRUE])
+m4trace:configure.in:22: -1- _AM_SUBST_NOTMAKE([AMDEP_FALSE])
+m4trace:configure.in:22: -1- m4_pattern_allow([^AMDEPBACKSLASH$])
+m4trace:configure.in:22: -1- _AM_SUBST_NOTMAKE([AMDEPBACKSLASH])
+m4trace:configure.in:22: -1- m4_pattern_allow([^am__nodep$])
+m4trace:configure.in:22: -1- _AM_SUBST_NOTMAKE([am__nodep])
+m4trace:configure.in:22: -1- m4_pattern_allow([^CCDEPMODE$])
+m4trace:configure.in:22: -1- AM_CONDITIONAL([am__fastdepCC], [
+  test "x$enable_dependency_tracking" != xno \
+  && test "$am_cv_CC_dependencies_compiler_type" = gcc3])
+m4trace:configure.in:22: -1- m4_pattern_allow([^am__fastdepCC_TRUE$])
+m4trace:configure.in:22: -1- m4_pattern_allow([^am__fastdepCC_FALSE$])
+m4trace:configure.in:22: -1- _AM_SUBST_NOTMAKE([am__fastdepCC_TRUE])
+m4trace:configure.in:22: -1- _AM_SUBST_NOTMAKE([am__fastdepCC_FALSE])
+m4trace:configure.in:23: -1- m4_pattern_allow([^CPP$])
+m4trace:configure.in:23: -1- m4_pattern_allow([^CPPFLAGS$])
+m4trace:configure.in:23: -1- m4_pattern_allow([^CPP$])
+m4trace:configure.in:24: -1- m4_pattern_allow([^AWK$])
+m4trace:configure.in:25: -1- m4_pattern_allow([^SET_MAKE$])
+m4trace:configure.in:26: -1- m4_pattern_allow([^LN_S$])
+m4trace:configure.in:30: -1- CMU_C___ATTRIBUTE__
+m4trace:configure.in:30: -1- _m4_warn([obsolete], [The macro `AC_TRY_COMPILE' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2615: AC_TRY_COMPILE is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../cmulocal/c-attribute.m4:9: CMU_C___ATTRIBUTE__ is expanded from...
+configure.in:30: the top level])
+m4trace:configure.in:30: -1- m4_pattern_allow([^HAVE___ATTRIBUTE__$])
+m4trace:configure.in:31: -1- CMU_GUESS_RUNPATH_SWITCH
+m4trace:configure.in:31: -1- _m4_warn([syntax], [AC_CACHE_VAL(andrew_runpath_switch, ...): suspicious cache-id, must contain _cv_ to be cached], [../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2053: AC_CACHE_CHECK is expanded from...
+../cmulocal/cyrus.m4:33: CMU_GUESS_RUNPATH_SWITCH is expanded from...
+configure.in:31: the top level])
+m4trace:configure.in:31: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2053: AC_CACHE_CHECK is expanded from...
+../cmulocal/cyrus.m4:33: CMU_GUESS_RUNPATH_SWITCH is expanded from...
+configure.in:31: the top level])
+m4trace:configure.in:31: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2662: _AC_LINK_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2679: AC_LINK_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2053: AC_CACHE_CHECK is expanded from...
+../cmulocal/cyrus.m4:33: CMU_GUESS_RUNPATH_SWITCH is expanded from...
+configure.in:31: the top level])
+m4trace:configure.in:34: -1- CMU_SOCKETS
+m4trace:configure.in:34: -2- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../cmulocal/bsd_sockets.m4:9: CMU_SOCKETS is expanded from...
+configure.in:34: the top level])
+m4trace:configure.in:34: -1- m4_pattern_allow([^LIB_SOCKET$])
+m4trace:configure.in:36: -1- CMU_HAVE_OPENSSL
+m4trace:configure.in:36: -1- CMU_FIND_LIB_SUBDIR
+m4trace:configure.in:36: -2- _m4_warn([obsolete], [The macro `AC_HELP_STRING' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:209: AC_HELP_STRING is expanded from...
+../cmulocal/common.m4:42: CMU_FIND_LIB_SUBDIR is expanded from...
+../cmulocal/openssl.m4:6: CMU_HAVE_OPENSSL is expanded from...
+configure.in:36: the top level])
+m4trace:configure.in:36: -1- m4_pattern_allow([^GREP$])
+m4trace:configure.in:36: -1- m4_pattern_allow([^EGREP$])
+m4trace:configure.in:36: -1- m4_pattern_allow([^STDC_HEADERS$])
+m4trace:configure.in:36: -1- m4_pattern_allow([^SIZEOF_LONG$])
+m4trace:configure.in:36: -1- m4_pattern_allow([^CMU_LIB_SUBDIR$])
+m4trace:configure.in:36: -1- CMU_ADD_LIBPATH([${with_openssl}/$CMU_LIB_SUBDIR])
+m4trace:configure.in:36: -1- m4_pattern_allow([^HAVE_OPENSSL$])
+m4trace:configure.in:40: -1- SASL_DES_CHK
+m4trace:configure.in:40: -1- m4_pattern_allow([^WITH_SSL_DES$])
+m4trace:configure.in:40: -1- m4_pattern_allow([^WITH_SSL_DES$])
+m4trace:configure.in:40: -1- m4_pattern_allow([^WITH_SSL_DES$])
+m4trace:configure.in:40: -1- m4_pattern_allow([^WITH_DES$])
+m4trace:configure.in:40: -1- m4_pattern_allow([^LIB_DES$])
+m4trace:configure.in:43: -1- SASL_KERBEROS_V4_CHK
+m4trace:configure.in:43: -1- m4_pattern_allow([^HAVE_LIBRESOLV$])
+m4trace:configure.in:43: -1- _m4_warn([syntax], [AC_CACHE_VAL(cyrus_krbinclude, ...): suspicious cache-id, must contain _cv_ to be cached], [../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2053: AC_CACHE_CHECK is expanded from...
+../config/kerberos_v4.m4:76: SASL_KERBEROS_V4_CHK is expanded from...
+configure.in:43: the top level])
+m4trace:configure.in:43: -1- _m4_warn([obsolete], [The macro `AC_WARN' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:33: AC_WARN is expanded from...
+../config/kerberos_v4.m4:76: SASL_KERBEROS_V4_CHK is expanded from...
+configure.in:43: the top level])
+m4trace:configure.in:43: -1- _m4_warn([obsolete], [The macro `AC_WARN' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:33: AC_WARN is expanded from...
+../config/kerberos_v4.m4:76: SASL_KERBEROS_V4_CHK is expanded from...
+configure.in:43: the top level])
+m4trace:configure.in:43: -1- m4_pattern_allow([^HAVE_KRB_GET_ERR_TEXT$])
+m4trace:configure.in:43: -1- m4_pattern_allow([^STATIC_KERBEROS4$])
+m4trace:configure.in:43: -1- m4_pattern_allow([^HAVE_KRB$])
+m4trace:configure.in:43: -1- m4_pattern_allow([^SASL_KRB_LIB$])
+m4trace:configure.in:44: -1- SASL_GSSAPI_CHK
+m4trace:configure.in:44: -1- SASL2_CRYPT_CHK
+m4trace:configure.in:44: -1- m4_pattern_allow([^LIB_CRYPT$])
+m4trace:configure.in:44: -1- _m4_warn([obsolete], [The macro `AC_HELP_STRING' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:209: AC_HELP_STRING is expanded from...
+../../lib/autoconf/general.m4:1463: AC_ARG_ENABLE is expanded from...
+../cmulocal/sasl2.m4:7: SASL_GSSAPI_CHK is expanded from...
+configure.in:44: the top level])
+m4trace:configure.in:44: -1- _m4_warn([obsolete], [The macro `AC_HELP_STRING' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:209: AC_HELP_STRING is expanded from...
+../../lib/autoconf/general.m4:1482: AC_ARG_WITH is expanded from...
+../cmulocal/sasl2.m4:7: SASL_GSSAPI_CHK is expanded from...
+configure.in:44: the top level])
+m4trace:configure.in:44: -1- _m4_warn([obsolete], [The macro `AC_WARN' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:33: AC_WARN is expanded from...
+../cmulocal/sasl2.m4:7: SASL_GSSAPI_CHK is expanded from...
+configure.in:44: the top level])
+m4trace:configure.in:44: -1- _m4_warn([obsolete], [The macro `AC_ERROR' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:34: AC_ERROR is expanded from...
+../cmulocal/sasl2.m4:7: SASL_GSSAPI_CHK is expanded from...
+configure.in:44: the top level])
+m4trace:configure.in:44: -1- m4_pattern_allow([^HAVE_GSSAPI_H$])
+m4trace:configure.in:44: -1- _m4_warn([obsolete], [The macro `AC_WARN' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:33: AC_WARN is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/headers.m4:129: _AC_CHECK_HEADER_MONGREL is expanded from...
+../../lib/autoconf/headers.m4:67: AC_CHECK_HEADER is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/headers.m4:129: _AC_CHECK_HEADER_MONGREL is expanded from...
+../../lib/autoconf/headers.m4:67: AC_CHECK_HEADER is expanded from...
+../cmulocal/sasl2.m4:7: SASL_GSSAPI_CHK is expanded from...
+configure.in:44: the top level])
+m4trace:configure.in:44: -1- m4_pattern_allow([^HAVE_LIBRESOLV$])
+m4trace:configure.in:44: -1- _m4_warn([obsolete], [The macro `AC_WARN' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:33: AC_WARN is expanded from...
+../cmulocal/sasl2.m4:7: SASL_GSSAPI_CHK is expanded from...
+configure.in:44: the top level])
+m4trace:configure.in:44: -1- _m4_warn([obsolete], [The macro `AC_WARN' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:33: AC_WARN is expanded from...
+../cmulocal/sasl2.m4:7: SASL_GSSAPI_CHK is expanded from...
+configure.in:44: the top level])
+m4trace:configure.in:44: -1- m4_pattern_allow([^HAVE_GSS_C_NT_HOSTBASED_SERVICE$])
+m4trace:configure.in:44: -1- _m4_warn([obsolete], [The macro `AC_WARN' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:33: AC_WARN is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2539: AC_EGREP_CPP is expanded from...
+../cmulocal/sasl2.m4:7: SASL_GSSAPI_CHK is expanded from...
+configure.in:44: the top level])
+m4trace:configure.in:44: -1- m4_pattern_allow([^HAVE_GSS_C_NT_HOSTBASED_SERVICE$])
+m4trace:configure.in:44: -1- m4_pattern_allow([^HAVE_GSS_C_NT_HOSTBASED_SERVICE$])
+m4trace:configure.in:44: -1- m4_pattern_allow([^HAVE_GSS_C_NT_USER_NAME$])
+m4trace:configure.in:44: -1- _m4_warn([obsolete], [The macro `AC_WARN' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:33: AC_WARN is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2539: AC_EGREP_CPP is expanded from...
+../cmulocal/sasl2.m4:7: SASL_GSSAPI_CHK is expanded from...
+configure.in:44: the top level])
+m4trace:configure.in:44: -1- m4_pattern_allow([^HAVE_GSS_C_NT_USER_NAME$])
+m4trace:configure.in:44: -1- m4_pattern_allow([^HAVE_GSS_C_NT_USER_NAME$])
+m4trace:configure.in:44: -1- m4_pattern_allow([^HAVE_GSSKRB5_REGISTER_ACCEPTOR_IDENTITY$])
+m4trace:configure.in:44: -1- m4_pattern_allow([^GSSAPI_LIBS$])
+m4trace:configure.in:44: -1- m4_pattern_allow([^GSSAPIBASE_LIBS$])
+m4trace:configure.in:48: -1- m4_pattern_allow([^KRB5_HEIMDAL$])
+m4trace:configure.in:50: -1- m4_pattern_allow([^HAVE_GSSAPI$])
+m4trace:configure.in:53: -1- SASL2_CRYPT_CHK
+m4trace:configure.in:53: -1- m4_pattern_allow([^LIB_CRYPT$])
+m4trace:configure.in:61: -1- m4_pattern_allow([^HAVE_SIA$])
+m4trace:configure.in:64: -1- _m4_warn([obsolete], [The macro `AC_ERROR' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:34: AC_ERROR is expanded from...
+configure.in:64: the top level])
+m4trace:configure.in:67: -1- m4_pattern_allow([^LIB_SIA$])
+m4trace:configure.in:77: -1- m4_pattern_allow([^AUTH_SASLDB$])
+m4trace:configure.in:78: -1- SASL_DB_PATH_CHECK([])
+m4trace:configure.in:78: -1- m4_pattern_allow([^SASL_DB_PATH$])
+m4trace:configure.in:79: -1- SASL_DB_CHECK([])
+m4trace:configure.in:79: -1- CYRUS_BERKELEY_DB_OPTS([])
+m4trace:configure.in:79: -1- CYRUS_BERKELEY_DB_CHK([])
+m4trace:configure.in:79: -1- CYRUS_BERKELEY_DB_CHK_LIB([])
+m4trace:configure.in:79: -1- CMU_ADD_LIBPATH_TO([$with_bdb_lib], [LDFLAGS])
+m4trace:configure.in:79: -1- CMU_ADD_LIBPATH_TO([$with_bdb_lib], [BDB_LIBADD])
+m4trace:configure.in:79: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../cmulocal/berkdb.m4:204: CYRUS_BERKELEY_DB_CHK_LIB is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/headers.m4:129: _AC_CHECK_HEADER_MONGREL is expanded from...
+../../lib/autoconf/headers.m4:67: AC_CHECK_HEADER is expanded from...
+../cmulocal/berkdb.m4:249: CYRUS_BERKELEY_DB_CHK is expanded from...
+../config/sasldb.m4:6: SASL_DB_CHECK is expanded from...
+configure.in:79: the top level])
+m4trace:configure.in:79: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../cmulocal/berkdb.m4:204: CYRUS_BERKELEY_DB_CHK_LIB is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/headers.m4:129: _AC_CHECK_HEADER_MONGREL is expanded from...
+../../lib/autoconf/headers.m4:67: AC_CHECK_HEADER is expanded from...
+../cmulocal/berkdb.m4:249: CYRUS_BERKELEY_DB_CHK is expanded from...
+../config/sasldb.m4:6: SASL_DB_CHECK is expanded from...
+configure.in:79: the top level])
+m4trace:configure.in:79: -1- CYRUS_BERKELEY_DB_CHK([])
+m4trace:configure.in:79: -1- CYRUS_BERKELEY_DB_CHK_LIB([])
+m4trace:configure.in:79: -1- CMU_ADD_LIBPATH_TO([$with_bdb_lib], [LDFLAGS])
+m4trace:configure.in:79: -1- CMU_ADD_LIBPATH_TO([$with_bdb_lib], [BDB_LIBADD])
+m4trace:configure.in:79: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../cmulocal/berkdb.m4:204: CYRUS_BERKELEY_DB_CHK_LIB is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/headers.m4:129: _AC_CHECK_HEADER_MONGREL is expanded from...
+../../lib/autoconf/headers.m4:67: AC_CHECK_HEADER is expanded from...
+../cmulocal/berkdb.m4:249: CYRUS_BERKELEY_DB_CHK is expanded from...
+../config/sasldb.m4:6: SASL_DB_CHECK is expanded from...
+configure.in:79: the top level])
+m4trace:configure.in:79: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../cmulocal/berkdb.m4:204: CYRUS_BERKELEY_DB_CHK_LIB is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/headers.m4:129: _AC_CHECK_HEADER_MONGREL is expanded from...
+../../lib/autoconf/headers.m4:67: AC_CHECK_HEADER is expanded from...
+../cmulocal/berkdb.m4:249: CYRUS_BERKELEY_DB_CHK is expanded from...
+../config/sasldb.m4:6: SASL_DB_CHECK is expanded from...
+configure.in:79: the top level])
+m4trace:configure.in:79: -1- _m4_warn([obsolete], [The macro `AC_ERROR' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/oldnames.m4:34: AC_ERROR is expanded from...
+../config/sasldb.m4:6: SASL_DB_CHECK is expanded from...
+configure.in:79: the top level])
+m4trace:configure.in:79: -1- _m4_warn([obsolete], [back quotes and double quotes must not be escaped in: Use either \"berkeley\", \"gdbm\", \"ndbm\" or \"none\"], [../../lib/autoconf/oldnames.m4:34: AC_ERROR is expanded from...
+../config/sasldb.m4:6: SASL_DB_CHECK is expanded from...
+configure.in:79: the top level])
+m4trace:configure.in:79: -1- m4_pattern_allow([^SASL_GDBM$])
+m4trace:configure.in:79: -1- m4_pattern_allow([^SASL_NDBM$])
+m4trace:configure.in:79: -1- m4_pattern_allow([^SASL_BERKELEYDB$])
+m4trace:configure.in:79: -1- m4_pattern_allow([^STATIC_SASLDB$])
+m4trace:configure.in:79: -1- m4_pattern_allow([^SASL_DB_UTILS$])
+m4trace:configure.in:79: -1- m4_pattern_allow([^SASL_DB_MANS$])
+m4trace:configure.in:79: -1- m4_pattern_allow([^SASL_DB_BACKEND$])
+m4trace:configure.in:79: -1- m4_pattern_allow([^SASL_DB_BACKEND_STATIC$])
+m4trace:configure.in:79: -1- m4_pattern_allow([^SASL_DB_INC$])
+m4trace:configure.in:79: -1- m4_pattern_allow([^SASL_DB_LIB$])
+m4trace:configure.in:87: -1- m4_pattern_allow([^HAVE_HTTPFORM$])
+m4trace:configure.in:110: -1- m4_pattern_allow([^MAIN_COMPAT_OBJ$])
+m4trace:configure.in:112: -1- m4_pattern_allow([^USE_DOORS$])
+m4trace:configure.in:113: -1- m4_pattern_allow([^SASLAUTHD_THREADED$])
+m4trace:configure.in:121: -1- m4_pattern_allow([^HAVE_PAM$])
+m4trace:configure.in:124: -1- m4_pattern_allow([^LIB_PAM$])
+m4trace:configure.in:126: -1- m4_pattern_allow([^HAVE_LIBRESOLV$])
+m4trace:configure.in:136: -1- CMU_ADD_LIBPATH([${with_ldap}/lib])
+m4trace:configure.in:141: -1- m4_pattern_allow([^HAVE_LDAP$])
+m4trace:configure.in:148: -1- m4_pattern_allow([^LDAP_LIBS$])
+m4trace:configure.in:152: -1- m4_pattern_allow([^STDC_HEADERS$])
+m4trace:configure.in:153: -1- m4_pattern_allow([^HAVE_SYS_WAIT_H$])
+m4trace:configure.in:154: -1- m4_pattern_allow([^TIME_WITH_SYS_TIME$])
+m4trace:configure.in:158: -1- m4_pattern_allow([^const$])
+m4trace:configure.in:159: -1- m4_pattern_allow([^pid_t$])
+m4trace:configure.in:162: -1- m4_pattern_allow([^LTLIBOBJS$])
+m4trace:configure.in:166: -1- _m4_warn([syntax], [AC_CACHE_VAL(have_func, ...): suspicious cache-id, must contain _cv_ to be cached], [../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+configure.in:166: the top level])
+m4trace:configure.in:166: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+configure.in:166: the top level])
+m4trace:configure.in:172: -1- m4_pattern_allow([^HAVE_FUNC$])
+m4trace:configure.in:175: -1- _m4_warn([syntax], [AC_CACHE_VAL(have_pretty_function, ...): suspicious cache-id, must contain _cv_ to be cached], [../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+configure.in:175: the top level])
+m4trace:configure.in:175: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+configure.in:175: the top level])
+m4trace:configure.in:181: -1- m4_pattern_allow([^HAVE_PRETTY_FUNCTION$])
+m4trace:configure.in:184: -1- _m4_warn([syntax], [AC_CACHE_VAL(have_function, ...): suspicious cache-id, must contain _cv_ to be cached], [../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+configure.in:184: the top level])
+m4trace:configure.in:184: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+configure.in:184: the top level])
+m4trace:configure.in:190: -1- m4_pattern_allow([^HAVE_FUNCTION$])
+m4trace:configure.in:196: -1- _m4_warn([obsolete], [The macro `AC_TYPE_SIGNAL' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/types.m4:738: AC_TYPE_SIGNAL is expanded from...
+configure.in:196: the top level])
+m4trace:configure.in:196: -1- m4_pattern_allow([^RETSIGTYPE$])
+m4trace:configure.in:203: -1- _m4_warn([obsolete], [The macro `AC_TRY_COMPILE' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2615: AC_TRY_COMPILE is expanded from...
+configure.in:203: the top level])
+m4trace:configure.in:203: -1- m4_pattern_allow([^GETXXNAM_R_5ARG$])
+m4trace:configure.in:226: -1- IPv6_CHECK_FUNC([getaddrinfo], [AC_DEFINE(HAVE_GETADDRINFO,[],[Do we have a getaddrinfo() function?])], [sasl_cv_getaddrinfo=yes])
+m4trace:configure.in:226: -1- m4_pattern_allow([^HAVE_GETADDRINFO$])
+m4trace:configure.in:226: -1- m4_pattern_allow([^HAVE_GETADDRINFO$])
+m4trace:configure.in:229: -1- m4_pattern_allow([^LIB@&t@OBJS$])
+m4trace:configure.in:235: -1- IPv6_CHECK_FUNC([getnameinfo], [AC_DEFINE(HAVE_GETNAMEINFO,[],[Do we have a getnameinfo() function?])], [sasl_cv_getnameinfo=yes])
+m4trace:configure.in:235: -1- m4_pattern_allow([^HAVE_GETADDRINFO$])
+m4trace:configure.in:235: -1- m4_pattern_allow([^HAVE_GETNAMEINFO$])
+m4trace:configure.in:238: -1- m4_pattern_allow([^LIB@&t@OBJS$])
+m4trace:configure.in:241: -1- IPv6_CHECK_SS_FAMILY([])
+m4trace:configure.in:241: -1- _m4_warn([obsolete], [The macro `AC_TRY_COMPILE' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2615: AC_TRY_COMPILE is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../cmulocal/ipv6.m4:66: IPv6_CHECK_SS_FAMILY is expanded from...
+configure.in:241: the top level])
+m4trace:configure.in:241: -2- m4_pattern_allow([^HAVE_SS_FAMILY$])
+m4trace:configure.in:242: -1- IPv6_CHECK_SA_LEN([])
+m4trace:configure.in:242: -1- _m4_warn([obsolete], [The macro `AC_TRY_COMPILE' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2615: AC_TRY_COMPILE is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../cmulocal/ipv6.m4:82: IPv6_CHECK_SA_LEN is expanded from...
+configure.in:242: the top level])
+m4trace:configure.in:242: -2- m4_pattern_allow([^HAVE_SOCKADDR_SA_LEN$])
+m4trace:configure.in:243: -1- IPv6_CHECK_SOCKLEN_T([])
+m4trace:configure.in:243: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:2688: AC_TRY_LINK is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../cmulocal/ipv6.m4:98: IPv6_CHECK_SOCKLEN_T is expanded from...
+configure.in:243: the top level])
+m4trace:configure.in:243: -2- m4_pattern_allow([^HAVE_SOCKLEN_T$])
+m4trace:configure.in:246: -2- m4_pattern_allow([^HAVE_STRUCT_SOCKADDR_STORAGE$])
+m4trace:configure.in:336: -1- _m4_warn([obsolete], [AC_OUTPUT should be used without arguments.
+You should run autoupdate.], [])
+m4trace:configure.in:336: -1- m4_pattern_allow([^LIB@&t@OBJS$])
+m4trace:configure.in:336: -1- m4_pattern_allow([^LTLIBOBJS$])
+m4trace:configure.in:336: -1- AM_CONDITIONAL([am__EXEEXT], [test -n "$EXEEXT"])
+m4trace:configure.in:336: -1- m4_pattern_allow([^am__EXEEXT_TRUE$])
+m4trace:configure.in:336: -1- m4_pattern_allow([^am__EXEEXT_FALSE$])
+m4trace:configure.in:336: -1- _AM_SUBST_NOTMAKE([am__EXEEXT_TRUE])
+m4trace:configure.in:336: -1- _AM_SUBST_NOTMAKE([am__EXEEXT_FALSE])
+m4trace:configure.in:336: -1- _AC_AM_CONFIG_HEADER_HOOK(["$ac_file"])
+m4trace:configure.in:336: -1- _AM_OUTPUT_DEPENDENCY_COMMANDS

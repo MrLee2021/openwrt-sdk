@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-lib-iptparser/Makefile
+Package: luci-lib-iptparser
+Submenu: 6. Libraries
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +luci-base
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: Iptables listing parser class
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description: Iptables listing parser class
+
+@@
+
+

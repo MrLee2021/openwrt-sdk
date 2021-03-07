@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-proto-ipip/Makefile
+Package: luci-proto-ipip
+Submenu: 5. Protocols
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +ipip
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: Support for IPIP tunnels (IPv4-in-IPv4 RFC2003)
+Maintainer: Roger Pueyo Centelles <roger.pueyo@guifi.net>
+Source: 
+Type: ipkg
+Feed: luci
+Description: Support for IPIP tunnels (IPv4-in-IPv4 RFC2003)
+Roger Pueyo Centelles <roger.pueyo@guifi.net>
+@@
+
+

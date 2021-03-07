@@ -1,0 +1,4 @@
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/uci-2014-04-11.1/CMakeFiles/cli.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/uci-2014-04-11.1/CMakeFiles/uci.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/uci-2014-04-11.1/lua/CMakeFiles/uci_lua.dir
+/home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/uci-2014-04-11.1/CMakeFiles/ucimap.dir

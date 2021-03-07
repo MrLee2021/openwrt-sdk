@@ -1,0 +1,10 @@
+Package: libsasl2
+Version: 2.1.23-2
+Depends: libc
+Source: feeds/oldpackages/libs/cyrus-sasl
+License: BSD-4c BSD
+LicenseFiles: COPYING cmulocal/COPYING saslauthd/COPYING
+Section: libs
+Architecture: ramips_24kec
+Installed-Size: 63630
+Description:  A general purpose authentication library

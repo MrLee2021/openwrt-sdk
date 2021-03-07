@@ -1,0 +1,1 @@
+cmd_drivers/usb/core/built-in.o :=  mipsel-openwrt-linux-uclibc-ld  -m elf32ltsmip   -r -o drivers/usb/core/built-in.o drivers/usb/core/../host/mtk-phy.o drivers/usb/core/../host/mtk-phy-7628.o drivers/usb/core/../host/mtk-phy-ahb.o drivers/usb/core/usbcore.o 

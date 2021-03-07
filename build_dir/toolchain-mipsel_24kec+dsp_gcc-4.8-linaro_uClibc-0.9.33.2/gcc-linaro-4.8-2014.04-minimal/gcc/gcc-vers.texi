@@ -1,0 +1,5 @@
+@set version-GCC 4.8.3
+@clear DEVELOPMENT
+@set srcdir /home/ubuntu/openwrt-sdk/build_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/gcc-linaro-4.8-2014.04/gcc
+@set VERSION_PACKAGE (OpenWrt/Linaro GCC 4.8-2014.04 unknown) 
+@set BUGURL @uref{https://dev.openwrt.org/}

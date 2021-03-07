@@ -1,0 +1,96 @@
+Source-Makefile: package/feeds/luci/luci-app-vpnbypass/Makefile
+Package: luci-app-vpnbypass
+Submenu: 3. Applications
+Version: x-4
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +luci +vpnbypass
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: VPN Bypass Web UI
+Maintainer: Stan Grishin <stangri@melmac.net>
+Source: 
+Type: ipkg
+Feed: luci
+Description:    Provides Web UI for VPNBypass service.
+Stan Grishin <stangri@melmac.net>
+@@
+
+Package: luci-i18n-vpnbypass-zh-cn
+Default: LUCI_LANG_zh-cn||(ALL&&m)
+Version: x-4
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread luci-app-vpnbypass
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: luci-app-vpnbypass - zh-cn translation
+Maintainer: Stan Grishin <stangri@melmac.net>
+Source: 
+Type: ipkg
+Hidden: 1
+Feed: luci
+Description:     Translation for luci-app-vpnbypass - 简体中文 (Simplified Chinese)
+Stan Grishin <stangri@melmac.net>
+@@
+
+Package: luci-i18n-vpnbypass-zh-tw
+Default: LUCI_LANG_zh-tw||(ALL&&m)
+Version: x-4
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread luci-app-vpnbypass
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: luci-app-vpnbypass - zh-tw translation
+Maintainer: Stan Grishin <stangri@melmac.net>
+Source: 
+Type: ipkg
+Hidden: 1
+Feed: luci
+Description:     Translation for luci-app-vpnbypass - 繁体中文 (Traditional Chinese)
+Stan Grishin <stangri@melmac.net>
+@@
+
+Package: luci-i18n-vpnbypass-ru
+Default: LUCI_LANG_ru||(ALL&&m)
+Version: x-4
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread luci-app-vpnbypass
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: luci-app-vpnbypass - ru translation
+Maintainer: Stan Grishin <stangri@melmac.net>
+Source: 
+Type: ipkg
+Hidden: 1
+Feed: luci
+Description:     Translation for luci-app-vpnbypass - Русский (Russian)
+Stan Grishin <stangri@melmac.net>
+@@
+
+Package: luci-i18n-vpnbypass-pt-br
+Default: LUCI_LANG_pt-br||(ALL&&m)
+Version: x-4
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread luci-app-vpnbypass
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: luci-app-vpnbypass - pt-br translation
+Maintainer: Stan Grishin <stangri@melmac.net>
+Source: 
+Type: ipkg
+Hidden: 1
+Feed: luci
+Description:     Translation for luci-app-vpnbypass - Português do Brasil (Brazialian Portuguese)
+Stan Grishin <stangri@melmac.net>
+@@
+
+

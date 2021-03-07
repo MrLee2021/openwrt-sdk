@@ -1,0 +1,22 @@
+Source-Makefile: package/ramips/drivers/mt7615e/Makefile
+Package: kmod-mt7615e
+Menu: 1
+Submenu: Drivers
+Version: <LINUX_VERSION>+MT7615_LinuxAP_V4.4.0.2_20160228-
+Depends: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: MTK MT7615e wifi AP driver
+Maintainer: 
+Source: MT7615_LinuxAP_V4.4.0.2_20160228.tar.bz2
+Type: ipkg
+Description: MTK MT7615e wifi AP driver
+
+@@
+Config:
+	source "package/ramips/drivers/mt7615e/config.in"
+@@
+
+

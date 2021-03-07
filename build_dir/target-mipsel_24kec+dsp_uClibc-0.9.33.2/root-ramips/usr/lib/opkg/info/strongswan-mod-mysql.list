@@ -1,0 +1,2 @@
+/etc/strongswan.d/charon/mysql.conf
+/usr/lib/ipsec/plugins/libstrongswan-mysql.so

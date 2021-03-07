@@ -1,0 +1,10 @@
+platform/0601-splice.patch
+platform/0602-ufsd.patch
+platform/064-compile-error.patch
+platform/065-hnat-interface.patch
+platform/066-support-RA_HW_NAT_WIFI_NEW_ARCH.patch
+platform/067-lanwan-vlan.patch
+platform/067-whnat.patch
+platform/068-hwnat-error.patch
+platform/070-fix-br0.patch
+platform/071-nand-controller-busy.patch

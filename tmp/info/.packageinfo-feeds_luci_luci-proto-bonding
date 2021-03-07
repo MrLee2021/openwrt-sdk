@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-proto-bonding/Makefile
+Package: luci-proto-bonding
+Submenu: 5. Protocols
+Version: x
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +proto-bonding
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+Section: luci
+Category: LuCI
+Title: Support for Link Aggregation (Channel Bonding)
+Maintainer: Helge Mader <ma@dev.tdt.de>
+Source: 
+Type: ipkg
+Feed: luci
+Description: Support for Link Aggregation (Channel Bonding)
+Helge Mader <ma@dev.tdt.de>
+@@
+
+

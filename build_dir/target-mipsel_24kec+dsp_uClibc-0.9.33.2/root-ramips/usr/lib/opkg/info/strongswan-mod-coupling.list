@@ -1,0 +1,2 @@
+/etc/strongswan.d/charon/coupling.conf
+/usr/lib/ipsec/plugins/libstrongswan-coupling.so

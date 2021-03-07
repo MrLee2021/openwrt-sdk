@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-ssl-nginx/Makefile
+Package: luci-ssl-nginx
+Submenu: 1. Collections
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +nginx-ssl +nginx-mod-luci-ssl +luci-mod-admin-full +luci-theme-bootstrap +luci-app-firewall +luci-proto-ppp +libiwinfo-lua +IPV6:luci-proto-ipv6 +rpcd-mod-rrdns +openssl-util
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: LuCI with HTTPS support on Nginx (OpenSSL as SSL backend)
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description:    LuCI with OpenSSL as the SSL backend (libustream-openssl). OpenSSL cmd tools (openssl-util) are used by nginx for SSL key generation.
+
+@@
+
+

@@ -1,0 +1,10 @@
+Package: strongswan-mod-curl
+Version: 5.3.2-1
+Depends: libc, strongswan, libcurl
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 3633
+Description:  StrongSwan cURL fetcher plugin plugin

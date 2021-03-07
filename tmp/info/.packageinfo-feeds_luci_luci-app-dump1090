@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-app-dump1090/Makefile
+Package: luci-app-dump1090
+Submenu: 3. Applications
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +dump1090
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: LuCI Support for dump1090
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description: LuCI Support for dump1090
+
+@@
+
+

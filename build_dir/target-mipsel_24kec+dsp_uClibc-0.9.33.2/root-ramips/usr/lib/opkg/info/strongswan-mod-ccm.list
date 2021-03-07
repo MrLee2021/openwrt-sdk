@@ -1,0 +1,2 @@
+/etc/strongswan.d/charon/ccm.conf
+/usr/lib/ipsec/plugins/libstrongswan-ccm.so

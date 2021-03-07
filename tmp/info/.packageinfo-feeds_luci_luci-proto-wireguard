@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-proto-wireguard/Makefile
+Package: luci-proto-wireguard
+Submenu: 5. Protocols
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +kmod-wireguard +wireguard-tools
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: Support for WireGuard VPN
+Maintainer: Dan Luedtke <mail@danrl.com>
+Source: 
+Type: ipkg
+Feed: luci
+Description: Support for WireGuard VPN
+Dan Luedtke <mail@danrl.com>
+@@
+
+

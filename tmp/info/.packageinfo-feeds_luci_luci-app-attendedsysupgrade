@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-app-attendedsysupgrade/Makefile
+Package: luci-app-attendedsysupgrade
+Submenu: 3. Applications
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +luci-base +uhttpd-mod-ubus +attendedsysupgrade-common +cgi-io
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: LuCI support for attended sysupgrades
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description: LuCI support for attended sysupgrades
+
+@@
+
+

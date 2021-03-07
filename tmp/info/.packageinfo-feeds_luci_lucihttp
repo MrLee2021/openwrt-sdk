@@ -1,0 +1,34 @@
+Source-Makefile: package/feeds/luci/lucihttp/Makefile
+Package: liblucihttp
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: LuCI HTTP utility library
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: 
+Type: ipkg
+Feed: luci
+Description: LuCI HTTP utility library
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: liblucihttp-lua
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +liblucihttp +liblua
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: Lua binding for the LuCI HTTP utility library
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: 
+Type: ipkg
+Feed: luci
+Description: Lua binding for the LuCI HTTP utility library
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+

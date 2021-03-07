@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-nginx/Makefile
+Package: luci-nginx
+Submenu: 1. Collections
+Version: x-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +nginx +nginx-mod-luci +luci-mod-admin-full +luci-theme-bootstrap +luci-app-firewall +luci-proto-ppp +libiwinfo-lua +IPV6:luci-proto-ipv6 +rpcd-mod-rrdns
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host 
+Section: luci
+Category: LuCI
+Title: LuCI interface with Nginx as Webserver
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description:    Standard OpenWrt set including full admin with ppp support and the default Bootstrap theme
+
+@@
+
+

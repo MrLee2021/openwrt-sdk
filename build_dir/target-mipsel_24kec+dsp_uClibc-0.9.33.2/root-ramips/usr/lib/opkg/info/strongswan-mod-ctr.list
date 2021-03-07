@@ -1,0 +1,2 @@
+/etc/strongswan.d/charon/ctr.conf
+/usr/lib/ipsec/plugins/libstrongswan-ctr.so

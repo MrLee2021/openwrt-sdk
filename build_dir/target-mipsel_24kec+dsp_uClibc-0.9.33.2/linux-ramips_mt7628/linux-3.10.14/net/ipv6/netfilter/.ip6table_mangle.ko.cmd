@@ -1,0 +1,1 @@
+cmd_net/ipv6/netfilter/ip6table_mangle.ko := mipsel-openwrt-linux-uclibc-ld -r  -m elf32ltsmip -T /home/ubuntu/openwrt-sdk/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/linux-ramips_mt7628/linux-3.10.14/scripts/module-common.lds --build-id  -o net/ipv6/netfilter/ip6table_mangle.ko net/ipv6/netfilter/ip6table_mangle.o net/ipv6/netfilter/ip6table_mangle.mod.o

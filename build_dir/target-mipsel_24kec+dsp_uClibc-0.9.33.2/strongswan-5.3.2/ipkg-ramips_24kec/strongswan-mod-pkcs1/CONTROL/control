@@ -1,0 +1,10 @@
+Package: strongswan-mod-pkcs1
+Version: 5.3.2-1
+Depends: libc, strongswan
+Source: feeds/packages/net/strongswan
+License: GPL-2.0+
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ramips_24kec
+Installed-Size: 4174
+Description:  StrongSwan PKCS1 key decoding plugin

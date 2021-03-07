@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-proto-openfortivpn/Makefile
+Package: luci-proto-openfortivpn
+Submenu: 5. Protocols
+Version: x
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +openfortivpn
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+Section: luci
+Category: LuCI
+Title: Support for OpenFortivpn
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description: Support for OpenFortivpn
+
+@@
+
+

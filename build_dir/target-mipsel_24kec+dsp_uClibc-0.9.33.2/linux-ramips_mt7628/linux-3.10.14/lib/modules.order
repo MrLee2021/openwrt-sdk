@@ -1,0 +1,2 @@
+kernel/lib/crc-ccitt.ko
+kernel/lib/zlib_deflate/zlib_deflate.ko

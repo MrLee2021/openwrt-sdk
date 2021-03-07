@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/luci/luci-lib-ipkg/Makefile
+Package: luci-lib-ipkg
+Submenu: 6. Libraries
+Version: x
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +luci-base
+Menu-Depends: 
+Provides: 
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+Section: luci
+Category: LuCI
+Title: Legacy opkg interface class
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: luci
+Description: Legacy opkg interface class
+
+@@
+
+

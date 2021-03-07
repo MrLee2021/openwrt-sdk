@@ -1,0 +1,8 @@
+Package: libmysqlclient-r
+Version: 5.1.73-1
+Depends: libc, uclibcxx, zlib, libpthread
+Source: feeds/oldpackages/libs/mysql
+Section: libs
+Architecture: ramips_24kec
+Installed-Size: 165963
+Description:  MySQL client library threadsafe

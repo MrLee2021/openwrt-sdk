@@ -1,0 +1,3 @@
+/etc/strongswan.d/charon/duplicheck.conf
+/usr/lib/ipsec/duplicheck
+/usr/lib/ipsec/plugins/libstrongswan-duplicheck.so

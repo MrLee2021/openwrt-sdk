@@ -1,0 +1,2 @@
+#! /bin/sh
+exec '/home/ubuntu/openwrt-sdk/staging_dir/host/bin/bison' -y "$@"

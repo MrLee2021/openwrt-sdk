@@ -1,0 +1,1 @@
+cmd_drivers/usb/built-in.o :=  mipsel-openwrt-linux-uclibc-ld  -m elf32ltsmip   -r -o drivers/usb/built-in.o drivers/usb/core/built-in.o drivers/usb/host/built-in.o drivers/usb/storage/built-in.o drivers/usb/misc/built-in.o drivers/usb/phy/built-in.o drivers/usb/usb-common.o 

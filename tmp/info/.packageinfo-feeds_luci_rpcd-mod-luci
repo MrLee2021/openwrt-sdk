@@ -1,0 +1,19 @@
+Source-Makefile: package/feeds/luci/rpcd-mod-luci/Makefile
+Package: rpcd-mod-luci
+Version: 20201107
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +rpcd +libubox +libubus +libnl-tiny
+Menu-Depends: 
+Provides: 
+Build-Depends: iwinfo
+Section: libs
+Category: Libraries
+Title: Rapid reverse DNS rpcd module
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: 
+Type: ipkg
+Feed: luci
+Description:  Provides LuCI backend ubus RPC operations.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+
